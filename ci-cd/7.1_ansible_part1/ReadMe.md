@@ -74,11 +74,14 @@ IaC позволяет запускать скрипт, который може�
 ### Решение 4
 
 1. Установлен Midnight Commander
+
 ![mc](https://github.com/SlavaZakariev/netology/blob/0295273a4287946759f76b201f639d8f4a19b247/ci-cd/7.1_ansible_part1/resources/ansible_5.1.jpg)
 ![resolt](https://github.com/SlavaZakariev/netology/blob/0295273a4287946759f76b201f639d8f4a19b247/ci-cd/7.1_ansible_part1/resources/ansible_5.2.jpg)
 
 2. Проверен статус сервиса sshd
+
 ![sshd](https://github.com/SlavaZakariev/netology/blob/0295273a4287946759f76b201f639d8f4a19b247/ci-cd/7.1_ansible_part1/resources/ansible_6.1.jpg)
 
 3. Создан текстовый файл
+
 ![txt](https://github.com/SlavaZakariev/netology/blob/0295273a4287946759f76b201f639d8f4a19b247/ci-cd/7.1_ansible_part1/resources/ansible_7.1.jpg)
