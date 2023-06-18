@@ -73,6 +73,57 @@
 
 ---
 
+3. Playbook motd
+
+```
+---
+- name: Edit motd
+  hosts: servers
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - name: variables
+      include_vars:
+        file: motd_vars.yaml
+
+    - name: change motd
+      template:
+        src: motd.txt
+        dest: /etc/motd
+
+```
+
+motd_vars.yaml
+
+```
+---
+motd:
+  name: Viacheslav
+  course: DevOps
+  
+```
+
+motd.txt
+
+```
+
+---
+Variables:
+
+var1: {{ motd.name }}
+var2: {{ motd.course }}
+
+```
+
+![motd](https://github.com/SlavaZakariev/netology/blob/edb48e8665cd4a2fbebe88ce8a0a2fc21936a1dc/ci-cd/7.2_ansible_part2/resources/ansible2_3.1.jpg)
+
+Приветствие на управляемых серверах Ubuntu2 и Ubuntu3
+
+![vars](https://github.com/SlavaZakariev/netology/blob/edb48e8665cd4a2fbebe88ce8a0a2fc21936a1dc/ci-cd/7.2_ansible_part2/resources/ansible2_3.3.jpg)
+
+---
+
 ### Задание 2
 
 Выполните действия, приложите файлы с модифицированным плейбуком и вывод выполнения.
