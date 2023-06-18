@@ -42,7 +42,7 @@
         dest: /tmp/extracted
 ```
 
-Запущено выполнение командой ansible-playbook .ansible/playbooks/unpack.yaml -K
+Запущено выполнение командой ***ansible-playbook .ansible/playbooks/unpack.yaml -K***
 
 ![upack.yaml](https://github.com/SlavaZakariev/netology/blob/5d54807054a02a507a7510797c4b9fd0faf9791a/ci-cd/7.2_ansible_part2/resources/ansible2_1.2.jpg)
 
