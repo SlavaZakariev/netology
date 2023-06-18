@@ -148,8 +148,13 @@ var2: {{ motd.course }}
         dest: /etc/motd
 
 ```
+Результат обновления
 
+![update](https://github.com/SlavaZakariev/netology/blob/4466ac74430003511f2358790c590ff7d6d89d5f/ci-cd/7.2_ansible_part2/resources/ansible2_4.1.jpg)
 
+Вывод приветсвия
+
+![update](https://github.com/SlavaZakariev/netology/blob/4466ac74430003511f2358790c590ff7d6d89d5f/ci-cd/7.2_ansible_part2/resources/ansible2_4.2.jpg)
 
 ---
 
