@@ -15,7 +15,36 @@
 
 ### Решение 1
 
+1. Написан playbook unpack.yaml
 
+```
+---
+- name: Download and Unpacking
+  hosts: servers
+  become: yes
+  become_method: sudo
+  
+  tasks:
+    - name: Download archive
+      get_url:
+        url: https://downloads.apache.org/kafka/3.5.0/kafka-3.5.0-src.tgz
+        dest: /tmp/kafka-3.5.0-src.tgz
+
+    - name: Create directory
+      file:
+        path: /tmp/extracted
+        state: directory
+
+    - name: Unpacking
+      unarchive:
+        remote_src: yes
+        src: /tmp/kafka-3.5.0-src.tgz
+        dest: /tmp/extracted
+```
+
+Запущено выполнение командой ansible-playbook .ansible/playbooks/unpack.yaml -K
+
+![upack.yaml](https://github.com/SlavaZakariev/netology/blob/5d54807054a02a507a7510797c4b9fd0faf9791a/ci-cd/7.2_ansible_part2/resources/ansible2_1.2.jpg)
 
 ---
 
