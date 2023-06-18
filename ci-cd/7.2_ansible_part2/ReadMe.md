@@ -46,6 +46,31 @@
 
 ![upack.yaml](https://github.com/SlavaZakariev/netology/blob/5d54807054a02a507a7510797c4b9fd0faf9791a/ci-cd/7.2_ansible_part2/resources/ansible2_1.2.jpg)
 
+2. Установка tuned
+
+```
+---
+- name: Install Tuned
+  hosts: servers
+  become: yes
+  become_method: sudo
+  
+  tasks:
+    - name: install tuned
+      apt:
+        name: tuned
+        state: present
+
+    - name: autorun tuned
+      service:
+        name: tuned
+        state: started
+        enabled: yes
+
+```
+
+![tuned](https://github.com/SlavaZakariev/netology/blob/e592719b036e3c99e081734d16137e7900725712/ci-cd/7.2_ansible_part2/resources/ansible2_2.1.jpg)
+
 ---
 
 ### Задание 2
