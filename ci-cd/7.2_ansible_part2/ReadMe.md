@@ -107,7 +107,6 @@ motd:
 motd.txt
 
 ```
-
 ---
 Variables:
 
@@ -132,6 +131,23 @@ var2: {{ motd.course }}
 ---
 
 ### Решение 2
+
+Обновлённый motd.txt
+
+```
+---
+- name: Edit motd
+  hosts: servers
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - name: change motd
+      template:
+        src: motd.txt
+        dest: /etc/motd
+
+```
 
 
 
