@@ -67,3 +67,19 @@
 ---
 
 ### Решение 4
+
+1. Скачивание архива с зеркала **Яндекса**
+
+![архив](https://github.com/SlavaZakariev/netology/blob/4d4b3ce7eda206a0e81705adf931f64f4344cb8c/ci-cd/7.3_terraform/resources/terraform_1.1.jpg)
+
+2. Распаковка архива
+
+![распаковка](https://github.com/SlavaZakariev/netology/blob/4d4b3ce7eda206a0e81705adf931f64f4344cb8c/ci-cd/7.3_terraform/resources/terraform_1.2.jpg)
+
+3. Перенос бинарного файла в директорию **/usr/local/bin**
+
+![бин](https://github.com/SlavaZakariev/netology/blob/4d4b3ce7eda206a0e81705adf931f64f4344cb8c/ci-cd/7.3_terraform/resources/terraform_1.3.jpg)
+
+4. Создание конфигурационного файла **Terraform CLI**
+
+![cli](https://github.com/SlavaZakariev/netology/blob/4d4b3ce7eda206a0e81705adf931f64f4344cb8c/ci-cd/7.3_terraform/resources/terraform_1.4.jpg)
