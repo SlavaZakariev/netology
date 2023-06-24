@@ -114,3 +114,6 @@ output "external_ip_address_vm_1" {
 
 ![ssh-key](https://github.com/SlavaZakariev/netology/blob/27a06328f4c5f007862102924a2843bf14a1ab70/ci-cd/7.4_yandex_cloud/resources/yc_1.1.jpg)
 
+2. Предварительный план **terraform plan**
+
+![plan](https://github.com/SlavaZakariev/netology/blob/84ec02ce9db392cced3d9531c465e5852194b497/ci-cd/7.4_yandex_cloud/resources/yc_1.2.jpg)
