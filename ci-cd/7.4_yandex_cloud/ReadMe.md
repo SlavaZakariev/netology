@@ -110,5 +110,7 @@ output "external_ip_address_vm_1" {
 
 ### Решение 1
 
+1. Создание ssh-ключей для Yandex Cloud
 
+![ssh-key](https://github.com/SlavaZakariev/netology/blob/27a06328f4c5f007862102924a2843bf14a1ab70/ci-cd/7.4_yandex_cloud/resources/yc_1.1.jpg)
 
