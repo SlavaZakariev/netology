@@ -116,8 +116,8 @@ output "external_ip_address_vm_1" {
 
 2. Предварительный план **terraform plan**
 
-![plan](https://github.com/SlavaZakariev/netology/blob/84ec02ce9db392cced3d9531c465e5852194b497/ci-cd/7.4_yandex_cloud/resources/yc_1.2.jpg)
+![plan](https://github.com/SlavaZakariev/netology/blob/ffbd259fa12f4c1c94574b7e16c8caa13b78e42e/ci-cd/7.4_yandex_cloud/resources/yc_1.2.jpg)
 
 3. Выполнение команды **terraform apply**
 
-![apply](https://github.com/SlavaZakariev/netology/blob/14d2c29d9cfa53fa12f4a7b9722b8f8c4d8459a1/ci-cd/7.4_yandex_cloud/resources/yc_1.3.jpg)
+![apply](https://github.com/SlavaZakariev/netology/blob/ffbd259fa12f4c1c94574b7e16c8caa13b78e42e/ci-cd/7.4_yandex_cloud/resources/yc_1.3.jpg)
