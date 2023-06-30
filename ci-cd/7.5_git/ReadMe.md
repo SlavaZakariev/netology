@@ -22,6 +22,12 @@
 
 ## Решение 1
 
+1. Зарегистрирован аккаукт в GitHub.
 
+![account](https://github.com/SlavaZakariev/netology/blob/c22ce3ca6b7e6f3283bf17a9d019e1457ba34e41/ci-cd/7.5_git/resources/git_1.1.jpg)
+
+2. Создан публиный репозиторий.
+
+![create](https://github.com/SlavaZakariev/netology/blob/c22ce3ca6b7e6f3283bf17a9d019e1457ba34e41/ci-cd/7.5_git/resources/git_1.2.jpg)
 
 ---
