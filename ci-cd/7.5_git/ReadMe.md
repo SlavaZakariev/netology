@@ -30,4 +30,19 @@
 
 ![create](https://github.com/SlavaZakariev/netology/blob/c22ce3ca6b7e6f3283bf17a9d019e1457ba34e41/ci-cd/7.5_git/resources/git_1.2.jpg)
 
+3 и 4. Клонирован репозиторий.
+
+![clone](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.3.jpg)
+
+5. Произведена настройка.
+
+![name](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.4.jpg)
+
+6. Статус git.
+
+![status](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.5.jpg)
+
+7. Изменение в файл ReadMe
+
+
 ---
