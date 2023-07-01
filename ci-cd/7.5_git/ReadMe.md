@@ -54,7 +54,7 @@
 
 ![push](https://github.com/SlavaZakariev/netology/blob/6731b19cdaf56330cad08b66396fc6d8ec0d69c9/ci-cd/7.5_git/resources/git_1.8.jpg)
 
-9. Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/blob/main/README.md).
+9. Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/graphs/commit-activity).
 
 ---
 
