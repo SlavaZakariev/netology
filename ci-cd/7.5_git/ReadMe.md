@@ -30,7 +30,7 @@
 
 ![create](https://github.com/SlavaZakariev/netology/blob/c22ce3ca6b7e6f3283bf17a9d019e1457ba34e41/ci-cd/7.5_git/resources/git_1.2.jpg)
 
-3 и 4. Клонирован репозиторий.
+3 и 4. Клонирован репозиторий и выполнен переход в директорию git.
 
 ![clone](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.3.jpg)
 
