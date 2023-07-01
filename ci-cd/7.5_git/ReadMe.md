@@ -54,4 +54,7 @@
 
 ![push](https://github.com/SlavaZakariev/netology/blob/6731b19cdaf56330cad08b66396fc6d8ec0d69c9/ci-cd/7.5_git/resources/git_1.8.jpg)
 
+9. Результат синхронизации с облачным GitHub.
+
+![github](https://github.com/SlavaZakariev/netology/blob/ca306df28edea2291912ccb33269fc9e6a8ad07e/ci-cd/7.5_git/resources/git_1.9.jpg)
 ---
