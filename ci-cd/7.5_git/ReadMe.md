@@ -30,19 +30,27 @@
 
 ![create](https://github.com/SlavaZakariev/netology/blob/c22ce3ca6b7e6f3283bf17a9d019e1457ba34e41/ci-cd/7.5_git/resources/git_1.2.jpg)
 
-3 и 4. Клонирован репозиторий и выполнен переход в директорию git.
+3. Клонирован репозиторий и выполнен переход в директорию git.
 
 ![clone](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.3.jpg)
 
-5. Произведена настройка.
+4. Произведена настройка.
 
 ![name](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.4.jpg)
 
-6. Статус git.
+5. Статус git.
 
 ![status](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.5.jpg)
 
-7. Изменение в файл ReadMe
+6. Переведен файл в состояние staged и внесены изменения в файл ReadMe
+
+![staged](https://github.com/SlavaZakariev/netology/blob/e3b461ffda9498a10d4861e9c1c452b784a6f28a/ci-cd/7.5_git/resources/git_1.6.jpg)
+
+7. Изменения в файле
+
+![diff](https://github.com/SlavaZakariev/netology/blob/e3b461ffda9498a10d4861e9c1c452b784a6f28a/ci-cd/7.5_git/resources/git_1.7.jpg)
+
+
 
 
 ---
