@@ -54,7 +54,22 @@
 
 ![push](https://github.com/SlavaZakariev/netology/blob/6731b19cdaf56330cad08b66396fc6d8ec0d69c9/ci-cd/7.5_git/resources/git_1.8.jpg)
 
-9. Результат синхронизации с облачным GitHub.
+9. Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/blob/main/README.md).
 
-![github](https://github.com/SlavaZakariev/netology/blob/ca306df28edea2291912ccb33269fc9e6a8ad07e/ci-cd/7.5_git/resources/git_1.9.jpg)
 ---
+
+Задание 2
+
+1. Создайте файл **.gitignore** (обратите внимание на точку в начале файла) и проверьте его статус сразу после создания.
+2. Добавьте файл **.gitignore** в следующий коммит **git add**....
+3. Напишите правила в этом файле, чтобы игнорировать любые файлы **.pyc**, а также все файлы в директории cache.
+4. Сделайте коммит и пуш.
+
+В качестве ответа добавьте ссылку на этот коммит в ваш md-файл с решением.
+
+---
+
+Решение 2
+
+1. Файл .gitignore
+
