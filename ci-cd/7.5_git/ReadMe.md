@@ -54,7 +54,7 @@
 
 ![push](https://github.com/SlavaZakariev/netology/blob/6731b19cdaf56330cad08b66396fc6d8ec0d69c9/ci-cd/7.5_git/resources/git_1.8.jpg)
 
-9. Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/graphs/commit-activity).
+Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/graphs/commit-activity).
 
 ---
 
@@ -87,7 +87,32 @@
 
 ![commit](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.4.jpg)
 
+Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/graphs/commit-activity).
+
 ---
 
 ### Задание 3
 
+1. Создайте новую ветку dev и переключитесь на неё.
+2. Создайте файл test.sh с произвольным содержимым.
+3. Сделайте несколько коммитов и пушей, имитируя активную работу над этим файлом.
+4. Сделайте мердж этой ветки в основную. Сначала нужно переключиться на неё, а потом вызывать git merge.
+5. Сделайте коммит и пуш.
+
+В качестве ответа прикрепите ссылку на граф коммитов в ваш md-файл с решением.
+
+---
+
+### Решение 3
+
+1. Созднана ветка dev, сделано переключение.
+
+![dev](https://github.com/SlavaZakariev/netology/blob/e5175794f0d0ad870da676b21d3e7071960a75c1/ci-cd/7.5_git/resources/git_3.1.jpg)
+
+2. Создан файл tesh.sh
+
+![.sh](https://github.com/SlavaZakariev/netology/blob/e5175794f0d0ad870da676b21d3e7071960a75c1/ci-cd/7.5_git/resources/git_3.2.jpg)
+
+3. Коммит и синхронизация с облаком GitHub
+
+![]()
