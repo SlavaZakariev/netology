@@ -109,7 +109,7 @@
 
 ![dev](https://github.com/SlavaZakariev/netology/blob/e5175794f0d0ad870da676b21d3e7071960a75c1/ci-cd/7.5_git/resources/git_3.1.jpg)
 
-2. Создан файл tesh.sh.
+2. Создан файл test.sh.
 
 ![.sh](https://github.com/SlavaZakariev/netology/blob/e5175794f0d0ad870da676b21d3e7071960a75c1/ci-cd/7.5_git/resources/git_3.2.jpg)
 
@@ -125,4 +125,4 @@
 
 ![finalcommit](https://github.com/SlavaZakariev/netology/blob/3bc5644a2d81b0f8ef426b5b22fafed197cd5cd6/ci-cd/7.5_git/resources/git_3.5.jpg)
 
-Ссылка на график репозитории main и dev на [GitHub[(https://github.com/SlavaZakariev/git-hw/network)
+Ссылка на график репозитории main и dev на [GitHub](https://github.com/SlavaZakariev/git-hw/network)
