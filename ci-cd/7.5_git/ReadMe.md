@@ -50,7 +50,8 @@
 
 ![diff](https://github.com/SlavaZakariev/netology/blob/e3b461ffda9498a10d4861e9c1c452b784a6f28a/ci-cd/7.5_git/resources/git_1.7.jpg)
 
+8. Выполнен **git push origin main**.
 
-
+![push](https://github.com/SlavaZakariev/netology/blob/6731b19cdaf56330cad08b66396fc6d8ec0d69c9/ci-cd/7.5_git/resources/git_1.8.jpg)
 
 ---
