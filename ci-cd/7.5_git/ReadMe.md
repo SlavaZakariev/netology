@@ -20,7 +20,7 @@
 
 ---
 
-## Решение 1
+### Решение 1
 
 1. Зарегистрирован аккаукт в GitHub.
 
@@ -42,11 +42,11 @@
 
 ![status](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.5.jpg)
 
-6. Переведен файл в состояние staged и внесены изменения в файл ReadMe
+6. Переведен файл в состояние staged и внесены изменения в файл ReadMe.
 
 ![staged](https://github.com/SlavaZakariev/netology/blob/e3b461ffda9498a10d4861e9c1c452b784a6f28a/ci-cd/7.5_git/resources/git_1.6.jpg)
 
-7. Изменения в файле
+7. Изменения в файле.
 
 ![diff](https://github.com/SlavaZakariev/netology/blob/e3b461ffda9498a10d4861e9c1c452b784a6f28a/ci-cd/7.5_git/resources/git_1.7.jpg)
 
@@ -58,7 +58,7 @@
 
 ---
 
-Задание 2
+### Задание 2
 
 1. Создайте файл **.gitignore** (обратите внимание на точку в начале файла) и проверьте его статус сразу после создания.
 2. Добавьте файл **.gitignore** в следующий коммит **git add**....
@@ -69,7 +69,25 @@
 
 ---
 
-Решение 2
+### Решение 2
 
-1. Файл .gitignore
+1. Файл .gitignore.
+
+![gitignore](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.1.jpg)
+
+2. Добавление в следующий коммит.
+
+![gitadd](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.2.jpg)
+
+3. Внесение исключенний.
+
+![add](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.3.jpg)
+
+4. Выполнение коммит и синхронизация с облаком.
+
+![commit](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.4.jpg)
+
+---
+
+### Задание 3
 
