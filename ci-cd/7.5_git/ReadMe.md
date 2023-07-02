@@ -54,7 +54,7 @@
 
 ![push](https://github.com/SlavaZakariev/netology/blob/6731b19cdaf56330cad08b66396fc6d8ec0d69c9/ci-cd/7.5_git/resources/git_1.8.jpg)
 
-Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/graphs/commit-activity).
+Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/commit/24b2ebe76b8a52ff9afa744b501bf6d34601bbb1).
 
 ---
 
@@ -87,7 +87,7 @@
 
 ![commit](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.4.jpg)
 
-Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/graphs/commit-activity).
+Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/commit/136b1c6b7868fd19a7dc135bf625ddb0d037d128).
 
 ---
 
