@@ -27,7 +27,7 @@
 
 5. Создан проект в Jenkins.
 
-![project](https://github.com/SlavaZakariev/netology/blob/af822561fdf1446a6ca6928c8af611f5aec23b1b/ci-cd/7.6_DevOps/resources/jenkins_1.4.jpg)
+![project](https://github.com/SlavaZakariev/netology/blob/2b142012557e9cb257458b1e11f3fcc3641a833f/ci-cd/7.6_DevOps/resources/jenkins_1.4.jpg)
 
 Дополнительные шаги.
 
