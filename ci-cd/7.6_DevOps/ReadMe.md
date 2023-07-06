@@ -13,6 +13,24 @@
 
 ### Решение 1
 
+1. Установка Jenkins.
+![jenkins](https://github.com/SlavaZakariev/netology/blob/cd6a6f922401d3e72875c0e102bab8e55ddfc7d8/ci-cd/7.6_DevOps/resources/jenkins_1.1.jpg)
+
+2. Установка Golang.
+![go](https://github.com/SlavaZakariev/netology/blob/af822561fdf1446a6ca6928c8af611f5aec23b1b/ci-cd/7.6_DevOps/resources/jenkins_1.2.jpg)
+
+3. Форк репозитория.
+![fork](https://github.com/SlavaZakariev/netology/blob/af822561fdf1446a6ca6928c8af611f5aec23b1b/ci-cd/7.6_DevOps/resources/jenkins_1.3.jpg)
+
+4. Создан проект в Jenkins.
+![project](https://github.com/SlavaZakariev/netology/blob/af822561fdf1446a6ca6928c8af611f5aec23b1b/ci-cd/7.6_DevOps/resources/jenkins_1.4.jpg)
+
+Дополнительные шаги.
+![build](https://github.com/SlavaZakariev/netology/blob/af822561fdf1446a6ca6928c8af611f5aec23b1b/ci-cd/7.6_DevOps/resources/jenkins_1.5.jpg)
+
+Успешный результат с 14 попытки.
+![done](https://github.com/SlavaZakariev/netology/blob/af822561fdf1446a6ca6928c8af611f5aec23b1b/ci-cd/7.6_DevOps/resources/jenkins_1.6.jpg)
+
 ---
 
 ### Задание 2
