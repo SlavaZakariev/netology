@@ -50,6 +50,9 @@
 
 ### Решение 2
 
+1. Создан Pipeline.
+![pipeline](https://github.com/SlavaZakariev/netology/blob/84d89305b6f39a565028ce2b3415a534b44bfe39/ci-cd/7.6_DevOps/resources/jenkins_2.1.jpg)
+
 ---
 
 ### Задание 3
