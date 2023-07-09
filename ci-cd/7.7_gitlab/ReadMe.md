@@ -44,3 +44,22 @@
 
 ### Решение 2
 
+1. Внесён проект в GitLab.
+
+![gitlab.local](https://github.com/SlavaZakariev/netology/blob/beb6b0452d97be429c338bcec26f69c39a22a03e/ci-cd/7.7_gitlab/resources/gitlab_1.5.jpg)
+
+2. Процесс предварительного добавления локального GitLab и вывод списка.
+
+![remote](https://github.com/SlavaZakariev/netology/blob/beb6b0452d97be429c338bcec26f69c39a22a03e/ci-cd/7.7_gitlab/resources/gitlab_1.6.jpg)
+
+3. Статус после создания файла **gitlab-ci.yml**.
+
+![yml](https://github.com/SlavaZakariev/netology/blob/beb6b0452d97be429c338bcec26f69c39a22a03e/ci-cd/7.7_gitlab/resources/gitlab_1.7.jpg)
+
+4. Внесение файла **gitlab-ci.yml** в локальный GitLab.
+
+![push.yml](https://github.com/SlavaZakariev/netology/blob/beb6b0452d97be429c338bcec26f69c39a22a03e/ci-cd/7.7_gitlab/resources/gitlab_1.8.jpg)
+
+5. Содержимое файла **gitlab-ci.yml**.
+
+![cat.yml](https://github.com/SlavaZakariev/netology/blob/5f549d6ea65441455e0610d2d60763968758adcd/ci-cd/7.7_gitlab/resources/gitlab_1.9.jpg)
