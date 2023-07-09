@@ -12,7 +12,21 @@
 
 ### Решение 1
 
+1. Развёрнут GitLab
 
+![gitlab](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.4.jpg)
+
+2. Созднан проект
+
+![project](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.1.jpg)
+
+3. Зарегистрирован runner
+
+![runner](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.3.jpg)
+
+Процесс регистрации в docker
+
+![docker](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.2.jpg)
 
 ---
 
