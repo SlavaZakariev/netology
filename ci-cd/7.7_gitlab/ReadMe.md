@@ -62,4 +62,4 @@
 
 5. Содержимое файла **gitlab-ci.yml**.
 
-![cat.yml](https://github.com/SlavaZakariev/netology/blob/5f549d6ea65441455e0610d2d60763968758adcd/ci-cd/7.7_gitlab/resources/gitlab_1.9.jpg)
+![cat.yml](https://github.com/SlavaZakariev/netology/blob/eb265a797c3266135025592daf4d44dcf67e98bc/ci-cd/7.7_gitlab/resources/gitlab_1.9.jpg)
