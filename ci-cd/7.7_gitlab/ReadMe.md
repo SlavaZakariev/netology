@@ -60,10 +60,10 @@
 
 ![push.yml](https://github.com/SlavaZakariev/netology/blob/beb6b0452d97be429c338bcec26f69c39a22a03e/ci-cd/7.7_gitlab/resources/gitlab_1.8.jpg)
 
-5. Выполнение pipeline ***(ПРИШЛОСЬ ОТКАТИТЬСЯ НА 14.0 ВЕРСИЮ, ЧТО ВЫПОЛНЕНИЕ ПРОШЛО КОРРЕКТНО, ИНАЧЕ ПОСТОЯЯНО ВЫПАДАЕТ ОШИБКА)***
-
-![pipeline](https://github.com/SlavaZakariev/netology/blob/7a8bd4a6b9b1a8c351b1924bf171deb4030dfe25/ci-cd/7.7_gitlab/resources/gitlab_1.11.jpg)
-
 5. Содержимое файла **.gitlab-ci.yml**.
 
 ![cat.yml](https://github.com/SlavaZakariev/netology/blob/eb265a797c3266135025592daf4d44dcf67e98bc/ci-cd/7.7_gitlab/resources/gitlab_1.9.jpg)
+
+6. Выполнение pipeline ***(Пришлось откатиться на 14.0 GitLab версию, иначе постояяно выпадает ошибка)***
+
+![pipeline](https://github.com/SlavaZakariev/netology/blob/7a8bd4a6b9b1a8c351b1924bf171deb4030dfe25/ci-cd/7.7_gitlab/resources/gitlab_1.11.jpg)
