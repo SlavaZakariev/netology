@@ -16,7 +16,7 @@
 
 ![gitlab](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.4.jpg)
 
-2. Созднан проект
+2. Создан проект
 
 ![project](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.1.jpg)
 
@@ -64,6 +64,6 @@
 
 ![cat.yml](https://github.com/SlavaZakariev/netology/blob/eb265a797c3266135025592daf4d44dcf67e98bc/ci-cd/7.7_gitlab/resources/gitlab_1.9.jpg)
 
-6. Выполнение pipeline ***(Пришлось откатиться на 14.0 GitLab версию, иначе постояяно выпадает ошибка)***
+6. Выполнение pipeline **(Пришлось откатиться на 14.0 GitLab версию, иначе постоянно выпадает ошибка)**
 
 ![pipeline](https://github.com/SlavaZakariev/netology/blob/7a8bd4a6b9b1a8c351b1924bf171deb4030dfe25/ci-cd/7.7_gitlab/resources/gitlab_1.11.jpg)
