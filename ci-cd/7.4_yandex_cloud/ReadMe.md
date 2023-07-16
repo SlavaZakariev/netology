@@ -121,3 +121,27 @@ output "external_ip_address_vm_1" {
 3. Выполнение команды **terraform apply**
  
 ![apply](https://github.com/SlavaZakariev/netology/blob/6d0225ca830497dfa282702bd3759a0dd7e28d5e/ci-cd/7.4_yandex_cloud/resources/yc_1.3.jpg)
+
+4. Playbook для инсталяции **Nging**
+
+```
+- name: Instal nginx
+  hosts: 51.250.76.39
+  become: true
+
+  tasks:
+  - name: Install nginx
+    apt:
+      name: nginx
+      state: latest
+
+  - name: Start nginx
+    systemd:
+      name: nginx
+      enabled: true
+      state: started
+    notify:
+      - nginx systemd
+```
+
+5. Проверка соединения
