@@ -144,4 +144,10 @@ output "external_ip_address_vm_1" {
       - nginx systemd
 ```
 
-5. Проверка соединения
+5. Выполнение Playbook'а
+
+![playbook](https://github.com/SlavaZakariev/netology/blob/71952eafd90244496ae0b6af7a1326dd3ca20c3b/ci-cd/7.4_yandex_cloud/resources/yc_1.4.jpg)
+
+6. Проверка соединения через консоль
+
+![curl](https://github.com/SlavaZakariev/netology/blob/71952eafd90244496ae0b6af7a1326dd3ca20c3b/ci-cd/7.4_yandex_cloud/resources/yc_1.5.jpg)
