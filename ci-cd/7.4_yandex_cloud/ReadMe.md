@@ -118,11 +118,11 @@ output "external_ip_address_vm_1" {
 
 ![plan](https://github.com/SlavaZakariev/netology/blob/ffbd259fa12f4c1c94574b7e16c8caa13b78e42e/ci-cd/7.4_yandex_cloud/resources/yc_1.2.jpg)
 
-3. Выполнение команды **terraform apply**
+3. Создание инфраструктуры **terraform apply**
  
 ![apply](https://github.com/SlavaZakariev/netology/blob/6d0225ca830497dfa282702bd3759a0dd7e28d5e/ci-cd/7.4_yandex_cloud/resources/yc_1.3.jpg)
 
-4. Playbook для инсталяции **Nging**
+4. Playbook для инсталяции **Nginx**
 
 ```
 - name: Instal nginx
@@ -148,6 +148,6 @@ output "external_ip_address_vm_1" {
 
 ![playbook](https://github.com/SlavaZakariev/netology/blob/71952eafd90244496ae0b6af7a1326dd3ca20c3b/ci-cd/7.4_yandex_cloud/resources/yc_1.4.jpg)
 
-6. Проверка соединения через консоль
+6. Проверка соединения с сервером **Nginx** через консоль
 
 ![curl](https://github.com/SlavaZakariev/netology/blob/71952eafd90244496ae0b6af7a1326dd3ca20c3b/ci-cd/7.4_yandex_cloud/resources/yc_1.5.jpg)
