@@ -37,3 +37,11 @@
 ---
 
 ### Решение 1
+
+1. Создана ВМ согласно условию.
+
+![vm](https://github.com/SlavaZakariev/netology/blob/ef5538a2a1a6d60bfb73add84bb0d8ecb067eaee/monitoring/8.1_review/resources/monit_1.1.jpg)
+
+2. Построен график нагрузки ЦП для созданной ВМ. (на графике выбрано за посление 30 минут)
+
+![cpu](https://github.com/SlavaZakariev/netology/blob/ef5538a2a1a6d60bfb73add84bb0d8ecb067eaee/monitoring/8.1_review/resources/monit_1.2.jpg)
