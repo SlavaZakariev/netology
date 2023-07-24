@@ -45,7 +45,7 @@ zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psq
 # 6. Добавлен пароль в файл конфигурации /etc/zabbix/zabbix_server.conf
 DBPassword=password
 
-# 7. Перезапуск сервиса, настройка zabbix сервера и веб-сервера при загрузке ОС
+# 7. Перезапуск сервиса, настройка zabbix сервера и веб-сервера apache при загрузке ОС
 systemctl restart zabbix-server apache2
 systemctl enable zabbix-server apache2
 
@@ -54,6 +54,18 @@ systemctl enable zabbix-server apache2
 Проверка службы zabbix
 
 ![status](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.2.jpg)
+
+Первичная настройка веб-интерфейса 
+
+![status](https://github.com/SlavaZakariev/netology/blob/22f56dece440a9a20a2776bd7c3c67ccacc2e705/monitoring/8.2_zabbix_part1/resources/zabbix1_1.3.jpg)
+
+Успешное завершение всех шагов первичной настройки веб-интерфейса 
+
+![status](https://github.com/SlavaZakariev/netology/blob/22f56dece440a9a20a2776bd7c3c67ccacc2e705/monitoring/8.2_zabbix_part1/resources/zabbix1_1.4.jpg)
+
+Авторизация в админке сервера zabbix
+
+![admin](https://github.com/SlavaZakariev/netology/blob/22f56dece440a9a20a2776bd7c3c67ccacc2e705/monitoring/8.2_zabbix_part1/resources/zabbix1_1.5.jpg)
 
 ---
 ### Задание 2 
