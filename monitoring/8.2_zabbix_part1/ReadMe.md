@@ -16,6 +16,41 @@
 
 ---
 
+### Решение 1
+
+Для установки поднят сервер Ubuntu 22.04.2 LTS
+
+[ver]()
+
+```
+# 1. Установка СУБД PosgreSQL
+apt update
+apt install postgresql 
+
+# 2. Установка репозитория Zabbix
+wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
+dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
+apt update
+
+# 3. Установка Zabbix сервер, веб-интерфейс
+apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-conf zabbix-sql-scripts
+
+# 4. Установка роли zabbix и БД для сервиса zabbix в СУБД PosgreSQL
+sudo -u postgres createuser --pwprompt zabbix
+sudo -u postgres createdb -O zabbix zabbix
+
+# 5. Импорти начальных схем и данных
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+
+# 6. Добавлен пароль в файл конфигурации /etc/zabbix/zabbix_server.conf
+DBPassword=password
+
+
+
+
+```
+
+---
 ### Задание 2 
 
 Установите Zabbix Agent на два хоста.
