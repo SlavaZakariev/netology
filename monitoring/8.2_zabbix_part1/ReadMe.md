@@ -20,7 +20,7 @@
 
 Для установки поднят сервер Ubuntu 22.04.2 LTS
 
-[ver]()
+[ver](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.1.jpg)
 
 ```
 # 1. Установка СУБД PosgreSQL
@@ -45,10 +45,11 @@ zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psq
 # 6. Добавлен пароль в файл конфигурации /etc/zabbix/zabbix_server.conf
 DBPassword=password
 
-
-
-
 ```
+
+Проверка службы zabbix
+
+[status](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.2.jpg)
 
 ---
 ### Задание 2 
