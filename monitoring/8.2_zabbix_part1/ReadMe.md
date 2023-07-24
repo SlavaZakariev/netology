@@ -20,7 +20,7 @@
 
 Для установки поднят сервер Ubuntu 22.04.2 LTS
 
-[ver](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.1.jpg)
+![ver](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.1.jpg)
 
 ```
 # 1. Установка СУБД PosgreSQL
@@ -49,7 +49,7 @@ DBPassword=password
 
 Проверка службы zabbix
 
-[status](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.2.jpg)
+![status](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.2.jpg)
 
 ---
 ### Задание 2 
