@@ -39,11 +39,15 @@ apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-c
 sudo -u postgres createuser --pwprompt zabbix
 sudo -u postgres createdb -O zabbix zabbix
 
-# 5. Импорти начальных схем и данных
+# 5. Импорт начальных схем и данных
 zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
 
 # 6. Добавлен пароль в файл конфигурации /etc/zabbix/zabbix_server.conf
 DBPassword=password
+
+# 7. Перезапуск сервиса, настройка zabbix сервера и веб-сервера при загрузке ОС
+systemctl restart zabbix-server apache2
+systemctl enable zabbix-server apache2
 
 ```
 
