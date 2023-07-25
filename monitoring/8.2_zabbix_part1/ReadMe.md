@@ -68,6 +68,7 @@ systemctl enable zabbix-server apache2
 ![admin](https://github.com/SlavaZakariev/netology/blob/22f56dece440a9a20a2776bd7c3c67ccacc2e705/monitoring/8.2_zabbix_part1/resources/zabbix1_1.5.jpg)
 
 ---
+
 ### Задание 2 
 
 Установите Zabbix Agent на два хоста.
@@ -84,3 +85,24 @@ systemctl enable zabbix-server apache2
 2. Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером
 3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
 4. Приложите в файл README.md текст использованных команд в GitHub
+
+---
+
+### Решение 2
+
+
+
+``` 
+# 1. Установка репозитория Zabbix
+wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
+dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
+apt update
+
+# 2. Установка Zabbix агента
+apt install zabbix-agent
+
+# 3. Перезапуск сервиса, настройка zabbix агента при загрузке ОС
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent
+
+```
