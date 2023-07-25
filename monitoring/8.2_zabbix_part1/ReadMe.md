@@ -90,9 +90,19 @@ systemctl enable zabbix-server apache2
 
 ### Решение 2
 
-Добавление двух хостов и проверка работы сервиса zabbix агентов на хостах
+1. Добавление двух хостов и проверка работы сервиса zabbix агентов на хостах
 
 ![service](https://github.com/SlavaZakariev/netology/blob/ce83620940d6bf4e40f27a5428185499aad04f37/monitoring/8.2_zabbix_part1/resources/zabbix1_1.8.jpg)
+
+2. Добавлены хосты в zabbix
+
+![hosts](https://github.com/SlavaZakariev/netology/blob/470de14a519ff96d7d3963480a8f7154c281bd95/monitoring/8.2_zabbix_part1/resources/zabbix1_1.6.jpg)
+
+3. Данные мониторинга "Latest data"
+
+![latest](https://github.com/SlavaZakariev/netology/blob/470de14a519ff96d7d3963480a8f7154c281bd95/monitoring/8.2_zabbix_part1/resources/zabbix1_1.7.jpg)
+
+4. Команды использованные для установки zabbix агентов на хостах Ubuntu2 и Ubuntu3
 
 ``` 
 # 1. Установка репозитория Zabbix
