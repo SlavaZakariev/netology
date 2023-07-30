@@ -84,6 +84,6 @@
 
 ### Решение 4
 
-Создна Dashboard с данными хостов zakarievvr-2 и zakarievvr-3
+Создан Dashboard с графическими данными хостов zakarievvr-2 и zakarievvr-3 CPU\RAM
 
 ![dash](https://github.com/SlavaZakariev/netology/blob/2209dab1253ce21a421f520036e5275ecf6d5cb5/monitoring/8.3_zabbix_part2/resources/zabbix_2.4.jpg)
