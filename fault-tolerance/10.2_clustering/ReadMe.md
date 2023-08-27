@@ -28,16 +28,13 @@ backend web_servers    # секция бэкенд
         server s1 127.0.0.1:8000 check
         server s2 127.0.0.1:9000 check
 
-
 listen web_tcp
-
 	bind :1325
-
 	server s1 127.0.0.1:8000 check inter 3s
 	server s2 127.0.0.1:9000 check inter 3s
 ```
 
-2. Настроена балансировка н round-bobin
+2. Настроена балансировка round-bobin
 
 ![roundrobin](https://github.com/SlavaZakariev/netology/blob/1c8216bfa5aeb20aaf4da314579a962d33e9db1e/fault-tolerance/10.2_clustering/resources/haproxy_1.1.jpg)
 
