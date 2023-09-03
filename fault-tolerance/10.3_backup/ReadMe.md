@@ -8,7 +8,11 @@
 
 ---
 
-Решение 1
+### Решение 1
+
+Результат выполнения синхронизации с исключением скрытых папок с подсчётом хэш-сумм.
+
+![hash](https://github.com/SlavaZakariev/netology/blob/main/fault-tolerance/10.3_backup/resources/rsync_1.1.jpg)
 
 ---
 
@@ -21,6 +25,23 @@
 
 ---
 
-Решение 2
+### Решение 2
+
+1. Написан скрипт с зеркальным копированием файлов/папок.
+
+![script](https://github.com/SlavaZakariev/netology/blob/ddd7434e1880903d43bee914f34e803ba9d0d899/fault-tolerance/10.3_backup/resources/rsync_1.2.jpg)
+
+2. Задание в cron 0 0 * * *, указывает что в полночь каждый день, будет выполняться скрипт. Также можно указать переменные в виде @daily, @midnight вместо значений пяти звёздочек, что будет аналогично значению 0 0 * * *
+
+![cron](https://github.com/SlavaZakariev/netology/blob/ddd7434e1880903d43bee914f34e803ba9d0d899/fault-tolerance/10.3_backup/resources/rsync_1.3.jpg)
+
+3. Запись в логе по завершению выполнения.
+
+![finish](https://github.com/SlavaZakariev/netology/blob/ddd7434e1880903d43bee914f34e803ba9d0d899/fault-tolerance/10.3_backup/resources/rsync_1.4.jpg)
+
+4. Сравнение папок /home/sysadmin и /tmp/backup
+
+![sync](https://github.com/SlavaZakariev/netology/blob/ddd7434e1880903d43bee914f34e803ba9d0d899/fault-tolerance/10.3_backup/resources/rsync_1.5.jpg)
 
 ---
+
