@@ -29,7 +29,7 @@
 
 ### Решение 1
 
-1. Подготовлена папка проекта terraform
+1. Подготовлена папка проекта **terraform**
 
 ![folders](https://github.com/SlavaZakariev/netology/blob/06cf5db1fbf5a829c1ee33dc205c32f617d5c709/fault-tolerance/10.4_fault-tolerance-in-the-cloud/recources/fault_1.1.jpg)
 
@@ -174,5 +174,9 @@ users:
 
 7. Балансировкщик в облаке
 
-![yc1](https://github.com/SlavaZakariev/netology/blob/06cf5db1fbf5a829c1ee33dc205c32f617d5c709/fault-tolerance/10.4_fault-tolerance-in-the-cloud/recources/fault_1.5.jpg)
-![yc1](https://github.com/SlavaZakariev/netology/blob/06cf5db1fbf5a829c1ee33dc205c32f617d5c709/fault-tolerance/10.4_fault-tolerance-in-the-cloud/recources/fault_1.6.jpg)
+![yc2](https://github.com/SlavaZakariev/netology/blob/06cf5db1fbf5a829c1ee33dc205c32f617d5c709/fault-tolerance/10.4_fault-tolerance-in-the-cloud/recources/fault_1.5.jpg)
+![yc3](https://github.com/SlavaZakariev/netology/blob/06cf5db1fbf5a829c1ee33dc205c32f617d5c709/fault-tolerance/10.4_fault-tolerance-in-the-cloud/recources/fault_1.6.jpg)
+
+8. Страница nginx при обращении к адресу балансера.
+
+![lb](https://github.com/SlavaZakariev/netology/blob/8052cd2580741510a0465eb5647ee04e733bc1bb/fault-tolerance/10.4_fault-tolerance-in-the-cloud/recources/fault_1.7.jpg)
