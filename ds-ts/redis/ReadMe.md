@@ -41,6 +41,12 @@
 
 ---
 
+### Решение 3
+
+![ttl5](https://github.com/SlavaZakariev/netology/blob/12148f1146cf6fdc2275d508e2c3707d9e9606da/ds-ts/redis/resources/cash_1.2.jpg)
+
+---
+
 ### Задание 4. Запись данных в Redis
 
 Запишите в Redis несколько ключей с любыми именами и значениями. 
