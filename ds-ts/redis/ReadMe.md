@@ -43,6 +43,8 @@
 
 ### Решение 3
 
+Выставлен ttl 5 секунд
+
 ![ttl5](https://github.com/SlavaZakariev/netology/blob/12148f1146cf6fdc2275d508e2c3707d9e9606da/ds-ts/redis/resources/cash_1.2.jpg)
 
 ---
@@ -52,3 +54,13 @@
 Запишите в Redis несколько ключей с любыми именами и значениями. 
 
 *Через redis-cli достаньте все записанные ключи и значения из базы, приведите скриншот этой операции.*
+
+---
+
+Установлен redis
+
+![redis1](https://github.com/SlavaZakariev/netology/blob/58297083f1e144680b43a1b81732cc5e6c155871/ds-ts/redis/resources/cash_1.3.jpg)
+
+Добавлены три ключа
+
+![redis1](https://github.com/SlavaZakariev/netology/blob/58297083f1e144680b43a1b81732cc5e6c155871/ds-ts/redis/resources/cash_1.4.jpg)
