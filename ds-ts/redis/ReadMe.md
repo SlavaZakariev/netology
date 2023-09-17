@@ -25,6 +25,14 @@
 
 ---
 
+### Решение 2
+
+Установлен memcached, версия 1.6.14
+
+![memcached](https://github.com/SlavaZakariev/netology/blob/e6247e5fc68bfbc213fbb88d86422a0665668524/ds-ts/redis/resources/cash_1.1.jpg)
+
+---
+
 ### Задание 3. Удаление по TTL в Memcached
 
 Запишите в memcached несколько ключей с любыми именами и значениями, для которых выставлен TTL 5. 
