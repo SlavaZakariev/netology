@@ -10,6 +10,15 @@
 
 ### Решение 1
 
+Подняты четыре контейнера.
+
+![docker](https://github.com/SlavaZakariev/netology/blob/a324eda2228c130c94fc2c714997cf157b98bd05/ds-ts/elk/resources/ELK_1.1.jpg)
+
+
+Веб страница **elasticsearch**.
+
+![docker](https://github.com/SlavaZakariev/netology/blob/a324eda2228c130c94fc2c714997cf157b98bd05/ds-ts/elk/resources/ELK_1.2.jpg)
+
 ---
 
 ### Задание 2. Kibana
@@ -21,6 +30,10 @@
 ---
 
 ### Решение 2
+
+В Kibana выполнен запрос **GET /_cluster/health?pretty**
+
+![docker](https://github.com/SlavaZakariev/netology/blob/a324eda2228c130c94fc2c714997cf157b98bd05/ds-ts/elk/resources/ELK_1.3.jpg)
 
 ---
 
