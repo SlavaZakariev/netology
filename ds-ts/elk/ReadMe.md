@@ -10,6 +10,69 @@
 
 ### Решение 1
 
+<details>
+   <summary> Конфигурационный файл docker-compose.yaml для 4-х контейнеров. </summary>
+
+```
+version: '3.7'
+
+services:
+  # Elasticsearch Docker Images: https://www.docker.elastic.co/
+  elasticsearch:
+    image: elasticsearch:7.17.9
+    container_name: elasticsearch
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+  kibana:
+    container_name: kibana
+    image: kibana:7.17.9
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.17.9
+    command: --strict.perms=false
+    user: root
+    volumes:
+      - /root/projects/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - /var/www/html:/usr/share/nginx/html
+    restart: always
+
+volumes:
+  elasticsearch-data:
+    driver: local
+
+```
+</details>
+
 Подняты четыре контейнера.
 
 ![docker](https://github.com/SlavaZakariev/netology/blob/a324eda2228c130c94fc2c714997cf157b98bd05/ds-ts/elk/resources/ELK_1.1.jpg)
