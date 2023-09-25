@@ -80,7 +80,7 @@ volumes:
 
 Веб страница **elasticsearch**.
 
-![docker](https://github.com/SlavaZakariev/netology/blob/a324eda2228c130c94fc2c714997cf157b98bd05/ds-ts/elk/resources/ELK_1.2.jpg)
+![elastic](https://github.com/SlavaZakariev/netology/blob/a324eda2228c130c94fc2c714997cf157b98bd05/ds-ts/elk/resources/ELK_1.2.jpg)
 
 ---
 
@@ -96,7 +96,7 @@ volumes:
 
 В Kibana выполнен запрос **GET /_cluster/health?pretty**
 
-![docker](https://github.com/SlavaZakariev/netology/blob/a324eda2228c130c94fc2c714997cf157b98bd05/ds-ts/elk/resources/ELK_1.3.jpg)
+![kibana](https://github.com/SlavaZakariev/netology/blob/a324eda2228c130c94fc2c714997cf157b98bd05/ds-ts/elk/resources/ELK_1.3.jpg)
 
 ---
 
@@ -110,6 +110,8 @@ volumes:
 
 ### Решение 3
 
+![logstash](https://github.com/SlavaZakariev/netology/blob/164ed6f6916d9159c2c9656a6e698722f8f9e683/ds-ts/elk/resources/ELK_1.4.jpg)
+
 ---
 
 ### Задание 4. Filebeat. 
@@ -121,6 +123,8 @@ volumes:
 ---
 
 ### Решение 4
+
+![filebeat](https://github.com/SlavaZakariev/netology/blob/164ed6f6916d9159c2c9656a6e698722f8f9e683/ds-ts/elk/resources/ELK_1.5.jpg)
 
 ---
 
