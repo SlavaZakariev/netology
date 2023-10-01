@@ -18,17 +18,50 @@
 ```sql
 ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
-1.6. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
+1.7. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
 
-1.7. Восстановите дамп в базу данных.
+1.8. Восстановите дамп в базу данных.
 
-1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
+1.9. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 ---
 
 ### Решение 1
+
+1.1 Поднят MySql 8.0.34
+
+![version](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.1.jpg)
+
+1.2 Создана учётная запись sys_temp
+
+![account](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.2.jpg)
+
+1.3 Список пользователей
+
+![list](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.3.jpg)
+
+1.4 Выданы все права для пользователя sys_temp
+
+![grand](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.4.jpg)
+
+1.5 Запрос на получение списка прав для пользователя sys_temp
+
+![check_grand](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.5.jpg)
+
+1.6 Задан пароль для пользователя sys_temp
+
+![password](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.6.jpg)
+
+   - Выход из-под root и вход под sys_temp
+
+![change_user](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.7.jpg)
+
+   - Проверка текущего пользователя
+
+![check_user](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.8.jpg)
+
 
 ---
 
