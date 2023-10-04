@@ -62,6 +62,13 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 ![check_user](https://github.com/SlavaZakariev/netology/blob/36e710a7b641b43de618002ede2e6f9b79ab72e7/db/12.2_ddl-dml/resources/mysql_1.8.jpg)
 
+1.7 Скачан архив
+
+![wget](https://github.com/SlavaZakariev/netology/blob/14f858b2a4f724973f2ef03f923b1ee27aca3949/db/12.2_ddl-dml/resources/mysql_1.9.jpg)
+
+1.8 Восстановлен дамп
+
+![wget](https://github.com/SlavaZakariev/netology/blob/14f858b2a4f724973f2ef03f923b1ee27aca3949/db/12.2_ddl-dml/resources/mysql_1.10.jpg)
 
 ---
 
