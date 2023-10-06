@@ -88,6 +88,6 @@ customer         | customer_id
 
 ### Решение 2
 
-![tables]
+![tables](https://github.com/SlavaZakariev/netology/blob/453041936207b84dcd0dea515cf96162b6f3108d/db/12.2_ddl-dml/resources/mysql_2.1.jpg)
  
 ---
