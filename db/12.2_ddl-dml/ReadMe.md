@@ -70,6 +70,10 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 ![wget](https://github.com/SlavaZakariev/netology/blob/14f858b2a4f724973f2ef03f923b1ee27aca3949/db/12.2_ddl-dml/resources/mysql_1.10.jpg)
 
+1.9 Подключение к БД через DBeaver
+
+![DBeaver](https://github.com/SlavaZakariev/netology/blob/440010769c1c46a6b223431e6a7803ba1234a85b/db/12.2_ddl-dml/resources/mysql_1.11.jpg)
+
 ---
 
 ### Задание 2
