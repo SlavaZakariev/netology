@@ -10,6 +10,16 @@
 
 ### Решение 1
 
+Выборка по столбцу **district** в таблице **address** с использованием оператора **LIKE** выборки названия и **POSITION** для исключения пробела.
+
+```
+SELECT DISTINCT district
+FROM address
+WHERE district like 'K%a'
+      and POSITION(' ' IN district) = 0;
+```
+![sql1](https://github.com/SlavaZakariev/netology/blob/c2a8c93a415344ce28e22257ea0043021a064225/db/12.3_SQL_part1/resources/sql_1.1.jpg)
+
 ---
 
 ### Задание 2
@@ -20,6 +30,16 @@
 
 ### Решение 2
 
+Выборка всех строк в таблице **payment** с уточняющими параметрами промежутка даты и величины стоимости.
+
+```
+SELECT *
+FROM payment
+WHERE Date(payment_date) between '2005-06-15' and '2005-06-18'
+      and amount > 10.0;
+```
+![sql2](https://github.com/SlavaZakariev/netology/blob/c2a8c93a415344ce28e22257ea0043021a064225/db/12.3_SQL_part1/resources/sql_1.2.jpg)
+
 ---
 
 ### Задание 3
@@ -29,6 +49,16 @@
 ---
 
 ### Решение 3
+
+Выборка всех строк в таблице **rental** сортируя с помощью оператора **ORDER BY**, и указанием лимита.
+
+```
+SELECT *
+FROM rental
+ORDER BY rental_date DESC
+LIMIT 5;
+```
+![sql3](https://github.com/SlavaZakariev/netology/blob/c2a8c93a415344ce28e22257ea0043021a064225/db/12.3_SQL_part1/resources/sql_1.3.jpg)
 
 ---
 
@@ -43,5 +73,14 @@
 ---
 
 ### Решение 4
+
+Выборка с подменой в имени в таблице **customer** с уточняющими параметрами по имени и активности с помощью оператора **WHERE**.
+
+```
+SELECT REPLACE(LOWER(first_name), 'll', 'pp'), LOWER(last_name), active
+FROM customer
+WHERE first_name IN ('Kelly', 'Willie') and active = 1;
+```
+![sql4](https://github.com/SlavaZakariev/netology/blob/c2a8c93a415344ce28e22257ea0043021a064225/db/12.3_SQL_part1/resources/sql_1.4.jpg)
 
 ---
