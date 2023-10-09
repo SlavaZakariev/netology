@@ -24,7 +24,7 @@ group by sf.staff_id
 having COUNT(cr.customer_id) > 300;
 ```
 
-![sql1](https://github.com/SlavaZakariev/netology/blob/dd6858cda563ffdaf9a2721b5e737e5f845c91ef/db/12.4_SQL_part2/resources/sql_2.1.jpg
+![sql1]()
  
 ---
 
