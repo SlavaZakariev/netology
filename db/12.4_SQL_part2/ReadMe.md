@@ -11,20 +11,25 @@
 
 ### Решение 1
 
+Выборка:
+- по объединноному столбцу ФИО сотрудника, города и количеству покупателей просуммированые по уникальному номеру из таблицы **store**
+- с использованием оператора **LIKE** для выборки условия названи в кавычках
+- и оператор **POSITION** для исключения пробела.
+
 ```sql
 select	concat(sf.first_name , ' ', sf.last_name) as 'Full Name Employee',
 		cy.city as 'City',
 		COUNT(cr.customer_id) as 'Number of Buyers'		
 from store s
-join staff sf on sf.store_id = s.store_id 
-join customer cr on cr.store_id = s.store_id
-join address a on a.address_id = s.address_id 
-join city cy on cy.city_id = a.city_id 
+inner join staff sf on sf.store_id = s.store_id 
+inner join customer cr on cr.store_id = s.store_id
+inner join address a on a.address_id = s.address_id 
+inner join city cy on cy.city_id = a.city_id 
 group by sf.staff_id
 having COUNT(cr.customer_id) > 300;
 ```
 
-![sql1](https://github.com/SlavaZakariev/netology/blob/5275f161c3c14645c9686ad8b8fd5e7ba9898c16/db/12.4_SQL_part2/resources/sql_2.1.jpg)
+![sql1]()
  
 ---
 
