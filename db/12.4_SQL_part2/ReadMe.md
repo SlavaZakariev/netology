@@ -11,7 +11,7 @@
 
 ### Решение 1
 
-```
+```sql
 select	concat(sf.first_name , ' ', sf.last_name) as 'LFMname Employee',
 		cy.city,
 		COUNT(cr.customer_id) as 'Count Buyers'		
@@ -35,7 +35,8 @@ having COUNT(cr.customer_id) > 300;
 ---
 
 ### Решение 2
-```
+
+```sql
 select COUNT(f.title)
 from film f  
 where f.`length` > (select AVG(`length`) 
@@ -53,7 +54,7 @@ where f.`length` > (select AVG(`length`)
 
 ### Решение 3
 
-```
+```sql
 select	t.amount_of_payments,
 	t.month_of_payments,
 	(select count(r.rental_id)
