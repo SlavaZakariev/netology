@@ -12,19 +12,19 @@
 ### Решение 1
 
 ```sql
-select	concat(sf.first_name , ' ', sf.last_name) as 'LFMname Employee',
-		cy.city,
-		COUNT(cr.customer_id) as 'Count Buyers'		
+select	concat(sf.first_name , ' ', sf.last_name) as 'Full Name Employee',
+		cy.city as 'City',
+		COUNT(cr.customer_id) as 'Number of Buyers'		
 from store s
 join staff sf on sf.store_id = s.store_id 
 join customer cr on cr.store_id = s.store_id
 join address a on a.address_id = s.address_id 
 join city cy on cy.city_id = a.city_id 
-group by sf.staff_id, cy.city_id 
+group by sf.staff_id
 having COUNT(cr.customer_id) > 300;
 ```
 
-![sql1](https://github.com/SlavaZakariev/netology/blob/dd6858cda563ffdaf9a2721b5e737e5f845c91ef/db/12.4_SQL_part2/resources/sql_2.1.jpg)
+![sql1](https://github.com/SlavaZakariev/netology/blob/dd6858cda563ffdaf9a2721b5e737e5f845c91ef/db/12.4_SQL_part2/resources/sql_2.1.jpg
  
 ---
 
