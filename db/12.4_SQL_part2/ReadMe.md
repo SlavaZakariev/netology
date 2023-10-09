@@ -41,7 +41,7 @@ from film f
 where f.`length` > (select AVG(`length`) 
                     from film);
 ```
-![sql2](https://github.com/SlavaZakariev/netology/blob/dd6858cda563ffdaf9a2721b5e737e5f845c91ef/db/12.4_SQL_part2/resources/sql_2.2.jpg)
+![sql2](https://github.com/SlavaZakariev/netology/blob/dd6858cda563ffdaf9a2721b5e737e5f845c91ef/db/12.4_SQL_part2/resources/sql_2.2.jp)
 
 ---
 
@@ -66,5 +66,5 @@ from (
 order by t.amount_of_payments desc  
 limit 1;
 ```
-![sql3](https://github.com/SlavaZakariev/netology/blob/dd6858cda563ffdaf9a2721b5e737e5f845c91ef/db/12.4_SQL_part2/resources/sql_2.3.jpg)
+![sql3](https://github.com/SlavaZakariev/netology/blob/dd6858cda563ffdaf9a2721b5e737e5f845c91ef/db/12.4_SQL_part2/resources/sql_2.3.jp)
 
