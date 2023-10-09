@@ -15,7 +15,7 @@
 - с использованием оператора **LIKE** для выборки условия названи в кавычках
 - и оператор **POSITION** для исключения пробела.
 
-```
+```sql
 SELECT DISTINCT district
 FROM address
 WHERE district like 'K%a'
@@ -39,7 +39,7 @@ WHERE district like 'K%a'
 - и промежутка даты с помощью оператора **BEETWEN**
 - и величины стоимости c использованием агрегатной функции **amount**
 
-```
+```sql
 SELECT *
 FROM payment
 WHERE Date(payment_date) between '2005-06-15' and '2005-06-18'
@@ -62,7 +62,7 @@ WHERE Date(payment_date) between '2005-06-15' and '2005-06-18'
 - отсортировать с помощью оператора **ORDER BY**
 - и указанием лимита с помощью оператора **LIMIT**.
 
-```
+```sql
 SELECT *
 FROM rental
 ORDER BY rental_date DESC
