@@ -89,7 +89,7 @@ LIMIT 5;
 - а также выводом имени с маленькой буквы с помощью оператора **LOWER** и указанием столбца в круглых скобках
 - с добавлением уточняющих параметров по имени и активности с помощью операторов **WHERE**, **IN**.
 
-```
+```sql
 SELECT REPLACE(LOWER(first_name), 'll', 'pp'), LOWER(last_name), active
 FROM customer
 WHERE first_name IN ('Kelly', 'Willie') and active = 1;
