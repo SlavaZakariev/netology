@@ -82,5 +82,5 @@ from (
 order by t.amount_of_payments desc  
 limit 1;
 ```
-![sql3](https://github.com/SlavaZakariev/netology/blob/97221f6c8c48a9d7231312a08112392c2a73a37f/db/12.4_SQL_part2/resources/sql_2.3.jpg)
+![sql3]()
 
