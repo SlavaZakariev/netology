@@ -45,7 +45,7 @@ having COUNT(cr.customer_id) > 300;
 Выборка:
 - сумма фильмов по названию из таблицы **film**
 - с дополнительным параметром c помощью оператора **WHERE** по длине фильма **length**
-- и функции **AVG** для вычисления среднего арифметического значения, в нашем случае продолжительности фильма
+- и агрегатной функции **AVG** для вычисления среднего арифметического значения, в нашем случае продолжительности фильма
 
 ```sql
 select COUNT(f.title)
@@ -66,21 +66,22 @@ where f.`length` > (select AVG(`length`)
 ### Решение 3
 
 Выборка:
-- стоббец сумма платежей, 
-- с дополнительным параметром c помощью оператора **WHERE** по длине фильма **length**
-- и функции **AVG** для вычисления среднего арифметического значения, в нашем случае продолжительности фильма
+- столбец сумма платежей и месяц платежа из таблицы **rental** с подзапросом на суммирование
+- с вторым подзапросом для вычесления суммы платежей из таблицы **payment**
+- с дополнительным параметром c помощью оператора **WHERE** по корректировке вывода формата даты (месяц/год)
+- с дополнительным параметром c помощью оператора **GROUP BY** для группировки по скоректированному формату даты
+- и отсортированный с помощью оператора **ORDER BY** по сумме платежа по убыванию с лимитом строки 1.
 
 ```sql
-select	t.amount_of_payments, t.month_of_payments,
-	(select count(r.rental_id)
-	from rental r
-	where DATE_FORMAT(r.rental_date, '%M %Y') = t.month_of_payments) 'count_of_rent'
-from (
-  select SUM(p.amount) 'amount_of_payments', DATE_FORMAT(p.payment_date, '%M %Y') 'month_of_payments' 
-  from payment p 
-  group by DATE_FORMAT(p.payment_date, '%M %Y')) t
+select t.amount_of_payments, t.month_of_payments,
+   (select count(r.rental_id)
+   from rental r
+   where DATE_FORMAT(r.rental_date, '%M %Y') = t.month_of_payments) 'count_of_rent'
+from (select SUM(p.amount) 'amount_of_payments', DATE_FORMAT(p.payment_date, '%M %Y') 'month_of_payments' 
+     from payment p 
+group by DATE_FORMAT(p.payment_date, '%M %Y')) t
 order by t.amount_of_payments desc  
 limit 1;
 ```
-![sql3]()
+![sql3](https://github.com/SlavaZakariev/netology/blob/76989c09daa94d823daa977c4ca1f91529554700/db/12.4_SQL_part2/resources/sql_2.3.jpg)
 
