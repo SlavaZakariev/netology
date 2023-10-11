@@ -8,6 +8,14 @@
 
 ### Решение 1
 
+```sql
+SELECT SUM(DATA_LENGTH) as 'Quantity of Tables', SUM(INDEX_LENGTH) as 'Quantity of Indexes,
+       ROUND(SUM(INDEX_LENGTH)*100/SUM(DATA_LENGTH) as 'Indexes in %'
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA = 'sakila';
+```
+![index1](https://github.com/SlavaZakariev/netology/blob/587fd0d5276dadcc7b7b2a5a437046c24cbea165/db/12.5_indexes/resources/index_1.1.jpg)
+
 ---
 
 ### Задание 2
@@ -28,4 +36,14 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 
 ### Решение 2
 
----
+```sql
+select distinct concat(c.last_name, ' ', c.first_name) as 'Full Name', sum(p.amount) over (c.customer_id)
+from payment p, customer c
+where date(p.payment_date) = '2005-07-30' and p.customer_id = c.customer_id;
+```
+Результат затрачиваемый до оптимизации запроса
+![index2](https://github.com/SlavaZakariev/netology/blob/587fd0d5276dadcc7b7b2a5a437046c24cbea165/db/12.5_indexes/resources/index_1.2.jpg)
+
+Результат затрачиваемый после оптимизации запроса
+![index3](https://github.com/SlavaZakariev/netology/blob/587fd0d5276dadcc7b7b2a5a437046c24cbea165/db/12.5_indexes/resources/index_1.3.jpg)
+
