@@ -34,18 +34,18 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 ### Решение 2
 
 1. Добавлено название столбца **Full Name** для удобства чтения вывода склеенных таблиц
-2. При подсчёте суммы платежей нет необходимости включать столбец **f.title**, достаточно **id** покупателя
-3. Так как результат до оптимизации выводит столбцы имя покупателя и плати, то выборку из списка таблиц можно сократить до необходимых нам **payment** и **customer**
-4. Дополнительные параметры в зоне оператора **WHERE** тоже сокращены, оставлена указанная ранее даты без измененний, изменено сопоставление между **id** покупателей в таблицах **payment** и **customer**. Ранее мы сократили выборку из списка таблиц, соответственно убрали остальные параметры.
+2. Выборку из списка таблиц можно сократить до **payment**
+3. Добавлены два внутренних джоина для сопоставления даты и покупателей по **id**
+4. Дополнительные параметры в зоне оператора **WHERE** тоже сокращены, оставлена указанная ранее дата с указанием полных суток
+5. Добавлена групировка по **id** покупателя
 
 ```sql
-select distinct concat(c.last_name, ' ', c.first_name) as 'Full Name', sum(p.amount) over (c.customer_id)
-from payment p, customer c
-where date(p.payment_date) = '2005-07-30' and p.customer_id = c.customer_id;
+select concat(c.last_name, ' ', c.first_name) as 'Full Name', sum(p.amount)
+from payment p
+inner join rental r on r.rental_date = p.payment_date
+inner join customer c on c.customer_id = r.customer_id 
+where p.payment_date between '2005-07-30 00:00:00' and '2005-07-30 23:59:59'
+group by c.customer_id  
 ```
-Результат затрачиваемый до оптимизации запроса **(2,4 секунды)**
-![index2](https://github.com/SlavaZakariev/netology/blob/587fd0d5276dadcc7b7b2a5a437046c24cbea165/db/12.5_indexes/resources/index_1.2.jpg)
 
-Результат затрачиваемый после оптимизации запроса **(4 миллисекунды)**
-![index3](https://github.com/SlavaZakariev/netology/blob/587fd0d5276dadcc7b7b2a5a437046c24cbea165/db/12.5_indexes/resources/index_1.3.jpg)
-
+![index2](https://github.com/SlavaZakariev/netology/blob/07eaecc2246fcfa735e545b055ed9e38787def26/db/12.5_indexes/resources/index_1.4.jpg)
