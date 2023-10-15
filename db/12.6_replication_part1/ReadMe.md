@@ -36,4 +36,57 @@
 
 ## Решение 2
 
+Инфраструктура подготовлена с помощью **docker compose**
+
+1. Подготовлен файл для переменных **.env**
+2. Подготовлен тома с конфигурационными файлами для контейнеров master и slave
+3. Написан манифест для **docker compose**
+
+```yml
+version: '3.5'
+services:
+  replication-master:
+    image: mysql:latest
+    container_name: replication-master
+    restart: always
+    env_file: .env
+    cap_add:
+      - all
+    volumes:
+      - ./master/my.conf:/etc/mysql/my.cnf
+    environment:
+      - TZ:${TZ}
+      - MYSQL_USER:${MYSQL_USER}
+      - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+    networks:
+      - mysql
+
+  replication-slave:
+    image: mysql:latest
+    container_name: replication-slave
+    restart: always
+    env_file: .env
+    cap_add:
+      - all
+    volumes:
+      -  ./slave/my.conf:/etc/mysql/my.cnf
+    environment:
+      - TZ:${TZ}
+      - MYSQL_USER:${MYSQL_USER}
+      - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+    networks:
+      - mysql
+
+networks:
+  mysql:
+    name: mysql
+```
+
+Результат запуска манифеста, созданые 2 контейнера **replication-master** и **replication-slave**, а также сеть **mysql**
+
+![compose](https://github.com/SlavaZakariev/netology/blob/5347f9f4201cf0c3d4a07d31a64dd589cd97606e/db/12.6_replication_part1/resources/repl_1.1.jpg)
+
+
 ---
