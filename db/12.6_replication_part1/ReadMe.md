@@ -84,12 +84,28 @@ networks:
     name: mysql
 ```
 
-Результат запуска манифеста, созданые 2 контейнера **replication-master** и **replication-slave**, а также сеть **mysql**
+Результат запуска манифеста, создание 2-х контейнеров **replication-master** и **replication-slave**, а также сеть **mysql**
 
 ![compose](https://github.com/SlavaZakariev/netology/blob/5347f9f4201cf0c3d4a07d31a64dd589cd97606e/db/12.6_replication_part1/resources/repl_1.1.jpg)
 
 Запущенные 2 контейнера
 
 ![cont](https://github.com/SlavaZakariev/netology/blob/e35056a6aabf2f6d1829d6239c9014d152677a36/db/12.6_replication_part1/resources/repl_1.2.jpg)
+
+Вход на **master**, выдача прав для пользователя **replication**, и проверка **master status**
+
+![master1](https://github.com/SlavaZakariev/netology/blob/86a096ab88ba36cd5c70fbebcf59dcc1bd2feda0/db/12.6_replication_part1/resources/repl_1.3.jpg)
+
+Вход на **slave**, указываем параметры для синхронизации с **master**, и проверка применения внесенных данных **master status**
+
+![slave1](https://github.com/SlavaZakariev/netology/blob/86a096ab88ba36cd5c70fbebcf59dcc1bd2feda0/db/12.6_replication_part1/resources/repl_1.4.jpg)
+
+Создание на **master** базы данных **repl01** для проверки синхронизации с **slave**
+
+![master2](https://github.com/SlavaZakariev/netology/blob/86a096ab88ba36cd5c70fbebcf59dcc1bd2feda0/db/12.6_replication_part1/resources/repl_1.5.jpg)
+
+Проверка на **slave** репликации базы данных **repl01** c **master**
+
+![slave2](https://github.com/SlavaZakariev/netology/blob/86a096ab88ba36cd5c70fbebcf59dcc1bd2feda0/db/12.6_replication_part1/resources/repl_1.6.jpg)
 
 ---
