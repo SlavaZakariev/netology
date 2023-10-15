@@ -42,7 +42,7 @@
 <details>
    <summary> 2. Содержимое main.tf - playbook terraform (OAuth-токен скрыт) </summary>
 
-```
+```terraform
 terraform {
   required_providers {
     yandex = {
@@ -149,7 +149,7 @@ output "external_ip_address_vm-1" {
 
 3. Содержимое файла **meta.yaml** (ssh скрыт)
 
-```
+```yml
 #cloud-config
 users:
   - name: sysadmin
