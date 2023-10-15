@@ -88,5 +88,8 @@ networks:
 
 ![compose](https://github.com/SlavaZakariev/netology/blob/5347f9f4201cf0c3d4a07d31a64dd589cd97606e/db/12.6_replication_part1/resources/repl_1.1.jpg)
 
+Запущенные 2 контейнера
+
+![cont](https://github.com/SlavaZakariev/netology/blob/e35056a6aabf2f6d1829d6239c9014d152677a36/db/12.6_replication_part1/resources/repl_1.2.jpg)
 
 ---
