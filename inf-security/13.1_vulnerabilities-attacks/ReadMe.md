@@ -25,13 +25,15 @@
 
 ### Решение 1
 
+Список разрешённых служб:
+
 ![nmap](https://github.com/SlavaZakariev/netology/blob/012ebaa403842e66e9f660be617b191d2ef3c8b9/inf-security/13.1_vulnerabilities-attacks/resources/nmap_1.1.jpg)
 
 Из уязвимостей можно отметить:
 
-- [ajp13 - Apache Jserv (Protocol v1.3)](https://hacktricks.boitatech.com.br/pentesting/8009-pentesting-apache-jserv-protocol-ajp)
-- [domain - ICS BIND 9.4.2](https://vulners.com/exploitdb/EDB-ID:6122)
-- [ftp - vsftpd 2.3.4](https://www.oreilly.com/library/view/mastering-metasploit/9781786463166/ch01s12.html)
+- [ICS BIND 9.4.2](https://vulners.com/cve/CVE-2012-1667)
+- [MySQL 5.0.51a-3ubuntu5](https://vulners.com/cve/CVE-2008-0226)
+- [PostgreSQL DB 8.3.0 - 8.3.7](https://vulners.com/cve/CVE-2013-1903)
 
 ---
 
@@ -51,3 +53,14 @@
 ---
 
 ### Решение 2
+
+Режимы отличаются сетевыми протоколами и флагами пакетов:
+SYN - TCP [SYN]
+FIN - TCP [FIN]
+Xmas - TCP [FIN, PSH, URG]
+
+Ответы от сервера:
+SYN сканирование - TCP [SYN, ACK] порт открыт [RST, ACK], [RST] порт закрыт
+FIN сканирование - TCP [RST, ACK] порт закрыт
+Xmas сканирование - TCP [RST, ACK] порт закрыт
+
