@@ -31,7 +31,7 @@
 
 - [ajp13 - Apache Jserv (Protocol v1.3)](https://hacktricks.boitatech.com.br/pentesting/8009-pentesting-apache-jserv-protocol-ajp)
 - [domain - ICS BIND 9.4.2](https://vulners.com/exploitdb/EDB-ID:6122)
-- [ftp - vsftpd 2.3.4])(https://www.oreilly.com/library/view/mastering-metasploit/9781786463166/ch01s12.html)
+- [ftp - vsftpd 2.3.4](https://www.oreilly.com/library/view/mastering-metasploit/9781786463166/ch01s12.html)
 
 ---
 
