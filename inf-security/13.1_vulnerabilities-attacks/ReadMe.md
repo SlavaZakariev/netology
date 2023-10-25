@@ -31,9 +31,9 @@
 
 Из уязвимостей можно отметить:
 
-- [ICS BIND 9.4.2](https://vulners.com/cve/CVE-2012-1667)
-- [MySQL 5.0.51a-3ubuntu5](https://vulners.com/cve/CVE-2008-0226)
-- [PostgreSQL DB 8.3.0 - 8.3.7](https://vulners.com/cve/CVE-2013-1903)
+1. [ICS BIND 9.4.2](https://vulners.com/cve/CVE-2012-1667)
+2. [MySQL 5.0.51a-3ubuntu5](https://vulners.com/cve/CVE-2008-0226)
+3. [PostgreSQL DB 8.3.0 - 8.3.7](https://vulners.com/cve/CVE-2013-1903)
 
 ---
 
@@ -55,12 +55,12 @@
 ### Решение 2
 
 Режимы отличаются сетевыми протоколами и флагами пакетов: \
-SYN - TCP [SYN] \
-FIN - TCP [FIN] \
-Xmas - TCP [FIN, PSH, URG]
+**SYN** - TCP [SYN] \
+**FIN** - TCP [FIN] \
+**Xmas** - TCP [FIN, PSH, URG]
 
 Ответы от сервера: \
-SYN сканирование - TCP [SYN, ACK] порт открыт [RST, ACK], [RST] порт закрыт \
-FIN сканирование - TCP [RST, ACK] порт закрыт \
-Xmas сканирование - TCP [RST, ACK] порт закрыт
+**SYN** сканирование - TCP [SYN, ACK] порт открыт [RST, ACK], [RST] порт закрыт \
+**FIN** сканирование - TCP [RST, ACK] порт закрыт \
+**Xmas** сканирование - TCP [RST, ACK] порт закрыт
 
