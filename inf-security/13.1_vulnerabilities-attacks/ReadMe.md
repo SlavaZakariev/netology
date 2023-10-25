@@ -21,6 +21,20 @@
   
 *Приведите ответ в свободной форме.*  
 
+---
+
+### Решение 1
+
+![nmap](https://github.com/SlavaZakariev/netology/blob/012ebaa403842e66e9f660be617b191d2ef3c8b9/inf-security/13.1_vulnerabilities-attacks/resources/nmap_1.1.jpg)
+
+Из уязвимостей можно отметить:
+
+- [ajp13 - Apache Jserv (Protocol v1.3)](https://hacktricks.boitatech.com.br/pentesting/8009-pentesting-apache-jserv-protocol-ajp)
+- [domain - ICS BIND 9.4.2](https://vulners.com/exploitdb/EDB-ID:6122)
+- [ftp - vsftpd 2.3.4])(https://www.oreilly.com/library/view/mastering-metasploit/9781786463166/ch01s12.html)
+
+---
+
 ### Задание 2
 
 Проведите сканирование Metasploitable в режимах SYN, FIN, Xmas, UDP.
@@ -33,3 +47,7 @@
 - Как отвечает сервер?
 
 *Приведите ответ в свободной форме.*
+
+---
+
+### Решение 2
