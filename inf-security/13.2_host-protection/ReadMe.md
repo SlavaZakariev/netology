@@ -57,14 +57,23 @@
 
 3. Инициализация раздела для шифрованием и установка ключа-пароля
 
-![sdb](https://github.com/SlavaZakariev/netology/blob/d69cce421634f8230da17a9e766cbb40011859f7/inf-security/13.2_host-protection/resources/luks_1.3.jpg)
+![ini](https://github.com/SlavaZakariev/netology/blob/d69cce421634f8230da17a9e766cbb40011859f7/inf-security/13.2_host-protection/resources/luks_1.3.jpg)
 
-4. Открываем только что созданный раздел с помощью модуля dm-crypt и вводим, проверяем статус
+4. Открываем только что созданный раздел с помощью модуля **dm-crypt** и вводим, проверяем статус
 
-![sdb](https://github.com/SlavaZakariev/netology/blob/d69cce421634f8230da17a9e766cbb40011859f7/inf-security/13.2_host-protection/resources/luks_1.4.jpg)
+![status](https://github.com/SlavaZakariev/netology/blob/d69cce421634f8230da17a9e766cbb40011859f7/inf-security/13.2_host-protection/resources/luks_1.4.jpg)
 
+5. Перезаписываем наш шифрованный раздел **linux** нулями, форматируем в **ext4**
 
+![ext](https://github.com/SlavaZakariev/netology/blob/2c29a084dff581672e9d768abf1c258b3ad5411f/inf-security/13.2_host-protection/resources/luks_1.5.jpg)
 
+6. Создаём скрытый каталог **.secret**, монтируем зашифрованный раздел в каталог, проверям наличие данных в каталоге **.secret**
+
+![mount](https://github.com/SlavaZakariev/netology/blob/2c29a084dff581672e9d768abf1c258b3ad5411f/inf-security/13.2_host-protection/resources/luks_1.6.jpg)
+
+7. Отмонтируем зашифрованный раздел, проверим наличие данных в каталоге **.secret**
+
+![unmount](https://github.com/SlavaZakariev/netology/blob/2c29a084dff581672e9d768abf1c258b3ad5411f/inf-security/13.2_host-protection/resources/luks_1.7.jpg)
 
 
 
