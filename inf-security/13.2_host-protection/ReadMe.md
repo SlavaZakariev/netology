@@ -14,7 +14,7 @@
 
 ![ver](https://github.com/SlavaZakariev/netology/blob/4db08df79ce71e6af4807defb4348e5de78b2a23/inf-security/13.2_host-protection/resources/ecrypt_1.1.jpg)
 
-2. Создание пользовтеля **cryptouser** и уканаие шифрования на домашний каталог созданного пользователя
+2. Создание пользователя **cryptouser** и указание шифрования на домашний каталог созданного пользователя
 
 ![user](https://github.com/SlavaZakariev/netology/blob/4db08df79ce71e6af4807defb4348e5de78b2a23/inf-security/13.2_host-protection/resources/ecrypt_1.2.jpg)
 
@@ -55,7 +55,7 @@
 
 ![sdb](https://github.com/SlavaZakariev/netology/blob/d69cce421634f8230da17a9e766cbb40011859f7/inf-security/13.2_host-protection/resources/luks_1.2.jpg)
 
-3. Инициализация раздела для шифрованием и установка ключа-пароля
+3. Инициализация раздела для шифрования и установка ключа-пароля
 
 ![ini](https://github.com/SlavaZakariev/netology/blob/d69cce421634f8230da17a9e766cbb40011859f7/inf-security/13.2_host-protection/resources/luks_1.3.jpg)
 
@@ -67,11 +67,11 @@
 
 ![ext](https://github.com/SlavaZakariev/netology/blob/2c29a084dff581672e9d768abf1c258b3ad5411f/inf-security/13.2_host-protection/resources/luks_1.5.jpg)
 
-6. Создаём скрытый каталог **.secret**, монтируем зашифрованный раздел в каталог, проверям наличие данных в каталоге **.secret**
+6. Создаём скрытый каталог **.secret**, монтируем зашифрованный раздел в каталог, проверяем наличие данных в каталоге **.secret**
 
 ![mount](https://github.com/SlavaZakariev/netology/blob/2c29a084dff581672e9d768abf1c258b3ad5411f/inf-security/13.2_host-protection/resources/luks_1.6.jpg)
 
-7. Отмонтируем зашифрованный раздел, проверим наличие данных в каталоге **.secret**
+7. Отключаем зашифрованный раздел, проверим наличие данных в каталоге **.secret**
 
 ![unmount](https://github.com/SlavaZakariev/netology/blob/2c29a084dff581672e9d768abf1c258b3ad5411f/inf-security/13.2_host-protection/resources/luks_1.7.jpg)
 
