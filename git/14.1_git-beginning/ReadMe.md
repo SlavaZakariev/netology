@@ -35,28 +35,28 @@
 
 ### Создание репозитория и первого коммита
 
-1. Зарегистрируйте аккаунт на [https://github.com/](https://github.com/). Если предпочитаете другое хранилище для репозитория, можно использовать его. \
-2. Создайте публичный репозиторий, который будете использовать дальше на протяжении всего курса, желательное с названием `devops-netology`.
+1. Зарегистрируйте аккаунт на [https://github.com/](https://github.com/). Если предпочитаете другое хранилище для репозитория, можно использовать его.
+1. Создайте публичный репозиторий, который будете использовать дальше на протяжении всего курса, желательное с названием `devops-netology`.
    Обязательно поставьте галочку `Initialize this repository with a README`. 
    
     ![Диалог создания репозитория](https://github.com/SlavaZakariev/netology/blob/31bfc3a0030cc85f07e7dda4c9f1afe04c6b060f/git/14.1_git-beginning/resources/github-new-repo-1.jpg)
     
-3. Создайте [авторизационный токен](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) для клонирования репозитория. \
-4. Склонируйте репозиторий, используя протокол HTTPS (`git clone ...`).
+1. Создайте [авторизационный токен](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) для клонирования репозитория.
+1. Склонируйте репозиторий, используя протокол HTTPS (`git clone ...`).
  
     ![Клонирование репозитория](https://github.com/SlavaZakariev/netology/blob/31bfc3a0030cc85f07e7dda4c9f1afe04c6b060f/git/14.1_git-beginning/resources/github-clone-repo-https.jpg)
     
-5. Перейдите в каталог с клоном репозитория (`cd devops-netology`). \
-6. Произведите первоначальную настройку Git, указав своё настоящее имя, чтобы нам было проще общаться, и email: \
-   (`git config --global user.name` и `git config --global user.email johndoe@example.com`). \
-7. Выполните команду `git status` и запомните результат. \
-8. Отредактируйте файл `README.md` любым удобным способом, тем самым переведя файл в состояние `Modified`. \
-9. Ещё раз выполните `git status` и продолжайте проверять вывод этой команды после каждого следующего шага. \
-10. Теперь посмотрите изменения в файле `README.md`, выполнив команды `git diff` и `git diff --staged`. \
-11. Переведите файл в состояние `staged` командой `git add README.md`. \
-12. И ещё раз выполните команды `git diff` и `git diff --staged`. Поиграйте с изменениями и этими командами, чтобы чётко понять, что и когда они отображают. \
-13. Теперь можно сделать коммит `git commit -m 'First commit'`. \
-14. И ещё раз посмотреть выводы команд `git status`, `git diff` и `git diff --staged`.
+1. Перейдите в каталог с клоном репозитория (`cd devops-netology`).
+1. Произведите первоначальную настройку Git, указав своё настоящее имя, чтобы нам было проще общаться, и email:
+   (`git config --global user.name` и `git config --global user.email johndoe@example.com`).
+1. Выполните команду `git status` и запомните результат.
+1. Отредактируйте файл `README.md` любым удобным способом, тем самым переведя файл в состояние `Modified`.
+1. Ещё раз выполните `git status` и продолжайте проверять вывод этой команды после каждого следующего шага.
+1. Теперь посмотрите изменения в файле `README.md`, выполнив команды `git diff` и `git diff --staged`.
+1. Переведите файл в состояние `staged` командой `git add README.md`.
+1. И ещё раз выполните команды `git diff` и `git diff --staged`. Поиграйте с изменениями и этими командами, чтобы чётко понять, что и когда они отображают.
+1. Теперь можно сделать коммит `git commit -m 'First commit'`.
+1. И ещё раз посмотреть выводы команд `git status`, `git diff` и `git diff --staged`.
 
 ### Создание файлов `.gitignore` и второго коммита
 
