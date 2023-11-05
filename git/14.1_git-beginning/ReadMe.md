@@ -47,7 +47,7 @@
     ![Клонирование репозитория](https://github.com/SlavaZakariev/netology/blob/31bfc3a0030cc85f07e7dda4c9f1afe04c6b060f/git/14.1_git-beginning/resources/github-clone-repo-https.jpg)
     
 1. Перейдите в каталог с клоном репозитория (`cd devops-netology`).
-1. Произведите первоначальную настройку Git, указав своё настоящее имя, чтобы нам было проще общаться, и email:
+1. Произведите первоначальную настройку Git, указав своё настоящее имя, чтобы нам было проще общаться, и email: \
    (`git config --global user.name` и `git config --global user.email johndoe@example.com`).
 1. Выполните команду `git status` и запомните результат.
 1. Отредактируйте файл `README.md` любым удобным способом, тем самым переведя файл в состояние `Modified`.
