@@ -3,13 +3,11 @@
 ### Цель задания
 
 В результате выполнения задания вы: 
-
 * научитесь подготоваливать новый репозиторий к работе;
 * сохранять, перемещать и удалять файлы в системе контроля версий.  
 
 
 ### Чеклист готовности к домашнему заданию
-
 1. Установлена консольная утилита для работы с Git.
 
 
@@ -89,3 +87,60 @@
 Выполните команду `git push`, если Git запросит логин и пароль — введите ваши логин и пароль от GitHub. \
 В качестве результата отправьте ссылку на репозиторий. 
 
+---
+
+## Решение 1
+
+### Репозиторий на GitHub
+
+1. Создан репозиторий **devops-netology**
+
+![gitnew1](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_1.1.jpg)
+
+![gitnew2](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_1.2.jpg)
+
+2. Создан token
+
+![token](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_1.3.jpg)
+
+3. Склонирован репозиторий
+
+![clone](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_1.4.jpg)
+
+4. Сконфигурирован пользователь и почтовый адрес
+
+![user](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_1.5.jpg)
+
+5. Отредактирован файл REAMDME.md и проверен статус
+
+![status](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_1.6.jpg)
+
+6. Просмотр изменений
+
+![gitdiff](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_1.7.jpg)
+
+7. Первый коммит
+
+![commit1](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_1.8.jpg)
+
+### Файл .gitignore
+
+1. Создан файл .gitignore
+
+![ignore1](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_2.1.jpg)
+
+2. Создан каталог terraform и внутри него ещё файл .gitignore согласно шаблону по [ссылке](https://github.com/github/gitignore/blob/main/Terraform.gitignore)
+
+![ignore2](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_2.2.jpg)
+
+### Публикация репозитория
+
+1. Просмотрен лог репозитория
+
+![log](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_3.1.jpg)
+
+2. Выполнена публикация
+
+![log](https://github.com/SlavaZakariev/netology/blob/65c706e4195a8cbd609ca58dedc8d7603b334d12/git/14.1_git-beginning/resources/git-big_3.2.jpg)
+
+3. [Ссылка на репозиторий](https://github.com/SlavaZakariev/devops-netology/blob/main/README.md)
