@@ -23,7 +23,7 @@
 
 ------
 
-## Задание 1. Знакомимся с GitLab и Bitbucket 
+## Задание 1. Знакомимся с GitLab 
 
 Из-за сложности доступа к Bitbucket в работе достаточно использовать два репозитория: GitHub и GitLab.
 
@@ -64,53 +64,17 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 * Измените видимость проекта на Public.
 * Нажмите «Сохранить изменения».
 
-### Bitbucket* (задание со звёздочкой) 
+---
 
-Это самостоятельное задание, его выполнение необязательно.
-____
+Решение 1
 
-Теперь необходимо проделать всё то же самое с [Bitbucket](https://bitbucket.org/). 
+Создан проект [devops-netology](https://gitlab.com/zakariev/devops-netology) в GitLab
 
-1. Обратите внимание, что репозиторий должен быть публичным — отключите галочку `private repository` при создании.
-1. На вопрос `Include a README?` отвечайте отказом. 
-1. В отличии от GitHub и GitLab в Bitbucket репозиторий должен принадлежать проекту, поэтому во время создания репозитория 
-надо создать и проект, который можно назвать, например, `netology`.
-1. Аналогично GitLab на странице вновь созданного проекта выберите `https`, чтобы получить ссылку, и добавьте этот репозиторий, как 
-`git remote add bitbucket ...`.
-1. Обратите внимание, как изменился результат работы команды `git remote -v`.
+![gitlab](https://github.com/SlavaZakariev/netology/blob/a19f7af57bd8628474386160b293cd9c24e053f7/git/14.2_git-basics/resources/gitlab_1.1.jpg)
 
-Если всё проделано правильно, то результат команды `git remote -v` должен быть следующий:
+Добавлен репозиторий на сервер Linux, проверен вывод командой `git remote -v`
 
-```bash
-$ git remote -v
-bitbucket https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (fetch)
-bitbucket https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (push)
-gitlab	  https://gitlab.com/andrey.borue/devops-netology.git (fetch)
-gitlab	  https://gitlab.com/andrey.borue/devops-netology.git (push)
-origin	  https://github.com/andrey-borue/devops-netology.git (fetch)
-origin	  https://github.com/andrey-borue/devops-netology.git (push)
-```
-
-Дополнительно можете добавить удалённые репозитории по `ssh`, тогда результат будет примерно такой:
-
-```bash
-git remote -v
-bitbucket	git@bitbucket.org:andreyborue/devops-netology.git (fetch)
-bitbucket	git@bitbucket.org:andreyborue/devops-netology.git (push)
-bitbucket-https	https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (fetch)
-bitbucket-https	https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (push)
-gitlab	git@gitlab.com:andrey.borue/devops-netology.git (fetch)
-gitlab	git@gitlab.com:andrey.borue/devops-netology.git (push)
-gitlab-https	https://gitlab.com/andrey.borue/devops-netology.git (fetch)
-gitlab-https	https://gitlab.com/andrey.borue/devops-netology.git (push)
-origin	git@github.com:andrey-borue/devops-netology.git (fetch)
-origin	git@github.com:andrey-borue/devops-netology.git (push)
-origin-https	https://github.com/andrey-borue/devops-netology.git (fetch)
-origin-https	https://github.com/andrey-borue/devops-netology.git (push)
-```
-
-Выполните push локальной ветки `main` в новые репозитории. \
-Подсказка: `git push -u gitlab main`. На этом этапе история коммитов во всех трёх репозиториях должна совпадать. 
+![gitlab](https://github.com/SlavaZakariev/netology/blob/a19f7af57bd8628474386160b293cd9c24e053f7/git/14.2_git-basics/resources/gitlab_1.2.jpg)
 
 ## Задание 2. Теги
 
