@@ -66,15 +66,17 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 
 ---
 
-Решение 1
+## Решение 1
 
-Создан проект [devops-netology](https://gitlab.com/zakariev/devops-netology) в GitLab
+1. Создан проект [devops-netology](https://gitlab.com/zakariev/devops-netology) в GitLab
 
 ![gitlab](https://github.com/SlavaZakariev/netology/blob/a19f7af57bd8628474386160b293cd9c24e053f7/git/14.2_git-basics/resources/gitlab_1.1.jpg)
 
-Добавлен репозиторий на сервер Linux, проверен вывод командой `git remote -v`
+2. Добавлен репозиторий на сервер Linux, проверен вывод командой `git remote -v`
 
 ![gitlab](https://github.com/SlavaZakariev/netology/blob/a19f7af57bd8628474386160b293cd9c24e053f7/git/14.2_git-basics/resources/gitlab_1.2.jpg)
+
+---
 
 ## Задание 2. Теги
 
@@ -87,6 +89,34 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
     * в GitHub — https://github.com/YOUR_ACCOUNT/devops-netology/releases;
     * в GitLab — https://gitlab.com/YOUR_ACCOUNT/devops-netology/-/tags;
     * в Bitbucket — список тегов расположен в выпадающем меню веток на отдельной вкладке. 
+
+---
+
+## Решение 2
+
+1. Создан легковестный тег `v0.0`
+
+![gitlab](https://github.com/SlavaZakariev/netology/blob/549b321d281e1575fc8c7af77eb1a7372aa4160f/git/14.2_git-basics/resources/gitlab_2.1.jpg)
+
+2. Выполнена публикация на GitHub
+
+![gitlab](https://github.com/SlavaZakariev/netology/blob/549b321d281e1575fc8c7af77eb1a7372aa4160f/git/14.2_git-basics/resources/gitlab_2.2.jpg)
+
+3. Выполнена публикация на GitLab
+
+![gitlab](https://github.com/SlavaZakariev/netology/blob/549b321d281e1575fc8c7af77eb1a7372aa4160f/git/14.2_git-basics/resources/gitlab_2.3.jpg)
+
+4. Создан аннотированный тег `v0.1` с комментарием
+
+![gitlab](https://github.com/SlavaZakariev/netology/blob/549b321d281e1575fc8c7af77eb1a7372aa4160f/git/14.2_git-basics/resources/gitlab_2.4.jpg)
+
+5. Выполнена публикация тегов на [GitHub](https://github.com/SlavaZakariev/devops-netology/tags) и GitLab
+
+![gitlab](https://github.com/SlavaZakariev/netology/blob/549b321d281e1575fc8c7af77eb1a7372aa4160f/git/14.2_git-basics/resources/gitlab_2.5.jpg)
+
+
+
+---
 
 ## Задание 3. Ветки 
 
