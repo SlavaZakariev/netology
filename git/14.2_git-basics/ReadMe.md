@@ -110,7 +110,7 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 
 ![gitlab](https://github.com/SlavaZakariev/netology/blob/549b321d281e1575fc8c7af77eb1a7372aa4160f/git/14.2_git-basics/resources/gitlab_2.4.jpg)
 
-5. Выполнена публикация тегов на [GitHub](https://github.com/SlavaZakariev/devops-netology/tags) и GitLab
+5. Выполнена публикация тегов на [GitHub](https://github.com/SlavaZakariev/devops-netology/tags) и [GitLab](https://gitlab.com/zakariev/devops-netology/-/tags)
 
 ![gitlab](https://github.com/SlavaZakariev/netology/blob/549b321d281e1575fc8c7af77eb1a7372aa4160f/git/14.2_git-basics/resources/gitlab_2.5.jpg)
 
