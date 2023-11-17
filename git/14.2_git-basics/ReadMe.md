@@ -114,8 +114,6 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 
 ![gitlab](https://github.com/SlavaZakariev/netology/blob/549b321d281e1575fc8c7af77eb1a7372aa4160f/git/14.2_git-basics/resources/gitlab_2.5.jpg)
 
-
-
 ---
 
 ## Задание 3. Ветки 
@@ -131,6 +129,36 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 1. Теперь измените содержание файла `README.md`, добавив новую строчку.
 1. Отправьте изменения в репозиторий и посмотрите, как изменится схема на странице https://github.com/YOUR_ACCOUNT/devops-netology/network 
 и как изменится вывод команды `git log`.
+
+---
+
+## Решение 3
+
+1. Отсортирован хеш в списке логов по названию коммита, выполнен checkout на данный лог
+
+ ![log](https://github.com/SlavaZakariev/netology/blob/62cdf34c370d11f418acebbe649ce5035fb3626a/git/14.2_git-basics/resources/gitlab_3.1.jpg)
+
+ 2. Создана новая ветка fix, опубликована на GitHub
+
+![log](https://github.com/SlavaZakariev/netology/blob/62cdf34c370d11f418acebbe649ce5035fb3626a/git/14.2_git-basics/resources/gitlab_3.2.jpg)
+
+3. График после публикации новой ветки Fix
+
+![log](https://github.com/SlavaZakariev/netology/blob/62cdf34c370d11f418acebbe649ce5035fb3626a/git/14.2_git-basics/resources/gitlab_3.3.jpg)
+
+4. Вносим новую строку в файл README.md, выполнеяем публикацию в GitHub
+
+![log](https://github.com/SlavaZakariev/netology/blob/62cdf34c370d11f418acebbe649ce5035fb3626a/git/14.2_git-basics/resources/gitlab_3.4.jpg)
+
+5. [График](https://github.com/SlavaZakariev/devops-netology/network) после публикации изменений в файл README.md
+
+![log](https://github.com/SlavaZakariev/netology/blob/62cdf34c370d11f418acebbe649ce5035fb3626a/git/14.2_git-basics/resources/gitlab_3.5.jpg)
+
+6. Список логов по одной строке
+
+![log](https://github.com/SlavaZakariev/netology/blob/62cdf34c370d11f418acebbe649ce5035fb3626a/git/14.2_git-basics/resources/gitlab_3.6.jpg)
+
+---
 
 ## Задание 4. Упрощаем себе жизнь
 
