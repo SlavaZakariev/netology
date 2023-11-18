@@ -146,7 +146,7 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 
 ![log](https://github.com/SlavaZakariev/netology/blob/62cdf34c370d11f418acebbe649ce5035fb3626a/git/14.2_git-basics/resources/gitlab_3.3.jpg)
 
-4. Вносим новую строку в файл README.md, выполнеяем публикацию в GitHub
+4. Вносим новую строку в файл README.md, выполняем публикацию в GitHub
 
 ![log](https://github.com/SlavaZakariev/netology/blob/62cdf34c370d11f418acebbe649ce5035fb3626a/git/14.2_git-basics/resources/gitlab_3.4.jpg)
 
@@ -176,3 +176,14 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 
 *В качестве результата работы по всем заданиям приложите ссылки на ваши репозитории в GitHub, GitLab и Bitbucket*.  
  
+ ---
+
+## Решение 4
+
+Ранее пользовался **Visual Studio Code** при работе с Git. Выполнен коммит и с комментарием и публикация.
+
+![VS](https://github.com/SlavaZakariev/netology/blob/7ff022619d32023985ae75cdebd7593d5ab09daf/git/14.2_git-basics/resources/gitlab_4.1.jpg)
+
+Изменения в файл README.md сделанные через VSCode.
+
+![VSC-Git](https://github.com/SlavaZakariev/netology/blob/7ff022619d32023985ae75cdebd7593d5ab09daf/git/14.2_git-basics/resources/gitlab_4.2.jpg)
