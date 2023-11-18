@@ -184,6 +184,6 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 
 ![VS](https://github.com/SlavaZakariev/netology/blob/7ff022619d32023985ae75cdebd7593d5ab09daf/git/14.2_git-basics/resources/gitlab_4.1.jpg)
 
-Изменения в файл README.md сделанные через VSCode.
+Изменения в файл [README.md](https://github.com/SlavaZakariev/devops-netology) сделанные через VSCode.
 
 ![VSC-Git](https://github.com/SlavaZakariev/netology/blob/7ff022619d32023985ae75cdebd7593d5ab09daf/git/14.2_git-basics/resources/gitlab_4.2.jpg)
