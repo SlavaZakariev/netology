@@ -269,3 +269,45 @@ Fast-forward
 ```
 
 *В качестве результата работы по всем заданиям приложите ссылку на .md-файл в вашем репозитории.*
+
+---
+
+Решение
+
+1. Создали папку **branching** и файлы **merge.sh**, **rebase.sh**
+
+![br](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_1.1.jpg)
+
+2. Создана ветка **git-merge**, выполнен коммит **"merge: use shift"**
+
+![commit1](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_1.2.jpg)
+
+3. Внесение изменений в файл **rebase.sh** в ветке **main** для создания будущего конфликта
+
+![main](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_1.3.jpg)
+
+4. Откат по хешу к коммиту **"prepare for merge and rebase"**
+
+![log](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_2.1.jpg)
+
+5. Промежуточный итог схемы **Git** после создания веток **git-merge** и **git-rebase**
+
+![net1](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_3.1.jpg)
+
+6. Сливаем ветку **git-metge** c **main** и публикуем в GitHub
+
+![net2](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_3.2.jpg)
+
+7. Результат схемы **Git** после слияния
+
+![net3](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_3.3.jpg)
+
+8. Публикация ветки **git-rebase** без и c ключом **-f** 
+
+![rebase1](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_4.1.jpg)
+
+8. Переключение на ветку **main** для дальнейшего слияния ветки **git-rebase**
+
+![rebase2](https://github.com/SlavaZakariev/netology/blob/60010e90b986a2d061d3f9d904536f670fb8e73e/git/14.3_git-branching/resources/merge_4.2.jpg)
+
+*Ссылка на [Network](https://github.com/SlavaZakariev/devops-netology/network)
