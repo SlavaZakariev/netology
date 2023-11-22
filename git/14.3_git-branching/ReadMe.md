@@ -272,7 +272,7 @@ Fast-forward
 
 ---
 
-Решение
+### Решение
 
 1. Создали папку **branching** и файлы **merge.sh**, **rebase.sh**
 
