@@ -29,19 +29,19 @@ IaC позволяет запускать скрипт, который може�
 
 1. Установлена версия 2.15.0
 
-![Установлена версия 2.15.0](https://github.com/SlavaZakariev/netology/blob/cd49c66445acfc3024f28e0e9cf8b59697fe108f/ci-cd/7.1_ansible_part1/resources/ansible_1.1.jpg)
+![ansible](https://github.com/SlavaZakariev/netology/blob/24a3a268de2aef02f6e31f4e0619b8ab5c1a8197/ci-cd/8.1_ansible_part1/resources/ansible_1.1.jpg)
 
 2. Добавлены два сервера Ubuntu2 и Ubuntu3
 
-![Добавлены два сервера](https://github.com/SlavaZakariev/netology/blob/9810ac76b31603dfacd3c2f509e81ec44d4b8504/ci-cd/7.1_ansible_part1/resources/ansible_2.1.jpg)
+![addserv](https://github.com/SlavaZakariev/netology/blob/24a3a268de2aef02f6e31f4e0619b8ab5c1a8197/ci-cd/8.1_ansible_part1/resources/ansible_2.1.jpg)
 
 3. Файл инвентори размещён в папке проекта у пользователя root
 
-![Файл инвентори](https://github.com/SlavaZakariev/netology/blob/9810ac76b31603dfacd3c2f509e81ec44d4b8504/ci-cd/7.1_ansible_part1/resources/ansible_3.1.jpg)
+![inven](https://github.com/SlavaZakariev/netology/blob/24a3a268de2aef02f6e31f4e0619b8ab5c1a8197/ci-cd/8.1_ansible_part1/resources/ansible_3.1.jpg)
 
 4. Проверен доступ к серверам Ubuntu2 и Ubuntu3 через ansible
 
-![Ping](https://github.com/SlavaZakariev/netology/blob/9810ac76b31603dfacd3c2f509e81ec44d4b8504/ci-cd/7.1_ansible_part1/resources/ansible_4.1.jpg)
+![ping](https://github.com/SlavaZakariev/netology/blob/24a3a268de2aef02f6e31f4e0619b8ab5c1a8197/ci-cd/8.1_ansible_part1/resources/ansible_4.1.jpg)
 
 ---
 
@@ -92,11 +92,11 @@ IaC позволяет запускать скрипт, который може�
 
 
 
-![resolt](https://github.com/SlavaZakariev/netology/blob/0295273a4287946759f76b201f639d8f4a19b247/ci-cd/7.1_ansible_part1/resources/ansible_5.2.jpg)
+![resolt](https://github.com/SlavaZakariev/netology/blob/24a3a268de2aef02f6e31f4e0619b8ab5c1a8197/ci-cd/8.1_ansible_part1/resources/ansible_5.2.jpg)
 
 2. Проверен статус сервиса sshd
 
-![sshd](https://github.com/SlavaZakariev/netology/blob/0295273a4287946759f76b201f639d8f4a19b247/ci-cd/7.1_ansible_part1/resources/ansible_6.1.jpg)
+![sshd](https://github.com/SlavaZakariev/netology/blob/24a3a268de2aef02f6e31f4e0619b8ab5c1a8197/ci-cd/8.1_ansible_part1/resources/ansible_6.1.jpg)
 
 3. Создан текстовый файл
 
