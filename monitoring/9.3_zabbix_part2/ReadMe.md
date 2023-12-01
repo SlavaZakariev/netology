@@ -1,4 +1,4 @@
-## 8.3 Система мониторинга Zabbix. Часть 2 - Вячеслав Закариев
+## 9.3 Система мониторинга Zabbix. Часть 2 - Вячеслав Закариев
 
 ### Задание 1
 Создайте свой шаблон, в котором будут элементы данных, мониторящие загрузку CPU и RAM хоста.
@@ -18,7 +18,7 @@
 
 Создан шаблон CPU-RAM
 
-![cpu-ram](https://github.com/SlavaZakariev/netology/blob/2209dab1253ce21a421f520036e5275ecf6d5cb5/monitoring/8.3_zabbix_part2/resources/zabbix_2.1.jpg)
+![cpu-ram](https://github.com/SlavaZakariev/netology/blob/5f35c5257622781ab55ca9530ef8a066d2ceb7ad/monitoring/9.3_zabbix_part2/resources/zabbix_2.1.jpg)
 
 ---
 
@@ -61,11 +61,11 @@
 
 Созданы 2 хоста с ФИО zakarievvr-2 и zakarievvr-3
 
-![hosts](https://github.com/SlavaZakariev/netology/blob/2209dab1253ce21a421f520036e5275ecf6d5cb5/monitoring/8.3_zabbix_part2/resources/zabbix_2.2.jpg)
+![hosts](https://github.com/SlavaZakariev/netology/blob/5f35c5257622781ab55ca9530ef8a066d2ceb7ad/monitoring/9.3_zabbix_part2/resources/zabbix_2.2.jpg)
 
 Снимок мониторинга Latest data
 
-![data](https://github.com/SlavaZakariev/netology/blob/2209dab1253ce21a421f520036e5275ecf6d5cb5/monitoring/8.3_zabbix_part2/resources/zabbix_2.3.jpg)
+![data](https://github.com/SlavaZakariev/netology/blob/5f35c5257622781ab55ca9530ef8a066d2ceb7ad/monitoring/9.3_zabbix_part2/resources/zabbix_2.3.jpg)
 
 ---
 
@@ -86,4 +86,4 @@
 
 Создан Dashboard "Netology" с графическими данными хостов zakarievvr-2 и zakarievvr-3 CPU\RAM
 
-![dash](https://github.com/SlavaZakariev/netology/blob/2209dab1253ce21a421f520036e5275ecf6d5cb5/monitoring/8.3_zabbix_part2/resources/zabbix_2.4.jpg)
+![dash](https://github.com/SlavaZakariev/netology/blob/5f35c5257622781ab55ca9530ef8a066d2ceb7ad/monitoring/9.3_zabbix_part2/resources/zabbix_2.4.jpg)
