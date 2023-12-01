@@ -18,7 +18,7 @@
 ### Решение 1
 Установлен Prometheus.
 
-![prometheus](https://github.com/SlavaZakariev/netology/blob/496f314d80d0d32b36e4976f3914ff4b7c1b3872/monitoring/8.4_prometheus_part1/resources/prometheus_1.1.jpg)
+![prometheus](https://github.com/SlavaZakariev/netology/blob/762582a85691e7c6bfc28377c4e85207440cf077/monitoring/9.4_prometheus_part1/resources/prometheus_1.1.jpg)
 
 ---
 
@@ -39,7 +39,7 @@
 ### Решение 1
 Установлен Node Exporter.
 
-![node-exporter](https://github.com/SlavaZakariev/netology/blob/496f314d80d0d32b36e4976f3914ff4b7c1b3872/monitoring/8.4_prometheus_part1/resources/prometheus_1.2.jpg)
+![node-exporter](https://github.com/SlavaZakariev/netology/blob/762582a85691e7c6bfc28377c4e85207440cf077/monitoring/9.4_prometheus_part1/resources/prometheus_1.2.jpg)
 
 ---
 
@@ -60,10 +60,10 @@
 
 Страница конфигурации Prometheus
 
-![configuration](https://github.com/SlavaZakariev/netology/blob/496f314d80d0d32b36e4976f3914ff4b7c1b3872/monitoring/8.4_prometheus_part1/resources/prometheus_1.3.jpg)
+![configuration](https://github.com/SlavaZakariev/netology/blob/762582a85691e7c6bfc28377c4e85207440cf077/monitoring/9.4_prometheus_part1/resources/prometheus_1.3.jpg)
 
 Страница объектов Prometheus
 
-![target](https://github.com/SlavaZakariev/netology/blob/496f314d80d0d32b36e4976f3914ff4b7c1b3872/monitoring/8.4_prometheus_part1/resources/prometheus_1.4.jpg)
+![target](https://github.com/SlavaZakariev/netology/blob/762582a85691e7c6bfc28377c4e85207440cf077/monitoring/9.4_prometheus_part1/resources/prometheus_1.4.jpg)
 
 ---
