@@ -14,19 +14,19 @@
 
 1. Развёрнут GitLab
 
-![gitlab](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.4.jpg)
+![gitlab](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.4.jpg)
 
 2. Создан проект
 
-![project](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.1.jpg)
+![project](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.1.jpg)
 
 3. Зарегистрирован runner
 
-![runner](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.3.jpg)
+![runner](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.3.jpg)
 
 Процесс регистрации в docker
 
-![docker](https://github.com/SlavaZakariev/netology/blob/20c21427d6ec7be049cba5400de31b9afb38ab66/ci-cd/7.7_gitlab/resources/gitlab_1.2.jpg)
+![docker](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.2.jpg)
 
 ---
 
@@ -46,24 +46,24 @@
 
 1. Внесён проект в GitLab.
 
-![gitlab.local](https://github.com/SlavaZakariev/netology/blob/a625f7a14ca6b5065135ad234e04d80afe8bce40/ci-cd/7.7_gitlab/resources/gitlab_1.10.jpg)
+![gitlab.local](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.10.jpg)
 
 2. Процесс предварительного добавления локального GitLab и вывод списка.
 
-![remote](https://github.com/SlavaZakariev/netology/blob/beb6b0452d97be429c338bcec26f69c39a22a03e/ci-cd/7.7_gitlab/resources/gitlab_1.6.jpg)
+![remote](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.6.jpg)
 
 3. Статус после создания файла **.gitlab-ci.yml**.
 
-![yml](https://github.com/SlavaZakariev/netology/blob/beb6b0452d97be429c338bcec26f69c39a22a03e/ci-cd/7.7_gitlab/resources/gitlab_1.7.jpg)
+![yml](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.7.jpg)
 
 4. Внесение файла **.gitlab-ci.yml** в локальный GitLab.
 
-![push.yml](https://github.com/SlavaZakariev/netology/blob/beb6b0452d97be429c338bcec26f69c39a22a03e/ci-cd/7.7_gitlab/resources/gitlab_1.8.jpg)
+![push.yml](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.8.jpg)
 
 5. Содержимое файла **.gitlab-ci.yml**.
 
-![cat.yml](https://github.com/SlavaZakariev/netology/blob/eb265a797c3266135025592daf4d44dcf67e98bc/ci-cd/7.7_gitlab/resources/gitlab_1.9.jpg)
+![cat.yml](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.9.jpg)
 
 6. Выполнение pipeline **(Пришлось откатиться на 14.0 GitLab версию, иначе постоянно выпадает ошибка)**
 
-![pipeline](https://github.com/SlavaZakariev/netology/blob/7a8bd4a6b9b1a8c351b1924bf171deb4030dfe25/ci-cd/7.7_gitlab/resources/gitlab_1.11.jpg)
+![pipeline](https://github.com/SlavaZakariev/netology/blob/7fe69426147e0773ccef5c56ed42d0f37d6a7ad5/ci-cd/8.7_gitlab/resources/gitlab_1.11.jpg)
