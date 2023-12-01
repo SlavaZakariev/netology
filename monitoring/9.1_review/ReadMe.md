@@ -40,8 +40,8 @@
 
 1. Создана ВМ согласно условию.
 
-![vm](https://github.com/SlavaZakariev/netology/blob/ef5538a2a1a6d60bfb73add84bb0d8ecb067eaee/monitoring/8.1_review/resources/monit_1.1.jpg)
+![vm](https://github.com/SlavaZakariev/netology/blob/9d29e358e22ff208bf6c8ab640a36589f2d6eea1/monitoring/9.1_review/resources/monit_1.1.jpg)
 
 2. Построен график нагрузки ЦП для созданной ВМ. (на графике выбрано за последние 30 минут)
 
-![cpu](https://github.com/SlavaZakariev/netology/blob/ef5538a2a1a6d60bfb73add84bb0d8ecb067eaee/monitoring/8.1_review/resources/monit_1.2.jpg)
+![cpu](https://github.com/SlavaZakariev/netology/blob/9d29e358e22ff208bf6c8ab640a36589f2d6eea1/monitoring/9.1_review/resources/monit_1.2.jpg)
