@@ -73,19 +73,19 @@
 
 1. Файл .gitignore.
 
-![gitignore](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.1.jpg)
+![gitignore](https://github.com/SlavaZakariev/netology/blob/49b3997ad80db3fb2278a5b42d430799244d2ae9/ci-cd/8.5_git/resources/git_2.1.jpg)
 
 2. Добавление в следующий коммит.
 
-![gitadd](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.2.jpg)
+![gitadd](https://github.com/SlavaZakariev/netology/blob/49b3997ad80db3fb2278a5b42d430799244d2ae9/ci-cd/8.5_git/resources/git_2.2.jpg)
 
 3. Внесение исключенний.
 
-![add](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.3.jpg)
+![add](https://github.com/SlavaZakariev/netology/blob/49b3997ad80db3fb2278a5b42d430799244d2ae9/ci-cd/8.5_git/resources/git_2.3.jpg)
 
 4. Выполнение коммит и синхронизация с облаком.
 
-![commit](https://github.com/SlavaZakariev/netology/blob/ce1ecaa242cc1a02a39a3d1ede2c760afe0ac49f/ci-cd/7.5_git/resources/git_2.4.jpg)
+![commit](https://github.com/SlavaZakariev/netology/blob/49b3997ad80db3fb2278a5b42d430799244d2ae9/ci-cd/8.5_git/resources/git_2.4.jpg)
 
 Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/commit/136b1c6b7868fd19a7dc135bf625ddb0d037d128).
 
