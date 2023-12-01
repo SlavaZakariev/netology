@@ -24,35 +24,35 @@
 
 1. Зарегистрирован аккаукт в GitHub.
 
-![account](https://github.com/SlavaZakariev/netology/blob/c22ce3ca6b7e6f3283bf17a9d019e1457ba34e41/ci-cd/7.5_git/resources/git_1.1.jpg)
+![account](https://github.com/SlavaZakariev/netology/blob/fd9fe38fb4577746ed7b8849f0cf61d426975f10/ci-cd/8.5_git/resources/git_1.1.jpg)
 
 2. Создан публиный репозиторий.
 
-![create](https://github.com/SlavaZakariev/netology/blob/c22ce3ca6b7e6f3283bf17a9d019e1457ba34e41/ci-cd/7.5_git/resources/git_1.2.jpg)
+![create](https://github.com/SlavaZakariev/netology/blob/fd9fe38fb4577746ed7b8849f0cf61d426975f10/ci-cd/8.5_git/resources/git_1.2.jpg)
 
 3. Клонирован репозиторий и выполнен переход в директорию git.
 
-![clone](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.3.jpg)
+![clone](https://github.com/SlavaZakariev/netology/blob/fd9fe38fb4577746ed7b8849f0cf61d426975f10/ci-cd/8.5_git/resources/git_1.3.jpg)
 
 4. Произведена настройка.
 
-![name](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.4.jpg)
+![name](https://github.com/SlavaZakariev/netology/blob/fd9fe38fb4577746ed7b8849f0cf61d426975f10/ci-cd/8.5_git/resources/git_1.4.jpg)
 
 5. Статус git.
 
-![status](https://github.com/SlavaZakariev/netology/blob/ac4e45162ec152db07b4591b1cfb6956127f35eb/ci-cd/7.5_git/resources/git_1.5.jpg)
+![status](https://github.com/SlavaZakariev/netology/blob/fd9fe38fb4577746ed7b8849f0cf61d426975f10/ci-cd/8.5_git/resources/git_1.5.jpg)
 
 6. Переведен файл в состояние staged и внесены изменения в файл ReadMe.
 
-![staged](https://github.com/SlavaZakariev/netology/blob/e3b461ffda9498a10d4861e9c1c452b784a6f28a/ci-cd/7.5_git/resources/git_1.6.jpg)
+![staged](https://github.com/SlavaZakariev/netology/blob/fd9fe38fb4577746ed7b8849f0cf61d426975f10/ci-cd/8.5_git/resources/git_1.6.jpg)
 
 7. Изменения в файле.
 
-![diff](https://github.com/SlavaZakariev/netology/blob/e3b461ffda9498a10d4861e9c1c452b784a6f28a/ci-cd/7.5_git/resources/git_1.7.jpg)
+![diff](https://github.com/SlavaZakariev/netology/blob/fd9fe38fb4577746ed7b8849f0cf61d426975f10/ci-cd/8.5_git/resources/git_1.7.jpg)
 
 8. Выполнен **git push origin main**.
 
-![push](https://github.com/SlavaZakariev/netology/blob/6731b19cdaf56330cad08b66396fc6d8ec0d69c9/ci-cd/7.5_git/resources/git_1.8.jpg)
+![push](https://github.com/SlavaZakariev/netology/blob/fd9fe38fb4577746ed7b8849f0cf61d426975f10/ci-cd/8.5_git/resources/git_1.8.jpg)
 
 Результат синхронизации с облачным [GitHub](https://github.com/SlavaZakariev/git-hw/commit/24b2ebe76b8a52ff9afa744b501bf6d34601bbb1).
 
