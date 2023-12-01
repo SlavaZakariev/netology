@@ -20,7 +20,7 @@
 
 Для установки поднят сервер Ubuntu 22.04.2 LTS
 
-![ver](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.1.jpg)
+![ver](https://github.com/SlavaZakariev/netology/blob/144565b66be608730b5dad1e6aa9b9c93ce1f7a7/monitoring/9.2_zabbix_part1/resources/zabbix1_1.1.jpg)
 
 ```
 # 1. Установка СУБД PosgreSQL
@@ -53,19 +53,19 @@ systemctl enable zabbix-server apache2
 
 Проверка службы zabbix
 
-![status](https://github.com/SlavaZakariev/netology/blob/f60fbdff14e9582da19c39ff1d46e6aa476f955c/monitoring/8.2_zabbix_part1/resources/zabbix1_1.2.jpg)
+![status](https://github.com/SlavaZakariev/netology/blob/144565b66be608730b5dad1e6aa9b9c93ce1f7a7/monitoring/9.2_zabbix_part1/resources/zabbix1_1.2.jpg)
 
 Первичная настройка веб-интерфейса 
 
-![status](https://github.com/SlavaZakariev/netology/blob/22f56dece440a9a20a2776bd7c3c67ccacc2e705/monitoring/8.2_zabbix_part1/resources/zabbix1_1.3.jpg)
+![status](https://github.com/SlavaZakariev/netology/blob/144565b66be608730b5dad1e6aa9b9c93ce1f7a7/monitoring/9.2_zabbix_part1/resources/zabbix1_1.3.jpg)
 
 Успешное завершение всех шагов первичной настройки веб-интерфейса 
 
-![status](https://github.com/SlavaZakariev/netology/blob/22f56dece440a9a20a2776bd7c3c67ccacc2e705/monitoring/8.2_zabbix_part1/resources/zabbix1_1.4.jpg)
+![status](https://github.com/SlavaZakariev/netology/blob/144565b66be608730b5dad1e6aa9b9c93ce1f7a7/monitoring/9.2_zabbix_part1/resources/zabbix1_1.4.jpg)
 
 Авторизация в админке сервера zabbix
 
-![admin](https://github.com/SlavaZakariev/netology/blob/22f56dece440a9a20a2776bd7c3c67ccacc2e705/monitoring/8.2_zabbix_part1/resources/zabbix1_1.5.jpg)
+![admin](https://github.com/SlavaZakariev/netology/blob/144565b66be608730b5dad1e6aa9b9c93ce1f7a7/monitoring/9.2_zabbix_part1/resources/zabbix1_1.5.jpg)
 
 ---
 
@@ -92,15 +92,15 @@ systemctl enable zabbix-server apache2
 
 1. Добавление двух хостов и проверка работы сервиса zabbix агентов на хостах
 
-![service](https://github.com/SlavaZakariev/netology/blob/ce83620940d6bf4e40f27a5428185499aad04f37/monitoring/8.2_zabbix_part1/resources/zabbix1_1.8.jpg)
+![service](https://github.com/SlavaZakariev/netology/blob/144565b66be608730b5dad1e6aa9b9c93ce1f7a7/monitoring/9.2_zabbix_part1/resources/zabbix1_1.8.jpg)
 
 2. Добавлены хосты в zabbix
 
-![hosts](https://github.com/SlavaZakariev/netology/blob/470de14a519ff96d7d3963480a8f7154c281bd95/monitoring/8.2_zabbix_part1/resources/zabbix1_1.6.jpg)
+![hosts](https://github.com/SlavaZakariev/netology/blob/144565b66be608730b5dad1e6aa9b9c93ce1f7a7/monitoring/9.2_zabbix_part1/resources/zabbix1_1.6.jpg)
 
 3. Данные мониторинга "Latest data"
 
-![latest](https://github.com/SlavaZakariev/netology/blob/470de14a519ff96d7d3963480a8f7154c281bd95/monitoring/8.2_zabbix_part1/resources/zabbix1_1.7.jpg)
+![latest](https://github.com/SlavaZakariev/netology/blob/144565b66be608730b5dad1e6aa9b9c93ce1f7a7/monitoring/9.2_zabbix_part1/resources/zabbix1_1.7.jpg)
 
 4. Команды использованные для установки zabbix агентов на хостах Ubuntu2 и Ubuntu3
 
