@@ -107,22 +107,22 @@
 
 1. Созднана ветка dev, сделано переключение.
 
-![dev](https://github.com/SlavaZakariev/netology/blob/e5175794f0d0ad870da676b21d3e7071960a75c1/ci-cd/7.5_git/resources/git_3.1.jpg)
+![dev](https://github.com/SlavaZakariev/netology/blob/d58a47636462b4736639249f9d8786376a275325/ci-cd/8.5_git/resources/git_3.1.jpg)
 
 2. Создан файл test.sh.
 
-![.sh](https://github.com/SlavaZakariev/netology/blob/e5175794f0d0ad870da676b21d3e7071960a75c1/ci-cd/7.5_git/resources/git_3.2.jpg)
+![.sh](https://github.com/SlavaZakariev/netology/blob/d58a47636462b4736639249f9d8786376a275325/ci-cd/8.5_git/resources/git_3.2.jpg)
 
 3. Обновление файла test, коммит и синхронизация с облаком GitHub.
 
-![updates](https://github.com/SlavaZakariev/netology/blob/53f414061b41e8be18bab9422a6a0e661ecc729b/ci-cd/7.5_git/resources/git_3.3.jpg)
+![updates](https://github.com/SlavaZakariev/netology/blob/d58a47636462b4736639249f9d8786376a275325/ci-cd/8.5_git/resources/git_3.3.jpg)
 
 4. Выполнен merge dev с main.
 
-![merge](https://github.com/SlavaZakariev/netology/blob/53f414061b41e8be18bab9422a6a0e661ecc729b/ci-cd/7.5_git/resources/git_3.4.jpg)
+![merge](https://github.com/SlavaZakariev/netology/blob/d58a47636462b4736639249f9d8786376a275325/ci-cd/8.5_git/resources/git_3.4.jpg)
 
 5. Коммит и синхронизация после merge.
 
-![finalcommit](https://github.com/SlavaZakariev/netology/blob/3bc5644a2d81b0f8ef426b5b22fafed197cd5cd6/ci-cd/7.5_git/resources/git_3.5.jpg)
+![finalcommit](https://github.com/SlavaZakariev/netology/blob/d58a47636462b4736639249f9d8786376a275325/ci-cd/8.5_git/resources/git_3.5.jpg)
 
 Ссылка на график репозитории main и dev на [GitHub](https://github.com/SlavaZakariev/git-hw/network)
