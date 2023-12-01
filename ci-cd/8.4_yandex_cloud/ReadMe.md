@@ -112,15 +112,15 @@ output "external_ip_address_vm_1" {
 
 1. Создание ssh-ключей для Yandex Cloud
 
-![ssh-key](https://github.com/SlavaZakariev/netology/blob/27a06328f4c5f007862102924a2843bf14a1ab70/ci-cd/7.4_yandex_cloud/resources/yc_1.1.jpg)
+![ssh-key](https://github.com/SlavaZakariev/netology/blob/eb8903f7ded1d5278beacf2e438e0912c57dfdcb/ci-cd/8.4_yandex_cloud/resources/yc_1.1.jpg)
 
 2. Предварительный план **terraform plan**
 
-![plan](https://github.com/SlavaZakariev/netology/blob/ffbd259fa12f4c1c94574b7e16c8caa13b78e42e/ci-cd/7.4_yandex_cloud/resources/yc_1.2.jpg)
+![plan](https://github.com/SlavaZakariev/netology/blob/eb8903f7ded1d5278beacf2e438e0912c57dfdcb/ci-cd/8.4_yandex_cloud/resources/yc_1.2.jpg)
 
 3. Создание инфраструктуры **terraform apply**
  
-![apply](https://github.com/SlavaZakariev/netology/blob/6d0225ca830497dfa282702bd3759a0dd7e28d5e/ci-cd/7.4_yandex_cloud/resources/yc_1.3.jpg)
+![apply](https://github.com/SlavaZakariev/netology/blob/eb8903f7ded1d5278beacf2e438e0912c57dfdcb/ci-cd/8.4_yandex_cloud/resources/yc_1.3.jpg)
 
 4. Playbook для инсталяции **Nginx**
 
@@ -146,8 +146,8 @@ output "external_ip_address_vm_1" {
 
 5. Выполнение Playbook'а
 
-![playbook](https://github.com/SlavaZakariev/netology/blob/71952eafd90244496ae0b6af7a1326dd3ca20c3b/ci-cd/7.4_yandex_cloud/resources/yc_1.4.jpg)
+![playbook](https://github.com/SlavaZakariev/netology/blob/eb8903f7ded1d5278beacf2e438e0912c57dfdcb/ci-cd/8.4_yandex_cloud/resources/yc_1.4.jpg)
 
 6. Проверка соединения с сервером **Nginx** через консоль
 
-![curl](https://github.com/SlavaZakariev/netology/blob/71952eafd90244496ae0b6af7a1326dd3ca20c3b/ci-cd/7.4_yandex_cloud/resources/yc_1.5.jpg)
+![curl](https://github.com/SlavaZakariev/netology/blob/eb8903f7ded1d5278beacf2e438e0912c57dfdcb/ci-cd/8.4_yandex_cloud/resources/yc_1.5.jpg)
