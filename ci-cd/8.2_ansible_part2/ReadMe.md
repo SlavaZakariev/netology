@@ -44,7 +44,7 @@
 
 Запущено выполнение командой ***ansible-playbook .ansible/playbooks/unpack.yaml -K***
 
-![upack.yaml](https://github.com/SlavaZakariev/netology/blob/5d54807054a02a507a7510797c4b9fd0faf9791a/ci-cd/7.2_ansible_part2/resources/ansible2_1.2.jpg)
+![upack.yaml](https://github.com/SlavaZakariev/netology/blob/88fdf5d81efa29553fb745b7f597ddeccc074b99/ci-cd/8.2_ansible_part2/resources/ansible2_1.2.jpg)
 
 2. Установка tuned
 
@@ -69,7 +69,7 @@
 
 ```
 
-![tuned](https://github.com/SlavaZakariev/netology/blob/e592719b036e3c99e081734d16137e7900725712/ci-cd/7.2_ansible_part2/resources/ansible2_2.1.jpg)
+![tuned](https://github.com/SlavaZakariev/netology/blob/88fdf5d81efa29553fb745b7f597ddeccc074b99/ci-cd/8.2_ansible_part2/resources/ansible2_2.1.jpg)
 
 ---
 
@@ -115,11 +115,11 @@ var2: {{ motd.course }}
 
 ```
 
-![motd](https://github.com/SlavaZakariev/netology/blob/edb48e8665cd4a2fbebe88ce8a0a2fc21936a1dc/ci-cd/7.2_ansible_part2/resources/ansible2_3.1.jpg)
+![motd](https://github.com/SlavaZakariev/netology/blob/88fdf5d81efa29553fb745b7f597ddeccc074b99/ci-cd/8.2_ansible_part2/resources/ansible2_3.1.jpg)
 
 Приветствие на управляемых серверах Ubuntu2 и Ubuntu3
 
-![vars](https://github.com/SlavaZakariev/netology/blob/edb48e8665cd4a2fbebe88ce8a0a2fc21936a1dc/ci-cd/7.2_ansible_part2/resources/ansible2_3.3.jpg)
+![vars](https://github.com/SlavaZakariev/netology/blob/88fdf5d81efa29553fb745b7f597ddeccc074b99/ci-cd/8.2_ansible_part2/resources/ansible2_3.3.jpg)
 
 ---
 
@@ -150,11 +150,11 @@ var2: {{ motd.course }}
 ```
 Результат обновления
 
-![update](https://github.com/SlavaZakariev/netology/blob/4466ac74430003511f2358790c590ff7d6d89d5f/ci-cd/7.2_ansible_part2/resources/ansible2_4.1.jpg)
+![update](https://github.com/SlavaZakariev/netology/blob/88fdf5d81efa29553fb745b7f597ddeccc074b99/ci-cd/8.2_ansible_part2/resources/ansible2_4.1.jpg)
 
 Вывод приветствия
 
-![update](https://github.com/SlavaZakariev/netology/blob/4466ac74430003511f2358790c590ff7d6d89d5f/ci-cd/7.2_ansible_part2/resources/ansible2_4.2.jpg)
+![update](https://github.com/SlavaZakariev/netology/blob/88fdf5d81efa29553fb745b7f597ddeccc074b99/ci-cd/8.2_ansible_part2/resources/ansible2_4.2.jpg)
 
 ---
 
