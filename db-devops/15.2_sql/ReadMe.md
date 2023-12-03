@@ -1,8 +1,4 @@
-[Источник](https://github.com/netology-code/virt-homeworks/blob/virt-11/06-db-02-sql/README.md) (2022-02-15)
-
----
-
-# Домашнее задание к занятию "6.2. SQL"
+## 15.2. SQL - Вячеслав Закариев
 
 ## Введение
 
