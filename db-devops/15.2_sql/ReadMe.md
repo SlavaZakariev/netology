@@ -16,6 +16,51 @@
 
 ### Решение 1
 
+Разворачиваем 2 контейнера:
+
+![sql](https://github.com/SlavaZakariev/netology/blob/60d7acae8204775e3c61f7f795c7ff0321cddf37/db-devops/15.2_sql/resources/sql_1.1.jpg)
+
+<details>
+<summary>docker-compose - файл</summary>
+ 
+ ```yaml
+ version: "3.8"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: netology_psql
+    volumes:
+      - netology_pgdata:/var/lib/postgresql/data
+      - netology_pgbackup:/dump
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./sql/insert.sql:/docker-entrypoint-initdb.d/insert.sql
+      - ./sql/update.sql:/docker-entrypoint-initdb.d/update.sql
+    restart: always
+    environment:
+      POSTGRES_DB: psqldb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  postgres_copy:
+    image: postgres:latest
+    container_name: netology_psqsl_copy
+    volumes:
+      - netology_pgdata_copy:/var/lib/postgresql/data
+      - netology_pgbackup:/dump
+    restart: always
+    environment:
+      POSTGRES_DB: psqldb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+volumes:
+  netology_pgdata: {}
+  netology_pgbackup: {}
+  netology_pgdata_copy: {}
+```
+</details>
+
 ---
 
 ### Задача 2
