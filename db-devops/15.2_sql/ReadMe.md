@@ -266,6 +266,10 @@ VALUES ('Иванов Иван Иванович', 'USA'),
        ('Ritchie Blackmore', 'Russia');
 ```
 
+Результат выполнения запроса.
+
+![sql1.5](https://github.com/SlavaZakariev/netology/blob/9401857893de1c5fb2c508f05d5ab29e5b4ad3a3/db-devops/15.2_sql/resources/sql_1.5.jpg)
+
 ---
 
 ### Задача 4
@@ -284,7 +288,7 @@ VALUES ('Иванов Иван Иванович', 'USA'),
 
 Приведите SQL-запрос для выдачи всех пользователей, которые совершили заказ, а также вывод данного запроса.
  
-Подсказк - используйте директиву `UPDATE`.
+Подсказка - используйте директиву `UPDATE`.
 
 ---
 
@@ -309,6 +313,12 @@ UPDATE Clients
 SET order_id = 5
 WHERE client_id = 3;
 ```
+
+```sql
+SELECT * from clients where order_id is not null;
+```
+
+![orders](https://github.com/SlavaZakariev/netology/blob/722ab321b143709b640c69243d5e2f69ce20c173/db-devops/15.2_sql/resources/sql_1.6.jpg)
 
 ---
 
