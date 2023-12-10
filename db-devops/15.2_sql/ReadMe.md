@@ -16,7 +16,7 @@
 
 ### Решение 1
 
-Разворачиваем 2 контейнера:
+Разворачиваем 2 контейнера **netology_psql** и **netology_psql_copy** с помощью **docker-compose**:
 
 ![sql](https://github.com/SlavaZakariev/netology/blob/60d7acae8204775e3c61f7f795c7ff0321cddf37/db-devops/15.2_sql/resources/sql_1.1.jpg)
 
