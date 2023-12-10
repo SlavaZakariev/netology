@@ -367,4 +367,14 @@ test_db=# EXPLAIN SELECT * from clients where order_id is not null;
 
 ### Решение 6
 
----
+Входим на основной контейнер и создаём дамп БД **test_db**.
+
+![pump1](https://github.com/SlavaZakariev/netology/blob/b2b2bc5abd1997069520f6ce58a25b0e711e4bd6/db-devops/15.2_sql/resources/sql_2.1.jpg)
+
+Входим на второй контейнер и создаём БД **test_db**, далее разворачиваем дамп во вновь созданную БД.
+
+![pump2](https://github.com/SlavaZakariev/netology/blob/b2b2bc5abd1997069520f6ce58a25b0e711e4bd6/db-devops/15.2_sql/resources/sql_2.2.jpg)
+
+Проверяем вновь добавленные строки из дампа в таблице **orders**.
+
+![pump3](https://github.com/SlavaZakariev/netology/blob/aa29c32e8e5f3bdb1b4ca2291fa547bef16ad7f5/db-devops/15.2_sql/resources/sql_2.3.jpg)
