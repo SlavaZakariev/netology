@@ -93,6 +93,82 @@ volumes:
 
 ### Решение 2
 
+Вошли в контейнер и далее в СУБД с помощью команды: `sudo docker exec -it netology_psql bash -c "psql -U postgres"`
+
+Применили примонтированный скрипт на томе для создания БД, таблиц, пользователя и выдачи им прав согласно условию задания.
+
+<details>
+<summary>create.sql</summary>
+
+ ```sql
+-- Создание БД test_db
+CREATE DATABASE test_db;
+\c test_db;
+
+-- Создание в test_db таблицы Orders
+CREATE TABLE IF NOT EXISTS Orders (
+    order_id SERIAL NOT NULL,
+    name varchar(256) NOT NULL,
+    price INT,
+    PRIMARY KEY (order_id)
+);
+
+-- Создание таблицы Clients
+CREATE TABLE IF NOT EXISTS Clients (
+    client_id SERIAL NOT NULL,
+    last_name varchar(256) NOT NULL,
+    country_name varchar(256) NOT NULL,
+    order_id INT,
+    PRIMARY KEY (client_id),
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+);
+
+-- предоставление привилигированных прав пользователю test-admin-user на таблицы БД test_db
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA "public" TO "test-admin-user";
+
+-- создание пользователя test-simple-user
+CREATE USER "test-simple-user";
+
+-- права пользователю test-simple-user на read/write для таблиц БД test_db
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA "public" TO "test-simple-user";
+```
+</details>
+
+Список БД:
+
+![DBs](https://github.com/SlavaZakariev/netology/blob/f8ab9b7b519cc82126943670defac59c4a3a4607/db-devops/15.2_sql/resources/sql_1.2.jpg)
+
+Описание таблиц **orders** и **clients**:
+
+```sql
+test_db-# \d orders
+                                        Table "public.orders"
+  Column  |          Type          | Collation | Nullable |                 Default
+----------+------------------------+-----------+----------+------------------------------------------
+ order_id | integer                |           | not null | nextval('orders_order_id_seq'::regclass)
+ name     | character varying(256) |           | not null |
+ price    | integer                |           |          |
+Indexes:
+    "orders_pkey" PRIMARY KEY, btree (order_id)
+Referenced by:
+    TABLE "clients" CONSTRAINT "clients_order_id_fkey" FOREIGN KEY (order_id) REFERENCES orders(order_id)
+
+test_db-# \d clients
+                                          Table "public.clients"
+    Column    |          Type          | Collation | Nullable |                  Default
+--------------+------------------------+-----------+----------+--------------------------------------------
+ client_id    | integer                |           | not null | nextval('clients_client_id_seq'::regclass)
+ last_name    | character varying(256) |           | not null |
+ country_name | character varying(256) |           | not null |
+ order_id     | integer                |           |          |
+Indexes:
+    "clients_pkey" PRIMARY KEY, btree (client_id)
+Foreign-key constraints:
+    "clients_order_id_fkey" FOREIGN KEY (order_id) REFERENCES orders(order_id)
+
+```
+
+
 ---
 
 ### Задача 3
