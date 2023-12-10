@@ -21,7 +21,7 @@
 ![sql](https://github.com/SlavaZakariev/netology/blob/60d7acae8204775e3c61f7f795c7ff0321cddf37/db-devops/15.2_sql/resources/sql_1.1.jpg)
 
 <details>
-<summary>docker-compose - файл</summary>
+<summary>docker-compose - файл дополнен с учётом всех заданий ниже</summary>
  
  ```yaml
  # version: "3.8"
