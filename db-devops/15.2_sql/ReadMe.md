@@ -333,6 +333,22 @@ SELECT * from clients where order_id is not null;
 
 ### Решение 5
 
+```sql
+test_db=# EXPLAIN SELECT * from clients where order_id is not null;
+                         QUERY PLAN
+------------------------------------------------------------
+ Seq Scan on clients  (cost=0.00..10.70 rows=70 width=1040)
+   Filter: (order_id IS NOT NULL)
+(2 rows)
+```
+![explain](https://github.com/SlavaZakariev/netology/blob/b63554c70cae724745e9bd770f16b9e3e4e351e5/db-devops/15.2_sql/resources/sql_1.7.jpg)
+
+- **Seq Scan** - последовательное чтение данных
+- **cost** - время затраченное на выполнение операции
+- rows - количество строк при выполнении операции
+- width - средний размер одной строки в байтах
+- EXPLAIN - команда выводит план выполнения, генерируемый планировщиком PostgreSQL для заданного оператора
+
 ---
 
 ### Задача 6
