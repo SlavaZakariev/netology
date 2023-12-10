@@ -168,6 +168,44 @@ Foreign-key constraints:
 
 ```
 
+SQL-запрос для выдачи списка пользователей с правами над таблицами test_db
+
+```sql
+SELECT table_name, grantee, privilege_type 
+FROM information_schema.role_table_grants 
+WHERE table_name IN ('clients', 'orders')
+  AND grantee <> 'postgres';
+```
+
+Список пользователей с правами над таблицами test_db
+
+```sql
+ table_name |     grantee      | privilege_type
+------------+------------------+----------------
+ orders     | test-admin-user  | INSERT
+ orders     | test-admin-user  | SELECT
+ orders     | test-admin-user  | UPDATE
+ orders     | test-admin-user  | DELETE
+ orders     | test-admin-user  | TRUNCATE
+ orders     | test-admin-user  | REFERENCES
+ orders     | test-admin-user  | TRIGGER
+ orders     | test-simple-user | INSERT
+ orders     | test-simple-user | SELECT
+ orders     | test-simple-user | UPDATE
+ orders     | test-simple-user | DELETE
+ clients    | test-admin-user  | INSERT
+ clients    | test-admin-user  | SELECT
+ clients    | test-admin-user  | UPDATE
+ clients    | test-admin-user  | DELETE
+ clients    | test-admin-user  | TRUNCATE
+ clients    | test-admin-user  | REFERENCES
+ clients    | test-admin-user  | TRIGGER
+ clients    | test-simple-user | INSERT
+ clients    | test-simple-user | SELECT
+ clients    | test-simple-user | UPDATE
+ clients    | test-simple-user | DELETE
+(22 rows)
+```
 
 ---
 
@@ -206,6 +244,28 @@ Foreign-key constraints:
 
 ### Решение 3
 
+Применили примонтированный скрипт **insert.sql** на томе при создании контейнеров.
+
+![insert](https://github.com/SlavaZakariev/netology/blob/ffa20f355576ecea8aa5cd0713362f75d44dbacb/db-devops/15.2_sql/resources/sql_1.3.jpg)
+
+ ```sql
+\c test_db;
+
+INSERT INTO Orders (name, price)
+VALUES ('Шоколад', 10),
+       ('Принтер', 3000),
+       ('Книга', 500),
+       ('Монитор', 7000),
+       ('Гитара', 4000);
+
+INSERT INTO Clients (last_name, country_name)
+VALUES ('Иванов Иван Иванович', 'USA'),
+       ('Петров Петр Петрович', 'Canada'),
+       ('Иоганн Себастьян Бах', 'Japan'),
+       ('Ронни Джеймс Дио', 'Russia'),
+       ('Ritchie Blackmore', 'Russia');
+```
+
 ---
 
 ### Задача 4
@@ -229,6 +289,26 @@ Foreign-key constraints:
 ---
 
 ### Решение 4
+
+Применили примонтированный скрипт **update.sql** на томе при создании контейнеров.
+
+![insert](https://github.com/SlavaZakariev/netology/blob/ffa20f355576ecea8aa5cd0713362f75d44dbacb/db-devops/15.2_sql/resources/sql_1.4.jpg)
+
+```sql
+\c test_db;
+
+UPDATE Clients
+SET order_id = 3
+WHERE client_id = 1;
+
+UPDATE Clients
+SET order_id = 4
+WHERE client_id = 2;
+
+UPDATE Clients
+SET order_id = 5
+WHERE client_id = 3;
+```
 
 ---
 
