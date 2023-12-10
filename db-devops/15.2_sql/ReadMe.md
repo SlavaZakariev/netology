@@ -24,18 +24,18 @@
 <summary>docker-compose - файл</summary>
  
  ```yaml
- version: "3.8"
+ # version: "3.8"
 
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:12
     container_name: netology_psql
     volumes:
       - netology_pgdata:/var/lib/postgresql/data
       - netology_pgbackup:/dump
-      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./sql/insert.sql:/docker-entrypoint-initdb.d/insert.sql
-      - ./sql/update.sql:/docker-entrypoint-initdb.d/update.sql
+      - ./sql/create.sql:/docker-entrypoint-db/create.sql
+      - ./sql/insert.sql:/docker-entrypoint-db/insert.sql
+      - ./sql/update.sql:/docker-entrypoint-db/update.sql
     restart: always
     environment:
       POSTGRES_DB: psqldb
@@ -43,7 +43,7 @@ services:
       POSTGRES_PASSWORD: postgres
 
   postgres_copy:
-    image: postgres:latest
+    image: postgres:12
     container_name: netology_psqsl_copy
     volumes:
       - netology_pgdata_copy:/var/lib/postgresql/data
