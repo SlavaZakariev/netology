@@ -97,8 +97,7 @@ volumes:
 
 Применили примонтированный скрипт на томе для создания БД, таблиц, пользователя и выдачи им прав согласно условию задания.
 
-<details>
-<summary>create.sql</summary>
+Скрипт **create.sql**
 
  ```sql
 -- Создание БД test_db
@@ -132,7 +131,6 @@ CREATE USER "test-simple-user";
 -- права пользователю test-simple-user на read/write для таблиц БД test_db
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA "public" TO "test-simple-user";
 ```
-</details>
 
 Список БД:
 
