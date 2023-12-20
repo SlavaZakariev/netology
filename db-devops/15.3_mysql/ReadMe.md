@@ -120,6 +120,24 @@ CREATE USER 'test'@'localhost'
 
 ### Решение 3
 
+Установим профилирование
+
+```sql
+SET profiling = 1;
+```
+
+Фиксируем время выполнения запроса `SELECT * FROM orders WHERE price > 100;` на движке **InnoDB**
+
+![engine1](https://github.com/SlavaZakariev/netology/blob/478da854dcf4f2c5a7eae5d8c81dcf5d9083d57b/db-devops/15.3_mysql/resources/mysql_3.1.jpg)
+
+Проверка текущего движке **InnoDB**, а также внесение на **MyISAM**
+
+![engine2](https://github.com/SlavaZakariev/netology/blob/478da854dcf4f2c5a7eae5d8c81dcf5d9083d57b/db-devops/15.3_mysql/resources/mysql_3.2.jpg)
+
+Фиксируем время выполнения запроса `SELECT * FROM orders WHERE price > 100;` на движке **MyISAM**
+
+![engine3](https://github.com/SlavaZakariev/netology/blob/478da854dcf4f2c5a7eae5d8c81dcf5d9083d57b/db-devops/15.3_mysql/resources/mysql_3.3.jpg)
+
 ---
 
 ### Задача 4 
