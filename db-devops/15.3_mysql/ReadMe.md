@@ -98,6 +98,12 @@ CREATE USER 'test'@'localhost'
 Предоставляем привилегии пользователю `test` на операции SELECT базы `test_db`. \
 Данные по пользователю с помощью схемы **INFORMATION_SCHEMA.USER_ATTRIBUTES**
 
+```sql
+SELECT table_schema, table_name, engine
+  FROM information_schema.tables
+  WHERE table_name = 'orders';
+```
+
 ![user2](https://github.com/SlavaZakariev/netology/blob/e403fea16a867a792d39efcf50fb6dd73f402864/db-devops/15.3_mysql/resources/mysql_2.2.jpg)
 
 ![user1](https://github.com/SlavaZakariev/netology/blob/e403fea16a867a792d39efcf50fb6dd73f402864/db-devops/15.3_mysql/resources/mysql_2.1.jpg)
@@ -137,6 +143,10 @@ SET profiling = 1;
 
 ![engine3](https://github.com/SlavaZakariev/netology/blob/478da854dcf4f2c5a7eae5d8c81dcf5d9083d57b/db-devops/15.3_mysql/resources/mysql_3.3.jpg)
 
+Разница во времени выполнения для движков: \
+**InnoDB: 0.00017975** \
+**MyISAM: 0.00016100**
+
 ---
 
 ### Задача 4 
@@ -172,5 +182,3 @@ innodb_log_buffer_size=1M
 innodb_buffer_pool_size=2G
 innodb_log_file_size=100M
 ```
-
----
