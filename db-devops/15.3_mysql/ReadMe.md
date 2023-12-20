@@ -45,7 +45,7 @@ volumes:
 
 ![mysql1](https://github.com/SlavaZakariev/netology/blob/27be6715466ac026772448fb496145f7342f7d1c/db-devops/15.3_mysql/resources/mysql_1.1.jpg)
 
-Вошли в конейнер, далее в консоль **mysql** и создаём БД netology
+Вошли в контейнер, далее в консоль **mysql** и создаём БД netology
 
 ![mysql2](https://github.com/SlavaZakariev/netology/blob/27be6715466ac026772448fb496145f7342f7d1c/db-devops/15.3_mysql/resources/mysql_1.2.jpg)
 
@@ -71,7 +71,7 @@ mysql> netology < /dump/test_dump.sql
 - срок истечения пароля - 180 дней 
 - количество попыток авторизации - 3 
 - максимальное количество запросов в час - 100
-- аттрибуты пользователя:
+- атрибуты пользователя:
     - Фамилия "Pretty"
     - Имя "James"
 
@@ -92,10 +92,10 @@ CREATE USER 'test'@'localhost'
   WITH MAX_QUERIES_PER_HOUR 100 -- максимальное количество запросов в час - 100
   PASSWORD EXPIRE INTERVAL 180 DAY -- срок истечения пароля - 180 дней
   FAILED_LOGIN_ATTEMPTS 3 -- количество попыток авторизации - 3
-  ATTRIBUTE '{"fname": "James", "lname": "Pretty"}' -- аттрибуты пользователя;
+  ATTRIBUTE '{"fname": "James", "lname": "Pretty"}' -- атрибуты пользователя;
 ```
 
-Предоставляем привелегии пользователю `test` на операции SELECT базы `test_db`. \
+Предоставляем привилегии пользователю `test` на операции SELECT базы `test_db`. \
 Данные по пользователю с помощью схемы **INFORMATION_SCHEMA.USER_ATTRIBUTES**
 
 ![user2](https://github.com/SlavaZakariev/netology/blob/e403fea16a867a792d39efcf50fb6dd73f402864/db-devops/15.3_mysql/resources/mysql_2.2.jpg)
