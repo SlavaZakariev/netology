@@ -84,6 +84,25 @@ mysql> netology < /dump/test_dump.sql
 
 ### Решение 2
 
+Создаём пользователя, согласно условию (пометки в комментариях)
+
+```sql
+CREATE USER 'test'@'localhost'
+  IDENTIFIED WITH mysql_native_password BY 'test-pass' -- плагин авторизации mysql_native_password
+  WITH MAX_QUERIES_PER_HOUR 100 -- максимальное количество запросов в час - 100
+  PASSWORD EXPIRE INTERVAL 180 DAY -- срок истечения пароля - 180 дней
+  FAILED_LOGIN_ATTEMPTS 3 -- количество попыток авторизации - 3
+  ATTRIBUTE '{"fname": "James", "lname": "Pretty"}' -- аттрибуты пользователя;
+```
+
+Предоставляем привелегии пользователю `test` на операции SELECT базы `test_db`.
+
+![user2](https://github.com/SlavaZakariev/netology/blob/e403fea16a867a792d39efcf50fb6dd73f402864/db-devops/15.3_mysql/resources/mysql_2.2.jpg)
+
+Данные по пользователю с помощью схемы **INFORMATION_SCHEMA.USER_ATTRIBUTES**
+
+![user1](https://github.com/SlavaZakariev/netology/blob/e403fea16a867a792d39efcf50fb6dd73f402864/db-devops/15.3_mysql/resources/mysql_2.1.jpg)
+
 ---
 
 ### Задача 3
