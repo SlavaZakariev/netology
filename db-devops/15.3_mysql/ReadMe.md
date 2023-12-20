@@ -58,6 +58,10 @@ mysql> netology < /dump/test_dump.sql
 
 ![mysql3](https://github.com/SlavaZakariev/netology/blob/27be6715466ac026772448fb496145f7342f7d1c/db-devops/15.3_mysql/resources/mysql_1.3.jpg)
 
+Подключаемся к восстановленной БД, выводим список таблиц и количество записей с `price` > 300.
+
+![mysql4](https://github.com/SlavaZakariev/netology/blob/0e7bcf97b2b5b4817246edcdf97e01e8a0028c18/db-devops/15.3_mysql/resources/mysql_1.4.jpg)
+
 ---
 
 ### Задача 2
