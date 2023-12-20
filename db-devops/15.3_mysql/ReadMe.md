@@ -156,4 +156,21 @@ SET profiling = 1;
 
 ### Решение 4
 
+Выполним копия конфигурационного файла командой
+
+```
+cp /etc/mysql/my.cnf /etc/mysql/my.cnf.bakup1
+```
+
+Можно внести изменения в виде:
+
+```
+innodb_flush_method=O_DSYNC
+innodb_flush_log_at_trx_commit=2
+innodb_file_per_table=ON
+innodb_log_buffer_size=1M
+innodb_buffer_pool_size=2G
+innodb_log_file_size=100M
+```
+
 ---
