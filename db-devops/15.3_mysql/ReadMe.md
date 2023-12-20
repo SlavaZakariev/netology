@@ -95,11 +95,10 @@ CREATE USER 'test'@'localhost'
   ATTRIBUTE '{"fname": "James", "lname": "Pretty"}' -- аттрибуты пользователя;
 ```
 
-Предоставляем привелегии пользователю `test` на операции SELECT базы `test_db`.
+Предоставляем привелегии пользователю `test` на операции SELECT базы `test_db`. \
+Данные по пользователю с помощью схемы **INFORMATION_SCHEMA.USER_ATTRIBUTES**
 
 ![user2](https://github.com/SlavaZakariev/netology/blob/e403fea16a867a792d39efcf50fb6dd73f402864/db-devops/15.3_mysql/resources/mysql_2.2.jpg)
-
-Данные по пользователю с помощью схемы **INFORMATION_SCHEMA.USER_ATTRIBUTES**
 
 ![user1](https://github.com/SlavaZakariev/netology/blob/e403fea16a867a792d39efcf50fb6dd73f402864/db-devops/15.3_mysql/resources/mysql_2.1.jpg)
 
