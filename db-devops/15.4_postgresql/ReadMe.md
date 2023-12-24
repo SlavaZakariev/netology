@@ -89,6 +89,12 @@ psql -U postgres test_database < /dump/test_dump.sql
 
 ![analyze](https://github.com/SlavaZakariev/netology/blob/cade76dca4f8446394cde36dc1a9b6f5a7f46b18/db-devops/15.4_postgresql/resources/psql_1.4.jpg)
 
+```sql
+select tablename, attname, avg_width
+  from pg_stats
+  where tablename = 'orders';
+```
+
 ---
 
 ### Задача 3
