@@ -74,6 +74,28 @@ volumes:
 
 ### Решение 2
 
+Создаём БД **test_database** командой:
+```sql
+CREATE DATABASE test_database;
+```
+
+![sql](https://github.com/SlavaZakariev/netology/blob/cade76dca4f8446394cde36dc1a9b6f5a7f46b18/db-devops/15.4_postgresql/resources/psql_1.2.jpg)
+
+Выходим из СУБД в контейнер и восстанавливаем **dump** учитывая ранее примапленную папку контейнера:
+
+```
+psql -U postgres test_database < /dump/test_dump.sql
+```
+
+Подлючаемся к ранее созданной БД **test_database** и проверям наличие восстановленных данных
+
+![dump](https://github.com/SlavaZakariev/netology/blob/cade76dca4f8446394cde36dc1a9b6f5a7f46b18/db-devops/15.4_postgresql/resources/psql_1.3.jpg)
+
+ Проводим операцию ANALYZE согласно условию для сбора статистики по таблице. \
+ Далее вводим запрос для поиска наибольшего среднего значения размера элементов в байтах
+
+![analyze](https://github.com/SlavaZakariev/netology/blob/cade76dca4f8446394cde36dc1a9b6f5a7f46b18/db-devops/15.4_postgresql/resources/psql_1.4.jpg)
+
 ---
 
 ### Задача 3
