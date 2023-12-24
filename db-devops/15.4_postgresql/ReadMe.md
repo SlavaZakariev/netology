@@ -137,3 +137,11 @@ INSERT INTO orders_2 SELECT * FROM orders where price <= 499; -- orders_2: price
 pg_dump -U postgres test_database > /dump/test_database_1.sql
 ```
 ![pg_dump](https://github.com/SlavaZakariev/netology/blob/1f962de3c4125718d63f17420066b9d72670066b/db-devops/15.4_postgresql/resources/psql_1.5.jpg)
+
+Можно попробовать добавить уникальность столбцу **title**, добавив параметры **UNIQUE** и **NOT NULL**
+```sql
+CREATE TABLE public.orders (
+    id integer NOT NULL,
+    title varchar(80) NOT NULL UNIQUE,
+    price integer DEFAULT 0);
+```
