@@ -76,7 +76,7 @@ CREATE DATABASE test_database;
 
 Выходим из СУБД в контейнер и восстанавливаем **dump** учитывая ранее примапленную папку контейнера:
 
-```
+```shell
 psql -U postgres test_database < /dump/test_dump.sql
 ```
 
@@ -131,4 +131,9 @@ INSERT INTO orders_2 SELECT * FROM orders where price <= 499; -- orders_2: price
 
 ### Решение 4
 
----
+Для создания dump БД test_database воспользуемся командой:
+
+```shell
+pg_dump -U postgres test_database > /dump/test_database_1.sql
+```
+
