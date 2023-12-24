@@ -136,4 +136,4 @@ INSERT INTO orders_2 SELECT * FROM orders where price <= 499; -- orders_2: price
 ```shell
 pg_dump -U postgres test_database > /dump/test_database_1.sql
 ```
-
+![pg_dump](https://github.com/SlavaZakariev/netology/blob/1f962de3c4125718d63f17420066b9d72670066b/db-devops/15.4_postgresql/resources/psql_1.5.jpg)
