@@ -35,10 +35,10 @@ services:
       POSTGRES_PASSWORD: netology # пароль для пользователя root
     restart: always
     ports:
-      -5432:5432
+      - 5432:5432
 
 volumes:
-  netology_mysqldata: {}
+  pgdata: {}
 ```
 
 ---
