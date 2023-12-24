@@ -32,7 +32,7 @@ services:
       - pgdata:/var/lib/postgresql/data
       - ./postgresql/test_dump.sql:/dump/test_dump.sql
     environment:
-      POSTGRES_PASSWORD: netology # пароль для пользователя root
+      POSTGRES_PASSWORD: netology # пароль для суперпользователя postgres по умолчанию
     restart: always
     ports:
       - 5432:5432
