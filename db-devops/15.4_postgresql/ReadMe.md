@@ -41,6 +41,16 @@ volumes:
   pgdata: {}
 ```
 
+Развёрнут контейнер PosgreSQL 13
+
+![psql1](https://github.com/SlavaZakariev/netology/blob/ea43db8298860139f4de431d67695266285cfd9c/db-devops/15.4_postgresql/resources/psql_1.1.jpg)
+
+`\l` вывод списка БД \
+`\c` подключение к БД \
+`\d` вывод списка таблиц \
+`\d name` вывод описания содержимого таблицы, где **name** это имя требуемой таблицы \
+`\q` выход из psql
+
 ---
 
 ### Задача 2
