@@ -110,6 +110,16 @@ select tablename, attname, avg_width
 
 ### Решение 3
 
+Можно попробовать создать две таблицы **orders_1** и **orders_2**.
+
+```sql
+CREATE TABLE orders_1 (CHECK (price > 499)) INHERITS (orders);
+INSERT INTO orders_1 SELECT * FROM orders where price > 499; -- orders_1: price>499
+```
+```sql
+CREATE TABLE orders_2 (CHECK (price <= 499)) INHERITS (orders);
+INSERT INTO orders_2 SELECT * FROM orders where price <= 499; -- orders_2: price<=499
+```
 ---
 
 ### Задача 4
