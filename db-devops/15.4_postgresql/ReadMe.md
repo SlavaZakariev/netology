@@ -80,7 +80,7 @@ CREATE DATABASE test_database;
 psql -U postgres test_database < /dump/test_dump.sql
 ```
 
-Подлючаемся к ранее созданной БД **test_database** и проверям наличие восстановленных данных
+Подключаемся к ранее созданной БД **test_database** и провереям наличие восстановленных данных
 
 ![dump](https://github.com/SlavaZakariev/netology/blob/cade76dca4f8446394cde36dc1a9b6f5a7f46b18/db-devops/15.4_postgresql/resources/psql_1.3.jpg)
 
