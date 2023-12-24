@@ -19,6 +19,28 @@
 
 ### Решение 1 
 
+Написан манифест **docker-compose.yml**
+
+```yaml
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: netology_postgresql
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgresql/test_dump.sql:/dump/test_dump.sql
+    environment:
+      POSTGRES_PASSWORD: netology # пароль для пользователя root
+    restart: always
+    ports:
+      -5432:5432
+
+volumes:
+  netology_mysqldata: {}
+```
+
 ---
 
 ### Задача 2
