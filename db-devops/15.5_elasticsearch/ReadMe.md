@@ -35,6 +35,31 @@
 
 ### Решение 1
 
+Написан манифест для **docker-compose**
+
+```yaml
+version: "3.8"
+
+services:
+  elasticsearch:
+    image: latest
+    container_name: netology_elasticsearch
+    volumes:
+      - elasticdata:/usr/share/elasticsearch/data
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    environment:
+      ELASTIC_USERNAME: "elastic"
+      ELASTIC_PASSWORD: "password"
+      discovery.type: single-node
+    ports:
+      - 9200:9200
+      - 9300:9300
+    restart: always
+
+volumes:
+  elasticdata: {}
+```
+
 ---
 
 ### Задача 2
