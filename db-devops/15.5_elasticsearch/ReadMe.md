@@ -42,22 +42,66 @@ version: "3.8"
 
 services:
   elasticsearch:
-    image: latest
+    build: .
     container_name: netology_elasticsearch
-    volumes:
-      - elasticdata:/usr/share/elasticsearch/data
-      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
-    environment:
-      ELASTIC_USERNAME: "elastic"
-      ELASTIC_PASSWORD: "password"
-      discovery.type: single-node
     ports:
       - 9200:9200
       - 9300:9300
     restart: always
+```
 
-volumes:
-  elasticdata: {}
+Подготовлен **dockerfile**
+(СТОИТ БЛОКИРОВКА НА СКАЧИВАНИЕ ПАКЕТОВ ЧЕРЕЗ wget ПРИ СБОРКЕ КОНТЕЙНЕРА, ИЩУ АЛЬТЕРНАТИВНОЕ РЕШЕНИЕ)
+
+```dockerfile
+FROM ubuntu:22.04
+LABEL author=Zakariev
+
+EXPOSE 9200
+EXPOSE 9300
+
+RUN export ES_HOME="/var/lib/elasticsearch" && \
+    apt -y install wget && \
+    wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.11.0-linux-x86_64.tar.gz && \
+    wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.11.0-linux-x86_64.tar.gz.sha512 && \
+    sha512sum -c elasticsearch-8.11.0-linux-x86_64.tar.gz.sha512 && \
+    tar -xzf elasticsearch-8.11.0-linux-x86_64.tar.gz && \
+    rm -f elasticsearch-8.11.0-linux-x86_64.tar.gz* && \
+    mv elasticsearch-8.11.0 ${ES_HOME} && \
+
+RUN groupadd elasticsearch  && \
+    useradd elasticsearch -g elasticsearch -p elasticsearch
+
+RUN chown elasticsearch:elasticsearch -R ${ES_HOME} && \
+    mkdir /var/lib/logs && \
+    mkdir /var/lib/data && \
+    chown elasticsearch:elasticsearch /var/lib/logs && \
+    chown elasticsearch:elasticsearch /var/lib/data && \
+    apt -y remove wget && \
+    apt clean all
+
+COPY ./config/* /var/lib/elasticsearch/config/
+
+USER elasticsearch
+
+ENV ES_HOME="/var/lib/elasticsearch" \
+    ES_PATH_CONF="/var/lib/elasticsearch/config"
+
+WORKDIR ${ES_HOME}
+
+CMD ["sh", "-c", "${ES_HOME}/bin/elasticsearch"]
+```
+
+Подготовлен файл конфигурации для **elasticsearch**
+
+```yaml
+discovery.type: single-node # Состав сервиса - одна нода
+node.name: netology_test # Наименование ноды
+path.data: /var/lib/data # Место хранения данных
+path.logs: /var/lib/logs # Место хранения логов
+network.host: 0.0.0.0 # Для корректной работы внутри контейнера
+xpack.security.enabled: false # Отключение настроек безопасности
+xpack.security.transport.ssl.enabled: false # Отключение шифрования по SSL
 ```
 
 ---
