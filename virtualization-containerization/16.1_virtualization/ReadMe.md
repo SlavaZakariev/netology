@@ -23,6 +23,22 @@
 
 ---
 
+## Решение 1
+
+1. Создана ВМ на Yandex Cloud
+
+![virt1](https://github.com/SlavaZakariev/netology/blob/e519d31aa6201bc64b5b96a3ecb41c0810c85a09/virtualization-containerization/16.1_virtualization/resources/virt_1.1.jpg)
+
+2. Выполнено подключение по **SSH ED25519**, проверены предустановленные приложения на **Yandex Cloud Toolbox**
+
+![virt2](https://github.com/SlavaZakariev/netology/blob/e519d31aa6201bc64b5b96a3ecb41c0810c85a09/virtualization-containerization/16.1_virtualization/resources/virt_1.2.jpg)
+
+3. Детализация по продуктам
+
+![virt3](https://github.com/SlavaZakariev/netology/blob/e519d31aa6201bc64b5b96a3ecb41c0810c85a09/virtualization-containerization/16.1_virtualization/resources/virt_1.3.jpg)
+
+---
+
 ## Задача 2
 
 Выберите один из вариантов платформы в зависимости от задачи. Здесь нет однозначно верного ответа так как все зависит от конкретных условий: финансирование, компетенции специалистов, удобство использования, надежность, требования ИБ и законодательства, фазы луны.
