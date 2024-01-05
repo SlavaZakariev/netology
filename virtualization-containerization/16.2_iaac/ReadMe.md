@@ -68,7 +68,7 @@ Error: The requested URL returned error: 404:
 
 3. Поднята виртуальная машина из файл **Vagrantfile**
 
-![up](https://github.com/SlavaZakariev/netology/blob/ee578eb4fb19c85152c56bf9dc6ef6f01e260d31/virtualization-containerization/16.2_iaac/resources/yc_1.4.jpg)
+![up](https://github.com/SlavaZakariev/netology/blob/ce2ec38f387d84587433fd1f4ce5817f49774cbb/virtualization-containerization/16.2_iaac/resources/yc_1.4.jpg)
 
 ---
 
