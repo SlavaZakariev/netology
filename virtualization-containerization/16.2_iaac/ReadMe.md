@@ -19,6 +19,10 @@
 
 ## Решение 1
 
+Установлен Packer, Vagrant, VirtualBox, YC plugin
+
+![yc1](https://github.com/SlavaZakariev/netology/blob/ee578eb4fb19c85152c56bf9dc6ef6f01e260d31/virtualization-containerization/16.2_iaac/resources/yc_1.1.jpg)
+
 ---
 
 ## Задача 2
@@ -53,6 +57,18 @@ Error: The requested URL returned error: 404:
 ---
 
 ## Решение 2
+
+1. Создан ssh ключ
+
+![ssh](https://github.com/SlavaZakariev/netology/blob/ee578eb4fb19c85152c56bf9dc6ef6f01e260d31/virtualization-containerization/16.2_iaac/resources/yc_1.2.jpg)
+
+2. Добавлен вручную пакет **Ubuntu 20.04** в лист **Vagrant**
+
+![list](https://github.com/SlavaZakariev/netology/blob/ee578eb4fb19c85152c56bf9dc6ef6f01e260d31/virtualization-containerization/16.2_iaac/resources/yc_1.3.jpg)
+
+3. Поднята виртуальная машина из файл **Vagrantfile**
+
+![up](https://github.com/SlavaZakariev/netology/blob/ee578eb4fb19c85152c56bf9dc6ef6f01e260d31/virtualization-containerization/16.2_iaac/resources/yc_1.4.jpg)
 
 ---
 
