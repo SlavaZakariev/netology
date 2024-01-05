@@ -31,7 +31,7 @@
 2. Создайте виртуальную машину Virtualbox с помощью Vagrant и  [Vagrantfile](https://github.com/netology-code/virtd-homeworks/blob/shvirtd-1/05-virt-02-iaac/src/Vagrantfile) в директории src.
 3. Зайдите внутрь ВМ и убедитесь, что Docker установлен с помощью команды:
 ```
-docker version && docker compose version
+docker version && docker compose version 
 ```
 
 3. Если Vagrant выдаёт ошибку (блокировка трафика):
