@@ -20,6 +20,33 @@ Hey, Netology
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0 . 
 - Предоставьте ответ в виде ссылки на https://hub.docker.com/<username_repo>/custom-nginx/general .
 
+---
+
+Решение 1
+
+1. Устанавливаем **docker** и **docker-compose**, далее скачиваем снимок **nginx:1.21.1** согласно условию
+
+![docker](https://github.com/SlavaZakariev/netology/blob/6dbad63a480c347cf265b707e983d2f8209e7683/virtualization-containerization/16.3_docker-compose/resources/dc_1.1.jpg)
+
+2. Создаём репозиторий [custom-nginx](https://hub.docker.com/repository/docker/slavazakariev/custom-nginx/general) в hub.docker.com
+
+3. Подготавливаем **Dockerfile**, далее собираем контейнер с указанием тэга.
+
+```dockerfile
+FROM nginx:1.21.1
+LABEL author=Zakariev
+COPY ./index.html /usr/share/nginx/html/index.html
+EXPOSE 80
+```
+
+![dockerfile](https://github.com/SlavaZakariev/netology/blob/6dbad63a480c347cf265b707e983d2f8209e7683/virtualization-containerization/16.3_docker-compose/resources/dc_1.3.jpg)
+
+4. Авторизируемся на hub.docker.com, далее загружаем контейнер в созданный [репозиторий](https://hub.docker.com/layers/slavazakariev/custom-nginx/nginx/images/sha256-7910c94e09b7433c43c428664a9ad5389cf44a6755c464da6f03440c1a12eab5?context=repo)
+
+![hub](https://github.com/SlavaZakariev/netology/blob/6dbad63a480c347cf265b707e983d2f8209e7683/virtualization-containerization/16.3_docker-compose/resources/dc_1.4.jpg)
+
+---
+
 ## Задача 2
 1. Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответвии с требованиями:
 - имя контейнера "ФИО-custom-nginx-t2"
