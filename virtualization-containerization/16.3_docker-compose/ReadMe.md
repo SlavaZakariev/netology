@@ -96,6 +96,28 @@ docker pull slavazakariev/custom-nginx:nginx
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
+---
+
+Решение 3
+
+1. Подключючаемся к контейнеру с помощью **docker attach**, далее выходи с помощью команды **Ctrl-C**.
+2. Нажатие Ctrl-C способ завершения сеанса. Без ключей -d или -it, команда останавливает контейнер, а не отключается от него.
+
+![attach](https://github.com/SlavaZakariev/netology/blob/2ad6bebc8ae91cb1a21d1d4e7c3b26c6d638eab3/virtualization-containerization/16.3_docker-compose/resources/dc_3.1.jpg)
+
+3. Подключаемся к контейнеру интерактивно с помощью команды **docker exec** с ключом **-it**, далее устанавливаем редактор **nano**.
+
+![nano](https://github.com/SlavaZakariev/netology/blob/2ad6bebc8ae91cb1a21d1d4e7c3b26c6d638eab3/virtualization-containerization/16.3_docker-compose/resources/dc_3.2.jpg)
+
+4. Редактируем порт в файле **default.conf**, перезапускаем сервис **nginx**, после проверяем доступность страницы по старому порту.
+5. Выходим из контейнера.
+6. Проверяем порт 8080, который проброшен на 80 порт в контейнере, но так как мы заменили его 81-м портом, выходит ошибка.
+7. Удаляем контейнер **docker rm** с ключом **-f**, **--force** то есть принудительно.
+
+![exec](https://github.com/SlavaZakariev/netology/blob/2ad6bebc8ae91cb1a21d1d4e7c3b26c6d638eab3/virtualization-containerization/16.3_docker-compose/resources/dc_3.3.jpg)
+
+---
+
 ## Задача 4
 
 
