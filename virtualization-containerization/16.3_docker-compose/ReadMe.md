@@ -62,6 +62,23 @@ docker pull slavazakariev/custom-nginx:nginx
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
+---
+
+Решение 2
+
+1. Запускаем контейнер из снимка **custom-nginx** с именем согласно условию.
+
+![cont1](https://github.com/SlavaZakariev/netology/blob/2b26342c8edbd8355f7911084aca9ffb0ce995f2/virtualization-containerization/16.3_docker-compose/resources/dc_2.1.jpg)
+
+2. Переименовываем контейнер, выполняем команды заданные в условии.
+
+![cont2](https://github.com/SlavaZakariev/netology/blob/2b26342c8edbd8355f7911084aca9ffb0ce995f2/virtualization-containerization/16.3_docker-compose/resources/dc_2.2.jpg)
+
+3. Отображаем страницу **index.html** контейнера
+
+![cont3](https://github.com/SlavaZakariev/netology/blob/2b26342c8edbd8355f7911084aca9ffb0ce995f2/virtualization-containerization/16.3_docker-compose/resources/dc_2.3.jpg)
+
+---
 
 ## Задача 3
 1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
