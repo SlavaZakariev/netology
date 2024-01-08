@@ -5,7 +5,7 @@
 Сценарий выполнения задачи:
 - Установите docker и docker compose plugin на свою linux рабочую станцию или ВМ.
 - Зарегистрируйтесь и создайте публичный репозиторий  с именем "custom-nginx" на https://hub.docker.com;
-- скачайте образ nginx:1.21.1;
+- Скачайте образ nginx:1.21.1;
 - Создайте Dockerfile и реализуйте в нем замену дефолтной индекс-страницы(/usr/share/nginx/html/index.html), на файл index.html с содержимым:
 ```
 <html>
@@ -29,7 +29,6 @@ Hey, Netology
 ![docker](https://github.com/SlavaZakariev/netology/blob/6dbad63a480c347cf265b707e983d2f8209e7683/virtualization-containerization/16.3_docker-compose/resources/dc_1.1.jpg)
 
 2. Создаём репозиторий [custom-nginx](https://hub.docker.com/repository/docker/slavazakariev/custom-nginx/general) в hub.docker.com
-
 3. Подготавливаем **Dockerfile**, далее собираем контейнер с указанием тэга.
 
 ```dockerfile
@@ -57,7 +56,9 @@ docker pull slavazakariev/custom-nginx:nginx
 - контейнер работает в фоне
 - контейнер опубликован на порту хост системы 127.0.0.1:8080
 2. Переименуйте контейнер в "custom-nginx-t2"
-3. Выполните команду ```date +"%d-%m-%Y %T.%N %Z" && sleep 0.150 && docker ps && ss -tlpn | grep 127.0.0.1:8080  && docker logs custom-nginx-t2 -n1 && docker exec -it custom-nginx-t2 base64 /usr/share/nginx/html/index.html```
+3. Выполните команды: \
+`date +"%d-%m-%Y %T.%N %Z" && sleep 0.150 && docker ps && ss -tlpn | grep 127.0.0.1:8080` \
+`docker logs custom-nginx-t2 -n1 && docker exec -it custom-nginx-t2 base64 /usr/share/nginx/html/index.html`
 4. Убедитесь с помощью curl или веб браузера, что индекс-страница доступна.
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
