@@ -195,3 +195,40 @@ services:
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
 
+---
+
+### Решение 5
+
+1. Чтобы выполнить данное задание, необхоимо поставить версию **docker-compose 2.X.** \
+   На 10/01/2024 в репозитории **Ubuntu** последняя верисия 1.29.2 без поддержки вложенных дополнительных файлов в манифесте.
+2. Обновился до версии **2.2.2** по ссылке: [https://github.com/docker/compose/releases](https://github.com/docker/compose/releases)
+
+![ver](https://github.com/SlavaZakariev/netology/blob/e62e0bda069cf6d6fdd30c70bfda9ea050e8db8e/virtualization-containerization/16.3_docker-compose/resources/dc_5.1.jpg)
+
+3. Запустил команду `docker compose up -d` в папке проекта, по умолчанию запустился манифест под именем **compose.yaml**.
+
+![cont](https://github.com/SlavaZakariev/netology/blob/e62e0bda069cf6d6fdd30c70bfda9ea050e8db8e/virtualization-containerization/16.3_docker-compose/resources/dc_5.2.jpg)
+
+4. Отредактировал файл **compose.yaml** для запуска обоих файлов:
+
+```yaml
+version: "3"
+include:
+  - docker-compose.yaml #Второй файл внутри директории task5
+services:
+  serviceA:
+    build: .
+    depends_on:
+      - portainer
+   portainer:
+     image: portainer/portainer-ce:latest
+     ports:
+       - "9000:9000"
+     volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
+```
+
+Выходит ошибка: `yaml: line 8: did not find expected key` \
+Менял `- portainer` на `serviceB`, но ошибка всё равно повторяется. Подскажите, где править манифест...
+
+---
