@@ -216,19 +216,14 @@ version: "3"
 include:
   - docker-compose.yaml #Второй файл внутри директории task5
 services:
-  serviceA:
-    build: .
-    depends_on:
-      - portainer
    portainer:
      image: portainer/portainer-ce:latest
+     network_mode: host
      ports:
        - "9000:9000"
      volumes:
        - /var/run/docker.sock:/var/run/docker.sock
 ```
 
-Выходит ошибка: `yaml: line 8: did not find expected key` \
-Менял `- portainer` на `serviceB`, но ошибка всё равно повторяется. Подскажите, где править манифест...
 
 ---
