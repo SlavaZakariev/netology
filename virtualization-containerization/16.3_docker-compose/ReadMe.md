@@ -224,6 +224,35 @@ services:
      volumes:
        - /var/run/docker.sock:/var/run/docker.sock
 ```
+![compose](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.3.jpg)
 
+5. Поставим тэг для ранее созданного снимка контейнера **custom-nginx**
 
----
+![tah](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.4.jpg)
+
+Не получается загрузить снимок в repository, все попытки добавляли снимов на hub.docker.com. \
+Сделал logout, так как ранее провёл аутентификацию, но загрузку не получается выполнить. Как указать путь в контейнер repository?
+
+```
+sysadmin@ubuntu1:~/task5$ sudo docker logout
+Removing login credentials for https://index.docker.io/v1/
+
+sysadmin@ubuntu1:~/task5$ sudo docker push custom-nginx:latest
+The push refers to repository [docker.io/library/custom-nginx]
+03b2aae6909d: Preparing
+d47e4d19ddec: Preparing
+8e58314e4a4f: Preparing
+ed94af62a494: Preparing
+875b5b50454b: Preparing
+63b5f2c0d071: Waiting
+d000633a5681: Waiting
+```
+
+6. Производим начальную настройку portainer логин/пароль адмнистратора.
+
+![portainer1](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.6.jpg)
+
+Не получается задеплоить манифест, кнопка "Deploy the stack" не активна. Подскажите, что я сделал не так?
+
+![portainer1](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.7.jpg)
+
