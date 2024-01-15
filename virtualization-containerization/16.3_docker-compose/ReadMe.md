@@ -226,29 +226,19 @@ services:
 ```
 ![compose](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.3.jpg)
 
-5. Поставим тэг для ранее созданного снимка контейнера **custom-nginx**
+5. Поставим тэг для ранее созданного снимка контейнера **custom-nginx** и загрузим в локальный репозиторий.
 
-![tah](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.4.jpg)
+![tah](https://github.com/SlavaZakariev/netology/blob/33fc5b305db6843c7814508180028dfa122d046e/virtualization-containerization/16.3_docker-compose/resources/dc_5.4.jpg)
 
-Не получается загрузить снимок в repository, все попытки добавляли снимов на hub.docker.com. \
-Сделал logout, так как ранее провёл аутентификацию, но загрузку не получается выполнить. Как указать путь в контейнер repository?
+6. Проверим работоспособность локального репозитория-контейнера.
 
-```
-sysadmin@ubuntu1:~/task5$ sudo docker logout
-Removing login credentials for https://index.docker.io/v1/
+- Удалим снимок с тэгом **localhost:5000/custom-nginx**
+- Загрузим его с локального репозитория
+- Проверим наличие снимка localhost:5000/custom-nginx в общем списке загруженных снимков
 
-sysadmin@ubuntu1:~/task5$ sudo docker push custom-nginx:latest
-The push refers to repository [docker.io/library/custom-nginx]
-03b2aae6909d: Preparing
-d47e4d19ddec: Preparing
-8e58314e4a4f: Preparing
-ed94af62a494: Preparing
-875b5b50454b: Preparing
-63b5f2c0d071: Waiting
-d000633a5681: Waiting
-```
+![check](https://github.com/SlavaZakariev/netology/blob/33fc5b305db6843c7814508180028dfa122d046e/virtualization-containerization/16.3_docker-compose/resources/dc_5.5.jpg)
 
-6. Производим начальную настройку portainer логин/пароль адмнистратора.
+8. Производим начальную настройку portainer логин/пароль адмнистратора.
 
 ![portainer1](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.6.jpg)
 
