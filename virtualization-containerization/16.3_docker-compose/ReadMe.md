@@ -42,7 +42,7 @@ EXPOSE 80
 
 4. Авторизируемся на hub.docker.com, далее загружаем контейнер в созданный [репозиторий](https://hub.docker.com/layers/slavazakariev/custom-nginx/nginx/images/sha256-7910c94e09b7433c43c428664a9ad5389cf44a6755c464da6f03440c1a12eab5?context=repo)
 
-![hub](https://github.com/SlavaZakariev/netology/blob/6dbad63a480c347cf265b707e983d2f8209e7683/virtualization-containerization/16.3_docker-compose/resources/dc_1.4.jpg)
+![hub](https://github.com/SlavaZakariev/netology/blob/d161515e8a5bf1175635e87a9a29931a3c634529/virtualization-containerization/16.3_docker-compose/resources/dc_1.4.jpg)
 
 ```
 docker pull slavazakariev/custom-nginx:nginx
