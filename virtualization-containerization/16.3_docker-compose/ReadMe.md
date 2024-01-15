@@ -45,7 +45,7 @@ EXPOSE 80
 ![hub](https://github.com/SlavaZakariev/netology/blob/d161515e8a5bf1175635e87a9a29931a3c634529/virtualization-containerization/16.3_docker-compose/resources/dc_1.4.jpg)
 
 ```
-docker pull slavazakariev/custom-nginx:nginx
+docker pull slavazakariev/custom-nginx:1.0.0
 ```
 
 ---
