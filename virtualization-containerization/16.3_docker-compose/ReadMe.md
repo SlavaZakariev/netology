@@ -238,11 +238,29 @@ services:
 
 ![check](https://github.com/SlavaZakariev/netology/blob/33fc5b305db6843c7814508180028dfa122d046e/virtualization-containerization/16.3_docker-compose/resources/dc_5.5.jpg)
 
-8. Производим начальную настройку portainer логин/пароль адмнистратора.
+8. Производим начальную настройку **portainer** логин/пароль адмнистратора.
 
 ![portainer1](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.6.jpg)
 
-Не получается задеплоить манифест, кнопка "Deploy the stack" не активна. Подскажите, что я сделал не так?
+9. Запускаем **compose** **nginx** через **portainer**.
 
-![portainer1](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.7.jpg)
+![portainer1](https://github.com/SlavaZakariev/netology/blob/07968405c7612a6b6cbf52341dee137117a4b80b/virtualization-containerization/16.3_docker-compose/resources/dc_5.7.jpg)
+
+10. Проверяем запущенный контейнер в терминале.
+
+![portainer2](https://github.com/SlavaZakariev/netology/blob/07968405c7612a6b6cbf52341dee137117a4b80b/virtualization-containerization/16.3_docker-compose/resources/dc_5.8.jpg)
+
+11. Снимок контейнера в portainer от от поля **AppArmorProfile** до **Driver**.
+
+![portainer3](https://github.com/SlavaZakariev/netology/blob/07968405c7612a6b6cbf52341dee137117a4b80b/virtualization-containerization/16.3_docker-compose/resources/dc_5.9.jpg)
+
+12. Удаляем **compose.yaml** и запускаем команду `docker compose up -d`. Получаем предупреждение, которое оповещает: \
+    Найдены потерянные контейнеры для этого проекта. Описание контейнера **Portainer** было в удалённом файле compose.yaml, можно запустить команду с флагом **--remove- 
+    orphans**, чтобы очистить ее.
+
+![compose](https://github.com/SlavaZakariev/netology/blob/07968405c7612a6b6cbf52341dee137117a4b80b/virtualization-containerization/16.3_docker-compose/resources/dc_6.1.jpg)
+
+13. Остановить тестовый стенд можно командой `docker stop $(docker ps -a -q)` под пользователем **root**
+
+![prune](https://github.com/SlavaZakariev/netology/blob/07968405c7612a6b6cbf52341dee137117a4b80b/virtualization-containerization/16.3_docker-compose/resources/dc_6.2.jpg)
 
