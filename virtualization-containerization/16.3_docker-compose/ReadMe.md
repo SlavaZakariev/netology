@@ -51,7 +51,7 @@ docker pull slavazakariev/custom-nginx:1.0.0
 ---
 
 ### Задача 2
-1. Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответвии с требованиями:
+1. Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответствии с требованиями:
 - имя контейнера "ФИО-custom-nginx-t2"
 - контейнер работает в фоне
 - контейнер опубликован на порту хост системы 127.0.0.1:8080
@@ -199,8 +199,8 @@ services:
 
 ### Решение 5
 
-1. Чтобы выполнить данное задание, необхоимо поставить версию **docker-compose 2.X.** \
-   На 10/01/2024 в репозитории **Ubuntu** последняя верисия 1.29.2 без поддержки вложенных дополнительных файлов в манифесте.
+1. Чтобы выполнить данное задание, необходимо поставить версию **docker-compose 2.X.** \
+   На 10/01/2024 в репозитории **Ubuntu** последняя версия 1.29.2 без поддержки вложенных дополнительных файлов в манифесте.
 2. Обновился до версии **2.2.2** по ссылке: [https://github.com/docker/compose/releases](https://github.com/docker/compose/releases)
 
 ![ver](https://github.com/SlavaZakariev/netology/blob/e62e0bda069cf6d6fdd30c70bfda9ea050e8db8e/virtualization-containerization/16.3_docker-compose/resources/dc_5.1.jpg)
@@ -238,7 +238,7 @@ services:
 
 ![check](https://github.com/SlavaZakariev/netology/blob/33fc5b305db6843c7814508180028dfa122d046e/virtualization-containerization/16.3_docker-compose/resources/dc_5.5.jpg)
 
-8. Производим начальную настройку **portainer** логин/пароль адмнистратора.
+8. Производим начальную настройку **portainer** логин/пароль администратора.
 
 ![portainer1](https://github.com/SlavaZakariev/netology/blob/e91d4cb6364353e894eaede2e204e49c4bd0fd0c/virtualization-containerization/16.3_docker-compose/resources/dc_5.6.jpg)
 
