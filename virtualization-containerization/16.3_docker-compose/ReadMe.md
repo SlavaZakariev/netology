@@ -262,5 +262,5 @@ services:
 
 13. Остановить тестовый стенд можно командой `docker stop $(docker ps -a -q)` под пользователем **root**
 
-![prune](https://github.com/SlavaZakariev/netology/blob/07968405c7612a6b6cbf52341dee137117a4b80b/virtualization-containerization/16.3_docker-compose/resources/dc_6.2.jpg)
+![prune](https://github.com/SlavaZakariev/netology/blob/3af654377a29e83e5e18bcba2b08a0989e77fd5c/virtualization-containerization/16.3_docker-compose/resources/dc_6.2.jpg)
 
