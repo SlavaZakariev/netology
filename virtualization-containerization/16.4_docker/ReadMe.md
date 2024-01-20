@@ -15,8 +15,8 @@
 
 ### Решение 1
 
-`docker build -t exaple_python .`
-`docker run -d -p 5000:5000 --name exaple_python  && docker ps`
+`docker build -t exaple_python .` \
+`docker run -d -p 5000:5000 --name exaple_python  && docker ps` \
 `curl http://localhost:5000 && dcoekr rm -f exaple_python`
 
 ---
