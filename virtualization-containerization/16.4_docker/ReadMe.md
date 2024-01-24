@@ -15,9 +15,13 @@
 
 ### Решение 1
 
-`docker build -t exaple_python .` \
-`docker run -d -p 5000:5000 --name exaple_python  && docker ps` \
-`curl http://localhost:5000 && dcoekr rm -f exaple_python`
+1. Собираем контейнер из копии репозитория.
+
+![py1](https://github.com/SlavaZakariev/netology/blob/d634e7549d049a8083ee246f43b93b41c741d574/virtualization-containerization/16.4_docker/resources/dcf_1.1.jpg)
+
+2. Проверям наличие вновь созданного снимка
+
+![py2](https://github.com/SlavaZakariev/netology/blob/d634e7549d049a8083ee246f43b93b41c741d574/virtualization-containerization/16.4_docker/resources/dcf_1.2.jpg)
 
 ---
 
