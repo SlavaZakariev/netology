@@ -18,7 +18,7 @@
 
 В файле meta прописать: 
  
-```terraform
+```yaml
  users:
   - name: user
     groups: sudo
