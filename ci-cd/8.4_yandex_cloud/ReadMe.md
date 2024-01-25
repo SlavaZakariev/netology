@@ -10,7 +10,7 @@
 
 Для выполнения этого задания нужно сгенирировать SSH-ключ командой ssh-kengen. Добавить в конфигурацию Terraform ключ в поле:
 
-```
+```terraform
  metadata = {
     user-data = "${file("./meta.txt")}"
   }
@@ -18,7 +18,7 @@
 
 В файле meta прописать: 
  
-```
+```terraform
  users:
   - name: user
     groups: sudo
@@ -29,7 +29,7 @@
 ```
 Где xxx — это ключ из файла /home/"name_ user"/.ssh/id_rsa.pub. Примерная конфигурация Terraform:
 
-```
+```terraform
 terraform {
   required_providers {
     yandex = {
@@ -93,7 +93,7 @@ output "external_ip_address_vm_1" {
 * внешний IP-адрес машины, полученный из output external_ ip_ address_ vm_1, в файле hosts;
 * доступ в файле plabook *yml поля hosts.
 
-```
+```ansible
 - hosts: 138.68.85.196
   remote_user: user
   tasks:
