@@ -93,7 +93,7 @@ output "external_ip_address_vm_1" {
 * внешний IP-адрес машины, полученный из output external_ ip_ address_ vm_1, в файле hosts;
 * доступ в файле plabook *yml поля hosts.
 
-```ansible
+```yaml
 - hosts: 138.68.85.196
   remote_user: user
   tasks:
@@ -124,7 +124,7 @@ output "external_ip_address_vm_1" {
 
 4. Playbook для инсталяции **Nginx**
 
-```
+```yaml
 - name: Instal nginx
   hosts: 51.250.76.39
   become: true
