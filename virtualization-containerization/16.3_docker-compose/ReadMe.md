@@ -150,7 +150,7 @@ docker pull slavazakariev/custom-nginx:1.0.0
 
 1. Создайте отдельную директорию(например /tmp/netology/docker/task5) и 2 файла внутри него.
 "compose.yaml" с содержимым:
-```
+```yaml
 version: "3"
 services:
   portainer:
@@ -162,7 +162,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 ```
 "docker-compose.yaml" с содержимым:
-```
+```yaml
 version: "3"
 services:
   registry:
@@ -180,7 +180,7 @@ services:
 4. Откройте страницу "https://127.0.0.1:9000" и произведите начальную настройку portainer.(логин и пароль адмнистратора)
 5. Откройте страницу "http://127.0.0.1:9000/#!/home", выберите ваше local  окружение. Перейдите на вкладку "stacks" и в "web editor" задеплойте следующий компоуз:
 
-```
+```yaml
 version: '3'
 
 services:
