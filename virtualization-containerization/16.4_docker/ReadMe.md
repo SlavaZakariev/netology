@@ -65,12 +65,12 @@ services:
       context: /home/sysadmin/shvirtd-example-python
       dockerfile: Dockerfile.python # имя докерфайла
     container_name: web             # имя контейнера
-    ports:                         # проброс портов
+    ports:                          # проброс портов
       - 80:8080
-    restart: always                # перезапуск контейнера
+    restart: always                 # перезапуск контейнера
     networks:
-      backend:                     # добавить в сеть backend
-       ipv4_address: 172.20.0.5    # статический IPv4
+      backend:                      # добавить в сеть backend
+       ipv4_address: 172.20.0.5     # статический IPv4
 
   db:
     image: mysql:8.0   # версия снимка
