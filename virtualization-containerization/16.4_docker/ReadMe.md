@@ -62,15 +62,15 @@ services:
 
   web:
     build:
-      context:  /home/sysadmin/shvirtd-example-python
+      context: /home/sysadmin/shvirtd-example-python
       dockerfile: Dockerfile.python # имя докерфайла
     container_name: web             # имя контейнера
-     ports:                         # проброс портов
+    ports:                         # проброс портов
       - 80:8080
-     restart: always                # перезапуск контейнера
-     networks:
-       backend:                     # добавить в сеть backend
-        ipv4_address: 172.20.0.5    # статический IPv4
+    restart: always                # перезапуск контейнера
+    networks:
+      backend:                     # добавить в сеть backend
+       ipv4_address: 172.20.0.5    # статический IPv4
 
   db:
     image: mysql:8.0   # версия снимка
@@ -81,13 +81,13 @@ services:
     env_file: .env     # файл с переменными
     volumes:           # том и проброс файла в директории
       - mysql:/var/lib/mysql/data
-      - ./mysql/my.conf:/etc/mysql/my.cnf
+      - ./mysql/my.conf:/etc/mysql/my.cnf:ro
     environment:
-      - TZ: Europe/Moscow # установка часового пояса МСК
-      - MYSQL_USER: ${MYSQL_USER}
-      - MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      - MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE: ${MYSQL_DATABASE}
+      - TZ=Europe/Moscow # установка часового пояса МСК
+      - MYSQL_USER:${MYSQL_USER}
+      - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE:${MYSQL_DATABASE}
       # Все параметры описываем в файле .env в папке проекта
       # MYSQL_ROOT_PASSWORD=my_root_password
       # MYSQL_DATABASE=my_database
@@ -97,13 +97,13 @@ services:
       backend:                    # добавить в сеть backend
         ipv4_address: 172.20.0.10 # статический IPv4
 
-networkd:            # создание сети
+networks:            # создание сети
   backend:           # название сети контейнеров
+    driver: bridge   # тип драйвера сети
     ipam:            # описание параметров сети
-      driver: bridge # тип драйвера сети
       config:
         - subnet: 172.20.0.0/24 # подсеть
-        - gateway: 172.20.0.1   # шлюз
+          gateway: 172.20.0.1   # шлюз
 
 volumes: # хранилище томов /var/lib/docker/volumes/
   mysql: {}
