@@ -109,6 +109,8 @@ volumes: # хранилище томов /var/lib/docker/volumes/
   mysql: {}
 ```
 
+![web-db](https://github.com/SlavaZakariev/netology/blob/96472127cb1325e67e5aed081c07be74df4819e4/virtualization-containerization/16.4_docker/resources/dcf_3.1.jpg)
+
 ---
 
 ### Задача 4
