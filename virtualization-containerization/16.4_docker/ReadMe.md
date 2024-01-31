@@ -62,7 +62,7 @@ services:
 
   web:
     build:
-      context: /home/sysadmin/shvirtd-example-python
+      context: /home/sysadmin/shvirtd-example-python # путь до докерфайла
       dockerfile: Dockerfile.python # имя докерфайла
     container_name: web             # имя контейнера
     ports:                          # проброс портов
