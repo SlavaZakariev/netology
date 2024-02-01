@@ -67,7 +67,7 @@ services:
     container_name: web             # имя контейнера
     ports:                          # проброс портов
       - 8080:80
-      - 8081:80
+      - 8090:80
     restart: always                 # перезапуск контейнера
     networks:
       backend:                      # добавить в сеть backend
