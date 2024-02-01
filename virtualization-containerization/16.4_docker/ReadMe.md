@@ -66,7 +66,7 @@ services:
       dockerfile: Dockerfile.python # имя докерфайла
     container_name: web             # имя контейнера
     ports:                          # проброс портов
-      - 80:8080
+      - 8080:80
     restart: always                 # перезапуск контейнера
     networks:
       backend:                      # добавить в сеть backend
