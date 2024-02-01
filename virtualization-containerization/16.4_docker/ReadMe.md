@@ -83,15 +83,11 @@ services:
       - ./mysql/my.conf:/etc/mysql/my.cnf:ro
     environment:
       - TZ=Europe/Moscow # установка часового пояса МСК
+      # Все параметры описываем в файле .env в папке проекта
       - MYSQL_USER:${MYSQL_USER}
       - MYSQL_PASSWORD:${MYSQL_PASSWORD}
       - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE:${MYSQL_DATABASE}
-      # Все параметры описываем в файле .env в папке проекта
-      # MYSQL_ROOT_PASSWORD=my_root_password
-      # MYSQL_DATABASE=my_database
-      # MYSQL_USER=my_user
-      # MYSQL_PASSWORD=my_password
     networks:
       backend:                    # добавить в сеть backend
         ipv4_address: 172.20.0.10 # статический IPv4
