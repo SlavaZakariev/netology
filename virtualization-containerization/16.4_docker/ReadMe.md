@@ -80,7 +80,6 @@ services:
     restart: always    # перезапуск контейнера
     env_file: .env     # файл с переменными
     volumes:           # том и проброс файла в директории
-      - mysql:/var/lib/mysql/data
       - ./mysql/my.conf:/etc/mysql/my.cnf:ro
     environment:
       - TZ=Europe/Moscow # установка часового пояса МСК
