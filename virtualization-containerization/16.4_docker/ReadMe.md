@@ -120,7 +120,7 @@ networks:            # создание сети
 
 3. Проверка стабильности работы контейнеров.
 
-![web-dc2](https://github.com/SlavaZakariev/netology/blob/c7f7de2866a4be790501e566f31c8640c13bb071/virtualization-containerization/16.4_docker/resources/dcf_3.2.jpg)
+![web-dc2](https://github.com/SlavaZakariev/netology/blob/dc8adf0cdca30f4535a21ad50c166f79f5d187d9/virtualization-containerization/16.4_docker/resources/dcf_3.2.jpg)
 
 ОШИБКИ:
 
