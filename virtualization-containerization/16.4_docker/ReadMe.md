@@ -239,6 +239,26 @@ docker image save hashicorp/terraform | tar --extract --wildcards --to-stdout '*
 
 ---
 
+### Решение 6.1
+
+1. Создаём контейнер из снимака без запуска самого контейнера
+
+```
+docker create --name terraform01 hashicorp/terraform
+```
+
+![create](https://github.com/SlavaZakariev/netology/blob/f184d8bf52298f76a4382342dc0489e9c22e2f74/virtualization-containerization/16.4_docker/resources/dcf_6.5.jpg)
+
+2. Копируем необходимый файл из контейнера по пути куда хотим сохранить
+
+```
+docker cp terraform01:/bin/terraform ./
+```
+
+![cp](https://github.com/SlavaZakariev/netology/blob/f184d8bf52298f76a4382342dc0489e9c22e2f74/virtualization-containerization/16.4_docker/resources/dcf_6.6.jpg)
+
+---
+
 ### Задача 7 (***)
 Запустите ваше python-приложение с помощью runC, не используя docker или containerd.  
 Предоставьте скриншоты  действий .
