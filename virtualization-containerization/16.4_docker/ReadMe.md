@@ -66,7 +66,7 @@ CMD ["python", "main.py"]
 
 ### Решение 3
 
-Написан манифест с учётом заданных условий
+1. Написан манифест с учётом заданных условий.
 
 ```yaml
 version: '3.8'
@@ -114,7 +114,25 @@ networks:            # создание сети
           gateway: 172.20.0.1   # шлюз
 ```
 
-![web-db](https://github.com/SlavaZakariev/netology/blob/96472127cb1325e67e5aed081c07be74df4819e4/virtualization-containerization/16.4_docker/resources/dcf_3.1.jpg)
+2. Результат выполнения манифеста
+
+![web-db1](https://github.com/SlavaZakariev/netology/blob/96472127cb1325e67e5aed081c07be74df4819e4/virtualization-containerization/16.4_docker/resources/dcf_3.1.jpg)
+
+3. Проверка стабильности работы контейнеров.
+
+![web-dc2](https://github.com/SlavaZakariev/netology/blob/c7f7de2866a4be790501e566f31c8640c13bb071/virtualization-containerization/16.4_docker/resources/dcf_3.2.jpg)
+
+ОШИБКИ:
+
+При попытке проверить подключение, выдаётся ошбика (Firewall отключен): 
+```
+sysadmin@ubuntu2:~$ curl -L http://127.0.0.1:8080
+curl: (56) Recv failure: Connection reset by peer
+sysadmin@ubuntu2:~$ curl -L http://127.0.0.1:8090
+curl: (56) Recv failure: Connection reset by peer
+```
+
+
 
 ---
 
