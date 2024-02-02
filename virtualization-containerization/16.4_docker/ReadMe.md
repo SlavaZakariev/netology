@@ -130,6 +130,9 @@ sysadmin@ubuntu2:~$ curl -L http://127.0.0.1:8080
 curl: (56) Recv failure: Connection reset by peer
 sysadmin@ubuntu2:~$ curl -L http://127.0.0.1:8090
 curl: (56) Recv failure: Connection reset by peer
+sysadmin@ubuntu2:~$ sudo ufw status
+Status: inactive
+
 ```
 Содержимое контейнера web
 ```
