@@ -209,6 +209,34 @@ root@666d3153db57:/app#
 
 ### Решение 6
 
+1. Скачиваем снимок **hashicorp/terraform:latest**
+
+![terraform](https://github.com/SlavaZakariev/netology/blob/0237ca6721c8fc53e8155f16d54ec43486cf329d/virtualization-containerization/16.4_docker/resources/dcf_6.1.jpg)
+
+2. Скачиваем приложение **dive** версия **0.11.0**
+
+```
+curl -OL https://github.com/wagoodman/dive/releases/download/v0.11.0/dive_0.11.0_linux_amd64.deb
+```
+
+![dive](https://github.com/SlavaZakariev/netology/blob/0237ca6721c8fc53e8155f16d54ec43486cf329d/virtualization-containerization/16.4_docker/resources/dcf_6.2.jpg)
+
+3. Открываем скаченный снимок с помощью **dive**
+
+```
+dive hashicorp/terraform
+```
+
+![open-dive](https://github.com/SlavaZakariev/netology/blob/0237ca6721c8fc53e8155f16d54ec43486cf329d/virtualization-containerization/16.4_docker/resources/dcf_6.3.jpg)
+
+4. Скачиваем необходимый файл, в нашем случае бинарный файл **terraform**
+
+```
+docker image save hashicorp/terraform | tar --extract --wildcards --to-stdout '*/layer.tar' | tar --extract --ignore-zeros --verbose bin/terraform
+```
+
+![download](https://github.com/SlavaZakariev/netology/blob/0237ca6721c8fc53e8155f16d54ec43486cf329d/virtualization-containerization/16.4_docker/resources/dcf_6.4.jpg)
+
 ---
 
 ### Задача 7 (***)
