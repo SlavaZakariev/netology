@@ -131,9 +131,31 @@ curl: (56) Recv failure: Connection reset by peer
 sysadmin@ubuntu2:~$ curl -L http://127.0.0.1:8090
 curl: (56) Recv failure: Connection reset by peer
 ```
+Содержимое контейнера web
+```
+sysadmin@ubuntu2:~/shvirtd-example-python$ sudo docker exec -it web bash
+root@666d3153db57:/app# ls -lah
+total 16K
+drwxr-xr-x 1 root root 4.0K Feb  1 21:20 .
+drwxr-xr-x 1 root root 4.0K Feb  1 21:43 ..
+-rw-rw-r-- 1 root root  254 Jan 24 19:00 main.py
+-rw-rw-r-- 1 root root   29 Jan 13 10:00 requirements.txt
+root@666d3153db57:/app# cat main.py
+from flask import Flask
+app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Привет, мир!!!! Это мое первое веб-приложение в Docker!'
 
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
+root@666d3153db57:/app# cat requirements.txt
+flask
+mysql-connector-python
+root@666d3153db57:/app#
 
+```
 ---
 
 ### Задача 4
