@@ -15,11 +15,23 @@
 
 ### Решение 1
 
-1. Собираем контейнер из копии репозитория.
+1. Скачан репозиторий **shvirtd-example-python**
+2. Написан **Dockerfile.python**
+
+```dockerfile
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+COPY main.py ./
+CMD ["python", "main.py"]
+```
+
+3. Собираем контейнер.
 
 ![py1](https://github.com/SlavaZakariev/netology/blob/d634e7549d049a8083ee246f43b93b41c741d574/virtualization-containerization/16.4_docker/resources/dcf_1.1.jpg)
 
-2. Проверям наличие вновь созданного снимка
+4. Проверям наличие вновь созданного снимка
 
 ![py2](https://github.com/SlavaZakariev/netology/blob/d634e7549d049a8083ee246f43b93b41c741d574/virtualization-containerization/16.4_docker/resources/dcf_1.2.jpg)
 
