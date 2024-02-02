@@ -156,8 +156,12 @@ root@666d3153db57:/app# cat requirements.txt
 flask
 mysql-connector-python
 root@666d3153db57:/app#
-
 ```
+
+ВОПРОСЫ: 
+1) Возможно не хватает параметров в Dockerfile.python для работы приложения. Прошу подсказать где я ошибься.
+2) Как передать данные .evn контейнера db для контейнера web
+
 ---
 
 ### Задача 4
