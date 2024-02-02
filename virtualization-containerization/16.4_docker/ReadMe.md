@@ -158,9 +158,13 @@ mysql-connector-python
 root@666d3153db57:/app#
 ```
 
-ВОПРОСЫ: 
+ВОПРОС: 
 1) Возможно не хватает параметров в Dockerfile.python для работы приложения. Прошу подсказать где я ошибься.
-2) Как передать данные .evn контейнера db для контейнера web
+
+4. Выполнено подключение к контейнеру **db**, далее к **mysql** через пользователя **root** \
+   Переключилсь на созданную через **.env** базе данных **db_netology**
+
+![mssql](https://github.com/SlavaZakariev/netology/blob/c0e55112b454d0c2f82f923fdfa26e709aec4155/virtualization-containerization/16.4_docker/resources/dcf_3.3.jpg)
 
 ---
 
