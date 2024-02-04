@@ -166,6 +166,9 @@ root@666d3153db57:/app#
 
 ![mssql](https://github.com/SlavaZakariev/netology/blob/c0e55112b454d0c2f82f923fdfa26e709aec4155/virtualization-containerization/16.4_docker/resources/dcf_3.3.jpg)
 
+5. Остановка проекта командой docker compose down \
+   (выполнение процесса и снимок выполню, как только разберусь с ошибкой описанную выше)
+
 ---
 
 ### Задача 4
