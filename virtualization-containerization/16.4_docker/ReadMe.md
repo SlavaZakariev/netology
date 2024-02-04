@@ -150,7 +150,7 @@ networks:            # создание сети
 
 ![mysql](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.4.jpg)
 
-5. Остановка проекта командой docker compose down
+5. Остановка проекта командой **docker compose down**
 
 ![down](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.5.jpg)
  
@@ -162,13 +162,24 @@ networks:            # создание сети
 1. Запустите в Yandex Cloud ВМ (вам хватит 2 Гб Ram).
 2. Подключитесь к Вм по ssh и установите docker.
 3. Напишите bash-скрипт, который скачает ваш fork-репозиторий в каталог /opt и запустит проект целиком.
-4. Зайдите на сайт проверки http подключений, например(или аналогичный): ```https://check-host.net/check-http``` и запустите проверку вашего сервиса ```http://<внешний_IP-адрес_вашей_ВМ>:5000```.
-5. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения ```docker ps -a```
-6. В качестве ответа повторите sql-запрос и приложите скриншот с данного сервера, bash-скрипт и ссылку на fork-репозиторий.
+4. Зайдите на сайт проверки http подключений, например(или аналогичный): ```https://check-host.net/check-http``` \
+   и запустите проверку вашего сервиса ```http://<внешний_IP-адрес_вашей_ВМ>:5000```.
+6. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения ```docker ps -a```
+7. В качестве ответа повторите sql-запрос и приложите скриншот с данного сервера, bash-скрипт и ссылку на fork-репозиторий.
 
 ---
 
 ### Решение 4
+
+1. Создана виртуальная машина на Ubuntu 22.04
+
+![yc](https://github.com/SlavaZakariev/netology/blob/de67e6b08455596742d2e98951c139ce0299ce0a/virtualization-containerization/16.4_docker/resources/dcf_4.1.jpg)
+
+2. Выполнено соединение по **ssh** через терминал **windows** и установлен **docker**
+
+![docker](https://github.com/SlavaZakariev/netology/blob/de67e6b08455596742d2e98951c139ce0299ce0a/virtualization-containerization/16.4_docker/resources/dcf_4.2.jpg)
+
+
 
 ---
 
