@@ -179,7 +179,7 @@ networks:            # создание сети
 
 ![docker](https://github.com/SlavaZakariev/netology/blob/de67e6b08455596742d2e98951c139ce0299ce0a/virtualization-containerization/16.4_docker/resources/dcf_4.2.jpg)
 
-
+3. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
 
 ---
 
