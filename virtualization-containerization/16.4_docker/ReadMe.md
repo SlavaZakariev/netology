@@ -135,58 +135,25 @@ networks:            # создание сети
 
 2. Результат выполнения манифеста
 
-![web-db1](https://github.com/SlavaZakariev/netology/blob/96472127cb1325e67e5aed081c07be74df4819e4/virtualization-containerization/16.4_docker/resources/dcf_3.1.jpg)
+![web-db1](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.1.jpg)
 
 3. Проверка стабильности работы контейнеров.
 
-![web-dc2](https://github.com/SlavaZakariev/netology/blob/dc8adf0cdca30f4535a21ad50c166f79f5d187d9/virtualization-containerization/16.4_docker/resources/dcf_3.2.jpg)
+![web-dc2](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.2.jpg)
 
-ОШИБКИ:
+3. Проверка соединение с хостового сервера по проброшенным портам.
 
-При попытке проверить подключение, выдаётся ошибка (Firewall отключен): 
-```
-sysadmin@ubuntu2:~$ curl -L http://127.0.0.1:8080
-curl: (56) Recv failure: Connection reset by peer
-sysadmin@ubuntu2:~$ curl -L http://127.0.0.1:8090
-curl: (56) Recv failure: Connection reset by peer
-sysadmin@ubuntu2:~$ sudo ufw status
-Status: inactive
-```
-Содержимое контейнера web
-```
-sysadmin@ubuntu2:~/shvirtd-example-python$ sudo docker exec -it web bash
-root@666d3153db57:/app# ls -lah
-total 16K
-drwxr-xr-x 1 root root 4.0K Feb  1 21:20 .
-drwxr-xr-x 1 root root 4.0K Feb  1 21:43 ..
--rw-rw-r-- 1 root root  254 Jan 24 19:00 main.py
--rw-rw-r-- 1 root root   29 Jan 13 10:00 requirements.txt
-root@666d3153db57:/app# cat main.py
-from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Привет, мир!!!! Это мое первое веб-приложение в Docker!'
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
-root@666d3153db57:/app# cat requirements.txt
-flask
-mysql-connector-python
-root@666d3153db57:/app#
-```
-
-ВОПРОС: 
-1) Возможно не хватает параметров в Dockerfile.python для работы приложения. Прошу подсказать где я ошибся.
+![curl](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.3.jpg)
 
 4. Выполнено подключение к контейнеру **db**, далее к **mysql** через пользователя **root** \
-   Переключились на созданную через **.env** базе данных **db_netology**
+   Переключились на созданную через **.env** базу данных **example**
 
-![mssql](https://github.com/SlavaZakariev/netology/blob/c0e55112b454d0c2f82f923fdfa26e709aec4155/virtualization-containerization/16.4_docker/resources/dcf_3.3.jpg)
+![mysql](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.4.jpg)
 
-5. Остановка проекта командой docker compose down \
-   (выполнение процесса и снимок выполню, как только разберусь с ошибкой описанную выше)
+5. Остановка проекта командой docker compose down
+
+![down](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.5.jpg)
+ 
 
 ---
 
