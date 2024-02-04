@@ -99,6 +99,7 @@ services:
       # Все параметры описываем в файле .env в папке проекта
       - MYSQL_USER:${MYSQL_USER}
       - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_DB_HOST:${MYSQL_DB_HOST}
       - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE:${MYSQL_DATABASE}
     networks:
