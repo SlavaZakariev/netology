@@ -78,8 +78,7 @@ services:
       dockerfile: Dockerfile.python # имя докерфайла
     container_name: web             # имя контейнера
     ports:                          # проброс портов
-      - 8080:80
-      - 8090:80
+      - '5000:5000'
     restart: always                 # перезапуск контейнера
     networks:
       backend:                      # добавить в сеть backend
@@ -89,22 +88,41 @@ services:
     image: mysql:8.0   # версия снимка
     container_name: db # имя контейнера
     ports:             # проброс портов
-      - 3306:3306
+      - '3306:3306'
     restart: always    # перезапуск контейнера
     env_file: .env     # файл с переменными
     volumes:           # том и проброс файла в директории
       - ./mysql/my.conf:/etc/mysql/my.cnf:ro
     environment:
       - TZ=Europe/Moscow # установка часового пояса МСК
-      # Все параметры описываем в файле .env в папке проекта
       - MYSQL_USER:${MYSQL_USER}
       - MYSQL_PASSWORD:${MYSQL_PASSWORD}
       - MYSQL_DB_HOST:${MYSQL_DB_HOST}
       - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE:${MYSQL_DATABASE}
+      # Все параметры описываем в файле .env в папке проекта
     networks:
       backend:                    # добавить в сеть backend
         ipv4_address: 172.20.0.10 # статический IPv4
+
+  reverse-proxy:
+    image: haproxy
+    restart: always
+    ports:
+    - '127.0.0.1:8080:8080'
+    volumes:
+    - ./haproxy/reverse/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:rw
+    networks:
+      backend:                    # добавить в сеть backend
+        ipv4_address: 172.20.0.11 # статический IPv4
+
+  ingress-proxy:
+    image: nginx:latest
+    restart: always
+    volumes:
+    - ./nginx/ingress/default.conf:/etc/nginx/conf.d/default.conf:rw
+    - ./nginx/ingress/nginx.conf:/etc/nginx/nginx.conf:rw
+    network_mode: host
 
 networks:            # создание сети
   backend:           # название сети контейнеров
