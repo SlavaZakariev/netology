@@ -99,6 +99,7 @@ services:
       - DB_USER:${DB_USER}
       - DB_PASSWORD:${DB_PASSWORD}
       - DB_NAME:${DB_NAME}
+      - DB_ROOT_PASSWORD:${DB_ROOT_PASSWORD}
       # Все параметры описываем в файле .env в папке проекта
     networks:
       backend:                    # добавить в сеть backend
