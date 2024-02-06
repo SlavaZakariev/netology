@@ -106,6 +106,7 @@ services:
 
   reverse-proxy:
     image: haproxy
+    container_name: reverse-proxy
     restart: always
     ports:
     - '127.0.0.1:8080:8080'
@@ -117,6 +118,7 @@ services:
 
   ingress-proxy:
     image: nginx:latest
+    container_name: ingress-proxy
     restart: always
     volumes:
     - ./nginx/ingress/default.conf:/etc/nginx/conf.d/default.conf:rw
