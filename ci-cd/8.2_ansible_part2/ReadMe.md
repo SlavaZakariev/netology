@@ -17,8 +17,7 @@
 
 1. Написан playbook unpack.yaml
 
-```
----
+```yaml
 - name: Download and Unpacking
   hosts: servers
   become: yes
@@ -48,8 +47,7 @@
 
 2. Установка tuned
 
-```
----
+```yaml
 - name: Install Tuned
   hosts: servers
   become: yes
@@ -75,8 +73,7 @@
 
 3. Playbook motd
 
-```
----
+```yaml
 - name: Edit motd
   hosts: servers
   become: yes
@@ -96,8 +93,7 @@
 
 motd_vars.yaml
 
-```
----
+```yaml
 motd:
   name: Viacheslav
   course: DevOps
@@ -106,8 +102,7 @@ motd:
 
 motd.txt
 
-```
----
+```yaml
 Variables:
 
 var1: {{ motd.name }}
@@ -134,8 +129,7 @@ var2: {{ motd.course }}
 
 Обновлённый motd.txt
 
-```
----
+```yaml
 - name: Edit motd
   hosts: servers
   become: yes
