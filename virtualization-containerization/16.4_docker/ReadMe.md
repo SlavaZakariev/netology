@@ -191,7 +191,7 @@ echo "Creating docker containers: db, app, proxy and nginx"
   docker compose up -d
 echo "Done"
 
-echo "list of containers"
+echo "List of containers"
   docker docker ps
 echo "Done"
 ```
