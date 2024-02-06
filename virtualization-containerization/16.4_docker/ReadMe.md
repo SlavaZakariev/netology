@@ -179,6 +179,23 @@ networks:            # создание сети
 
 ![docker](https://github.com/SlavaZakariev/netology/blob/de67e6b08455596742d2e98951c139ce0299ce0a/virtualization-containerization/16.4_docker/resources/dcf_4.2.jpg)
 
+3. Скрипт bash для автоматизации сборки
+
+```bash
+#!/bin/bash
+echo "Cloning the project from GitHub"
+  git clone https://github.com/SlavaZakariev/shvirtd-example-python
+echo "Done"
+
+echo "Creating docker containers: db, app, proxy and nginx"
+  docker compose up -d
+echo "Done"
+
+echo "list of containers"
+  docker docker ps
+echo "Done"
+```
+
 3. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
 
 ---
