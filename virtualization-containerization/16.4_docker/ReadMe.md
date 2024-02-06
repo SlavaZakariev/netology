@@ -188,11 +188,11 @@ echo "Cloning the project from GitHub"
 echo "Done"
 
 echo "Creating docker containers: db, app, proxy and nginx"
-  docker compose up -d
+  sudo docker compose up -d
 echo "Done"
 
 echo "List of containers"
-  docker docker ps
+  sudo docker ps
 echo "Done"
 ```
 
