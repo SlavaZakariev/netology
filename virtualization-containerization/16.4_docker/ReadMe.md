@@ -96,9 +96,9 @@ services:
     environment:
       - TZ=Europe/Moscow # установка часового пояса МСК
       - DB_HOST:${DB_HOST}
-      - DB_USER:{DB_USER}
-      - DB_PASSWORD:{DB_PASSWORD}
-      - DB_NAME:{DB_NAME}
+      - DB_USER:${DB_USER}
+      - DB_PASSWORD:${DB_PASSWORD}
+      - DB_NAME:${DB_NAME}
       # Все параметры описываем в файле .env в папке проекта
     networks:
       backend:                    # добавить в сеть backend
