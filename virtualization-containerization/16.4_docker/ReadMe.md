@@ -196,7 +196,7 @@ echo "list of containers"
 echo "Done"
 ```
 
-3. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
+4. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
 
 ---
 
