@@ -95,7 +95,7 @@ services:
       - ./mysql/my.conf:/etc/mysql/my.cnf:ro
     environment:
       - TZ=Europe/Moscow # установка часового пояса МСК
-      - MYSQL_ROOT_PASSWORD=:${MYSQL_ROOT_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
       - DB_HOST:${DB_HOST}
       - DB_USER:${DB_USER}
       - DB_PASSWORD:${DB_PASSWORD}
