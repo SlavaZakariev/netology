@@ -175,7 +175,7 @@ networks:            # создание сети
 
 1. Создана виртуальная машина на Ubuntu 22.04
 
-![yc](https://github.com/SlavaZakariev/netology/blob/de67e6b08455596742d2e98951c139ce0299ce0a/virtualization-containerization/16.4_docker/resources/dcf_4.1.jpg)
+![yc](https://github.com/SlavaZakariev/netology/blob/5daad8a3296e3b32b7c3009a0571f7cad70e4b66/virtualization-containerization/16.4_docker/resources/dcf_4.1.jpg)
 
 2. Выполнено соединение по **ssh** через терминал **windows** и установлен **docker**
 
