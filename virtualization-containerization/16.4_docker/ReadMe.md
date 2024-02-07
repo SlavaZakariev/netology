@@ -155,7 +155,7 @@ networks:            # создание сети
 5. Остановка проекта командой **docker compose down**
 
 ![down](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.5.jpg)
- 
+
 ---
 
 ### Задача 4
@@ -205,6 +205,54 @@ echo "List of containers"
 ![bash](https://github.com/SlavaZakariev/netology/blob/4799431a11455ea5f5319c7d35b751f389e954ce/virtualization-containerization/16.4_docker/resources/dcf_4.3.jpg)
 
 6. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
+
+ОШИБКА:
+
+1) Контейнер web не подключается к БД
+2) В контейнере не создалась БД example и не отрабатывает вход по пользователю 'app', работает только root (ссылка на [.env](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/.env))
+
+```
+zakariev@yandex-vm:~$ sudo docker logs web -n 10
+    db = mysql.connector.connect(
+  File "/usr/local/lib/python3.9/site-packages/mysql/connector/pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/mysql/connector/connection_cext.py", line 140, in __init__
+    self.connect(**kwargs)
+  File "/usr/local/lib/python3.9/site-packages/mysql/connector/abstracts.py", line 1363, in connect
+    self._open_connection()
+  File "/usr/local/lib/python3.9/site-packages/mysql/connector/connection_cext.py", line 328, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (99)
+zakariev@yandex-vm:~$ sudo docker exec -it db mysql -u app -p
+Enter password:
+ERROR 1045 (28000): Access denied for user 'app'@'localhost' (using password: YES)
+zakariev@yandex-vm:~$ sudo docker exec -it db mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.01 sec)
+
+mysql>
+```
 
 ---
 
