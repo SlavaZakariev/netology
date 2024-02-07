@@ -156,7 +156,6 @@ networks:            # создание сети
 
 ![down](https://github.com/SlavaZakariev/netology/blob/a657a8c29036a3e4aab6ac81ab368b34a44124ce/virtualization-containerization/16.4_docker/resources/dcf_3.5.jpg)
  
-
 ---
 
 ### Задача 4
@@ -179,9 +178,9 @@ networks:            # создание сети
 
 2. Выполнено соединение по **ssh** через терминал **windows** и установлен **docker**
 
-![docker](https://github.com/SlavaZakariev/netology/blob/de67e6b08455596742d2e98951c139ce0299ce0a/virtualization-containerization/16.4_docker/resources/dcf_4.2.jpg)
+![docker](https://github.com/SlavaZakariev/netology/blob/4799431a11455ea5f5319c7d35b751f389e954ce/virtualization-containerization/16.4_docker/resources/dcf_4.2.jpg)
 
-3. Скрипт bash для автоматизации сборки
+3. Написан скрипт **yandex-vm.sh** на **bash** для автоматизации сборки
 
 ```bash
 #!/bin/bash
@@ -203,7 +202,7 @@ echo "List of containers"
 
 4. Запуск скрипта **yandex-vm.sh** на ВМ в **Yandex Cloud**
 
-![bash](https://github.com/SlavaZakariev/netology/blob/5c21a77bd8713b504e016db644005a4192862e35/virtualization-containerization/16.4_docker/resources/dcf_4.3.jpg)
+![bash](https://github.com/SlavaZakariev/netology/blob/4799431a11455ea5f5319c7d35b751f389e954ce/virtualization-containerization/16.4_docker/resources/dcf_4.3.jpg)
 
 6. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
 
