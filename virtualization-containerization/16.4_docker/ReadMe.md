@@ -201,7 +201,11 @@ echo "List of containers"
   sudo docker ps
 ```
 
-4. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
+4. Запуск скрипта **yandex-vm.sh** на ВМ в **Yandex Cloud**
+
+![bash](https://github.com/SlavaZakariev/netology/blob/5c21a77bd8713b504e016db644005a4192862e35/virtualization-containerization/16.4_docker/resources/dcf_4.3.jpg)
+
+6. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
 
 ---
 
