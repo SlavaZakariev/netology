@@ -199,7 +199,6 @@ echo "Done"
 
 echo "List of containers"
   sudo docker ps
-echo "Done"
 ```
 
 4. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
