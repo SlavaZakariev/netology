@@ -95,11 +95,11 @@ services:
       - ./mysql/my.conf:/etc/mysql/my.cnf:ro
     environment:
       - TZ=Europe/Moscow # установка часового пояса МСК
-      - MYSQL_ROOT_HOST=:${MYSQL_ROOT_HOST}
       - MYSQL_ROOT_PASSWORD=:${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=:${MYSQL_DATABASE}
-      - MYSQL_USER=:${MYSQL_USER}
-      - MYSQL_PASSWORD=:${MYSQL_PASSWORD}
+      - DB_HOST:${DB_HOST}
+      - DB_USER:${DB_USER}
+      - DB_PASSWORD:${DB_PASSWORD}
+      - DB_NAME:${DB_NAME}
       # Все параметры описываем в файле .env в папке проекта
     networks:
       backend:                    # добавить в сеть backend
