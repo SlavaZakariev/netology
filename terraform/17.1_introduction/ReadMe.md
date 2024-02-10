@@ -34,6 +34,10 @@
 
 ### Ренешение 1
 
+1. Установленная версия Terraform
+
+[ter](https://github.com/SlavaZakariev/netology/blob/f4c7a300892cbcbeace6f6341619750b03f395e2/terraform/17.1_introduction/resources/ter_1.1.jpg)
+
 ---
 
 ### Дополнительное задание (со звёздочкой*)
