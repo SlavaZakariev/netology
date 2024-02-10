@@ -1,4 +1,4 @@
-## Основы Terraform. "Yandex Cloud" - Вячеслав Закариев
+## 17.2 Основы Terraform. "Yandex Cloud" - Вячеслав Закариев
 
 ### Цели задания
 
