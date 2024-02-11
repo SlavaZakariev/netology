@@ -51,7 +51,7 @@
 
 ![errors](https://github.com/SlavaZakariev/netology/blob/360bcb3b88a29b000bfb3cd8eef98abcab21552b/terraform/17.1_introduction/resources/ter_1.3.jpg)
 
-6. Исправленный часть кода с 24-й строки:
+6. Исправленная часть кода с 24-й строки:
 ```terraform
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
