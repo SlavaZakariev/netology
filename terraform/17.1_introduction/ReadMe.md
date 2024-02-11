@@ -47,8 +47,9 @@
 5. Раскомментировал и запустил выполнение, выдало две ошибки:
    - 24-я строка: Все блоки ресурсов должны иметь 2 метки (тип, название).
    - 29-я строка: Имя должно начинаться с буквы или знака подчеркивания...
+   - 31-я строка: Имя random_string_FAKE не совпадает с объявленным в коревом модуле.
 
-![errors](https://github.com/SlavaZakariev/netology/blob/02bcf1f9c93c64310c35ea52ce0cda1573c1e12b/terraform/17.1_introduction/resources/ter_1.3.jpg)
+![errors](https://github.com/SlavaZakariev/netology/blob/360bcb3b88a29b000bfb3cd8eef98abcab21552b/terraform/17.1_introduction/resources/ter_1.3.jpg)
 
 6. Исправленный часть кода с 24-й строки:
 ```terraform
