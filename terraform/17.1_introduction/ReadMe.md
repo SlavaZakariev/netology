@@ -43,8 +43,12 @@
    
 ![init](https://github.com/SlavaZakariev/netology/blob/fdc161982d0bc6b510b7d584edce5fe946d78fb6/terraform/17.1_introduction/resources/ter_1.2.jpg)
 
-4.  Далее применил команду **terraform apply**, получен результат `"result": "UXvhE7e1m6imPtf4"` в созданном файле **.terraform.lock.hcl**
-3. 
+4. Далее применил команду **terraform apply**, получен результат `"result": "UXvhE7e1m6imPtf4"` в созданном файле **.terraform.lock.hcl**
+3. Раскомментировал и запустил выполнение, выдало две ошибки:
+   - 24-я строка: Все блоки ресурсов должны иметь 2 метки (тип, название).
+   - 29-я строка: Имя должно начинаться с буквы или знака подчеркивания и может содержать только буквы, цифры, знаки подчеркивания и тире.
+
+![errors](https://github.com/SlavaZakariev/netology/blob/02bcf1f9c93c64310c35ea52ce0cda1573c1e12b/terraform/17.1_introduction/resources/ter_1.3.jpg)
 
 ---
 
