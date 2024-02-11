@@ -73,6 +73,12 @@ resource "docker_container" "nginx" {
 
 ![ps](https://github.com/SlavaZakariev/netology/blob/7def2a9d490bbd69c6e5e393279eb119f6963b3f/terraform/17.1_introduction/resources/ter_1.4.jpg)
 
+8. Команда **terraform apply -auto-approve** уничтожает текущее состояние ресурсов и заменяет их теми, которые были изменены, без предварительного показа плана. Данная команда в продуктивной среде может нанести непоправимый вред из-за человеческого фактора. Специалисты рекомендую применять данный ключ только в тестовых средах.
+
+Результат команды **docker ps** после применения **terraform apply -auto-approve**
+
+![approve](https://github.com/SlavaZakariev/netology/blob/e8dd0a26fa6dd4d78bc43aa62613c49740b2ec51/terraform/17.1_introduction/resources/ter_1.5.jpg)
+
 ---
 
 ### Дополнительное задание (со звёздочкой*)
