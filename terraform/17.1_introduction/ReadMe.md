@@ -38,9 +38,10 @@
 
 ![ter](https://github.com/SlavaZakariev/netology/blob/f4c7a300892cbcbeace6f6341619750b03f395e2/terraform/17.1_introduction/resources/ter_1.1.jpg)
 
-2. Согласно файлу **.gitignore** в файле `personal.auto.tfvars` допускается хранить секретные данные.
-3. Полученный результат `"result": "UXvhE7e1m6imPtf4"`
-4. 
+2. Согласно файлу **.gitignore** в файле `personal.auto.tfvars` допускается хранить секретные данные
+3. Применили команду **terraform apply**, получен результат для секрета `"result": "UXvhE7e1m6imPtf4"`
+3. 
+
 ---
 
 ### Дополнительное задание (со звёздочкой*)
