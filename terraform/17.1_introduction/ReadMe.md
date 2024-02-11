@@ -96,6 +96,8 @@ resource "docker_container" "nginx" {
   "check_results": null
 }
 ```
+10. Образ не был удалён так как у нас в файле main.tf был прописан параметр resource keep_locally = true, в случае, если заменить на false, то снимок данного блока ресурса (контейнера) будет удалён при применении команды **terraform destroy**.
+
 
 ---
 
