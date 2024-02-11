@@ -69,6 +69,9 @@ resource "docker_container" "nginx" {
 }
 
 ```
+7. Результат команды **docker ps**
+
+![ps](https://github.com/SlavaZakariev/netology/blob/7def2a9d490bbd69c6e5e393279eb119f6963b3f/terraform/17.1_introduction/resources/ter_1.4.jpg)
 
 ---
 
