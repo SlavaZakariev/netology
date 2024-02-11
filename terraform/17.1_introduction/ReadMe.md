@@ -81,7 +81,7 @@ resource "docker_container" "nginx" {
 
 9. Данные уничтожены командой **terraform destroy**
 
-
+![destroy](https://github.com/SlavaZakariev/netology/blob/f53f2cea019f8099abbb3c566266b69bbbb0a540/terraform/17.1_introduction/resources/ter_1.6.jpg)
 
 Содержимое файла **terraform.tfstate**
 
