@@ -79,6 +79,24 @@ resource "docker_container" "nginx" {
 
 ![approve](https://github.com/SlavaZakariev/netology/blob/e8dd0a26fa6dd4d78bc43aa62613c49740b2ec51/terraform/17.1_introduction/resources/ter_1.5.jpg)
 
+9. Данные уничтожены командой **terraform destroy**
+
+
+
+Содержимое файла **terraform.tfstate**
+
+```terraform
+{
+  "version": 4,
+  "terraform_version": "1.5.0",
+  "serial": 18,
+  "lineage": "74e65535-806b-381f-f235-86eab714e4a2",
+  "outputs": {},
+  "resources": [],
+  "check_results": null
+}
+```
+
 ---
 
 ### Дополнительное задание (со звёздочкой*)
