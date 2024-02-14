@@ -96,6 +96,7 @@ services:
     environment:
       - TZ=Europe/Moscow # установка часового пояса МСК
       - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+      - MYSQL_ROOT_HOST="%"
       - DB_HOST:${DB_HOST}
       - DB_USER:${DB_USER}
       - DB_PASSWORD:${DB_PASSWORD}
