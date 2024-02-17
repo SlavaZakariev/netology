@@ -186,11 +186,11 @@ volumes:
 
 1. Создана виртуальная машина на Ubuntu 22.04
 
-![yc](https://github.com/SlavaZakariev/netology/blob/5daad8a3296e3b32b7c3009a0571f7cad70e4b66/virtualization-containerization/16.4_docker/resources/dcf_4.1.jpg)
+![yc](https://github.com/SlavaZakariev/netology/blob/14a2a32ce86111cede0290faba3ee02341450e1e/virtualization-containerization/16.4_docker/resources/dcf_4.1.jpg)
 
 2. Выполнено соединение по **ssh** через терминал **windows** и установлен **docker**
 
-![docker](https://github.com/SlavaZakariev/netology/blob/4799431a11455ea5f5319c7d35b751f389e954ce/virtualization-containerization/16.4_docker/resources/dcf_4.2.jpg)
+![docker](https://github.com/SlavaZakariev/netology/blob/14a2a32ce86111cede0290faba3ee02341450e1e/virtualization-containerization/16.4_docker/resources/dcf_4.2.jpg)
 
 3. Написан скрипт **yandex-vm.sh** на **bash** для автоматизации сборки
 
@@ -218,7 +218,9 @@ echo "List of containers"
 
 5. Проверка соединения по http выполнено с ресурса: [https://reqbin.com/](https://reqbin.com/)
 
+![http](https://github.com/SlavaZakariev/netology/blob/14a2a32ce86111cede0290faba3ee02341450e1e/virtualization-containerization/16.4_docker/resources/dcf_4.4.jpg)
 
+6. fg
 
 7. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
 
