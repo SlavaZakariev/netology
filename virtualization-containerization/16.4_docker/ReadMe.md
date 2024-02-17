@@ -216,7 +216,11 @@ echo "List of containers"
 
 ![bash](https://github.com/SlavaZakariev/netology/blob/4799431a11455ea5f5319c7d35b751f389e954ce/virtualization-containerization/16.4_docker/resources/dcf_4.3.jpg)
 
-6. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
+5. Проверка соединения по http выполнено с ресурса: [https://reqbin.com/](https://reqbin.com/)
+
+
+
+7. Ссылка на проект на [GitHub](https://github.com/SlavaZakariev/shvirtd-example-python/blob/main/README.md)
 
 ОШИБКА:
 
