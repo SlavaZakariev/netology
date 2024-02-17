@@ -78,14 +78,15 @@ services:
       dockerfile: Dockerfile.python # имя докерфайла
     container_name: web             # имя контейнера
     ports:                          # проброс портов
-      - '5000:5000'
+      - '5000:5000'                 # номер порта
     restart: always                 # перезапуск контейнера
-    env_file: .env
-    environment:
+    env_file: .env                  # файл с переменными
+    environment:                    # блок переменных
+      - TZ=Europe/Moscow            # установка часового пояса МСК
       - DB_HOST=db
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD:${DB_PASSWORD}
-      - DB_NAME=${DB_NAME}
+      - DB_USER:${MYSQL_USER}
+      - DB_PASSWORD:${MYSQL_PASSWORD}
+      - DB_NAME:${MYSQL_DATABASE}
     networks:
       backend:                      # добавить в сеть backend
        ipv4_address: 172.20.0.5     # статический IPv4
@@ -93,24 +94,25 @@ services:
   db:
     image: mysql:8.0   # версия снимка
     container_name: db # имя контейнера
-    ports:             # проброс портов
+    ports:
       - '3306:3306'
-    restart: always    # перезапуск контейнера
-    env_file: .env     # файл с переменными
+    restart: always
+    env_file: .env
     volumes:           # том и проброс файла в директории
       - ./mysql/my.conf:/etc/mysql/my.cnf:ro
+      - mysql_data:/var/lib/mysql
     environment:
-      - TZ=Europe/Moscow # установка часового пояса МСК
-      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
-      - MYSQL_ROOT_HOST="%"
-      - DB_HOST:${DB_HOST}
-      - DB_USER:${DB_USER}
-      - DB_PASSWORD:${DB_PASSWORD}
-      - DB_NAME:${DB_NAME}
       # Все параметры описываем в файле .env в папке проекта
+      - TZ=Europe/Moscow
+      - MYSQL_ROOT_HOST="%"
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER:${MYSQL_USER}
+      - MYSQL_PASSWORD:${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD:${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE:${MYSQL_DATABASE}
     networks:
-      backend:                    # добавить в сеть backend
-        ipv4_address: 172.20.0.10 # статический IPv4
+      backend:
+        ipv4_address: 172.20.0.10
 
   reverse-proxy:
     image: haproxy
@@ -121,8 +123,8 @@ services:
     volumes:
     - ./haproxy/reverse/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:rw
     networks:
-      backend:                    # добавить в сеть backend
-        ipv4_address: 172.20.0.11 # статический IPv4
+      backend:
+        ipv4_address: 172.20.0.11
 
   ingress-proxy:
     image: nginx:latest
@@ -140,6 +142,9 @@ networks:            # создание сети
       config:
         - subnet: 172.20.0.0/24 # подсеть
           gateway: 172.20.0.1   # шлюз
+
+volumes:
+  mysql_data: {}
 ```
 
 2. Результат выполнения манифеста
