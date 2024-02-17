@@ -84,9 +84,9 @@ services:
     environment:                    # блок переменных
       - TZ=Europe/Moscow            # установка часового пояса МСК
       - DB_HOST=db
-      - DB_USER:${MYSQL_USER}
+      - DB_USER=app
       - DB_PASSWORD:${MYSQL_PASSWORD}
-      - DB_NAME:${MYSQL_DATABASE}
+      - DB_NAME=example
     networks:
       backend:                      # добавить в сеть backend
        ipv4_address: 172.20.0.5     # статический IPv4
