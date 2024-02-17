@@ -80,6 +80,12 @@ services:
     ports:                          # проброс портов
       - '5000:5000'
     restart: always                 # перезапуск контейнера
+    env_file: .env
+    environment:
+      - DB_HOST=db
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD:${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
     networks:
       backend:                      # добавить в сеть backend
        ipv4_address: 172.20.0.5     # статический IPv4
