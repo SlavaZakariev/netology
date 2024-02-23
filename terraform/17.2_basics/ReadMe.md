@@ -63,15 +63,15 @@
 personal.auto.tfvars
 variables.tf
 ```
-3. Инициализирован облако **terrarorm init**
+3. Инициализировано облако **terrarorm init**
 
 ![init](https://github.com/SlavaZakariev/netology/blob/38792aaab144fbe271dfbea83ecd66a963bfae32/terraform/17.2_basics/resources/ter_1.2.jpg)
 
-Исправленный блок кода файа **main.tf**
+4. Исправленный блок кода файа **main.tf**
 
-1. Строка `platform_id = "standart-v4"`. Согласно документациии, можно воспользоваться параметрами ЦП: v1, v2 и v3, а также другими.
+- Строка `platform_id = "standart-v4"`. Согласно документациии, можно воспользоваться параметрами ЦП: v1, v2 и v3, а также другими.
    [https://cloud.yandex.ru/ru/docs/compute/concepts/vm-platforms](https://cloud.yandex.ru/ru/docs/compute/concepts/vm-platforms)
-2. Строка `cores = 1`. Исправлено количество ядер с 1 до 2, согласно документации 2 ядра является минимальным количеством ядер для виртуальной машины.
+- Строка `cores = 1`. Исправлено количество ядер с 1 до 2, согласно документации 2 ядра является минимальным количеством ядер для виртуальной машины.
    [https://cloud.yandex.ru/ru/docs/compute/concepts/performance-levels](https://cloud.yandex.ru/ru/docs/compute/concepts/performance-levels)
 
 ```terraform
@@ -84,7 +84,7 @@ resource "yandex_compute_instance" "platform" {
     core_fraction = 5
   }
 ```
-Параметр `preemptible = true` применяется при необходимости сделать ВМ прерываемой. Применятся если с момента запуска машины прошло 24 часа, либо возникает нехватка ресурсов для запуска ВМ. Прерываемые ВМ не обеспечивают отказоустойчивость. \
+5. Параметр `preemptible = true` применяется при необходимости сделать ВМ прерываемой. Применятся если с момента запуска машины прошло 24 часа, либо возникает нехватка ресурсов для запуска ВМ. Прерываемые ВМ не обеспечивают отказоустойчивость. \
 Параметр `core_fraction = 5` указывает базовую производительность ядра в процентах. Применятеся для экономии финансовых затрат на ресурсы в облаке.
 
 ---
