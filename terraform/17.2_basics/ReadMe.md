@@ -87,6 +87,14 @@ resource "yandex_compute_instance" "platform" {
 5. Параметр `preemptible = true` применяется при необходимости сделать ВМ прерываемой. Применятся если с момента запуска машины прошло 24 часа, либо возникает нехватка ресурсов для запуска ВМ. Прерываемые ВМ не обеспечивают отказоустойчивость. \
 Параметр `core_fraction = 5` указывает базовую производительность ядра в процентах. Применятеся для экономии финансовых затрат на ресурсы в облаке.
 
+6. Созданная ВМ в консоле Yandex Cloud
+
+![ycvm](https://github.com/SlavaZakariev/netology/blob/1fa9547abdbb0d6047330ec0258f3a0bd620ba12/terraform/17.2_basics/resources/ter_1.3.jpg)
+
+7. Подключение по ssh к vm через терминал Windows
+
+![wc](https://github.com/SlavaZakariev/netology/blob/1fa9547abdbb0d6047330ec0258f3a0bd620ba12/terraform/17.2_basics/resources/ter_1.4.jpg)
+
 ---
 
 ### Задание 2
