@@ -40,6 +40,30 @@
 
 ---
 
+### Решение 1
+
+Исправленный блок кода файа **main.tf**
+
+1. Строка `platform_id = "standart-v4"`. Согласно документациии, можно воспользоваться параметрами ЦП: v1, v2 и v3, а также другими.
+   [https://cloud.yandex.ru/ru/docs/compute/concepts/vm-platforms](https://cloud.yandex.ru/ru/docs/compute/concepts/vm-platforms)
+2. Строка `cores = 1`. Исправлено количество ядер с 1 до 2, согласно документации 2 ядра является минимальным количеством ядер для виртуальной машины.
+   [https://cloud.yandex.ru/ru/docs/compute/concepts/performance-levels](https://cloud.yandex.ru/ru/docs/compute/concepts/performance-levels)
+
+```terraform
+resource "yandex_compute_instance" "platform" {
+  name        = "netology-develop-platform-web"
+  platform_id = "standard-v1"
+  resources {
+    cores         = 2
+    memory        = 1
+    core_fraction = 5
+  }
+```
+Параметр `preemptible = true` применяется при необходимости сделать ВМ прерываемой. Применятся если с момента запуска машины прошло 24 часа, либо возникает нехватка ресурсов для запуска ВМ. Прерываемые ВМ не обеспечивают отказоустойчивость. \
+Параметр `core_fraction = 5` указывает базовую производительность ядра в процентах. Применятеся для экономии финансовых затрат на ресурсы в облаке.
+
+---
+
 ### Задание 2
 
 1. Замените все хардкод-**значения** для ресурсов **yandex_compute_image** и **yandex_compute_instance** на **отдельные** переменные. К названиям переменных ВМ добавьте в начало префикс **vm_web_** .  Пример: **vm_web_name**.
