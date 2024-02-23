@@ -65,7 +65,7 @@ variables.tf
 ```
 3. Инициализирован облако **terrarorm init**
 
-![init]()
+![init](https://github.com/SlavaZakariev/netology/blob/38792aaab144fbe271dfbea83ecd66a963bfae32/terraform/17.2_basics/resources/ter_1.2.jpg)
 
 Исправленный блок кода файа **main.tf**
 
