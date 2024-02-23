@@ -42,6 +42,31 @@
 
 ### Решение 1
 
+1. Установил Yandex Console
+
+![yc](https://github.com/SlavaZakariev/netology/blob/b833328bca00b7deaefdacb7fa4f4a3334d67b32/terraform/17.2_basics/resources/ter_1.1.jpg)
+
+2. Обновил данные в файле **variables.tf**, добавил файл в **.gitignore**.
+
+```terraform
+# Local .terraform directories and files
+**/.terraform/*
+.terraform*
+
+!.terraformrc
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# own secret vars store.
+personal.auto.tfvars
+variables.tf
+```
+3. Инициализирован облако **terrarorm init**
+
+![init]()
+
 Исправленный блок кода файа **main.tf**
 
 1. Строка `platform_id = "standart-v4"`. Согласно документациии, можно воспользоваться параметрами ЦП: v1, v2 и v3, а также другими.
