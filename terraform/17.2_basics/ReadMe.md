@@ -222,6 +222,52 @@ resource "yandex_compute_instance" "platform" {
 
 ---
 
+### Решение 3
+
+1. Создан файл **vms_platform.tf**, подготовлены переменные для новой ВМ **netology-develop-platform-db**
+
+```terraform
+###vm_db
+
+variable "vm_db_version" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "ubuntu version"
+}
+
+variable "vm_db_name" {
+  type        = string
+  default     = "netology-develop-platform-db"
+  description = "instance name"
+}
+
+variable "vm_db_cpu_id" {
+  type        = string
+  default     = "standard-v1"
+  description = "cpu id"
+}
+
+variable "vm_db_cores" {
+  type        = string
+  default     = "2"
+  description = "numbers of cpu cores"
+}
+
+variable "vm_db_memory" {
+  type        = string
+  default     = "2"
+  description = "the amount of RAM"
+}
+
+variable "vm_db_core_fraction" {
+  type        = string
+  default     = "20"
+  description = "cpu core fraction"
+}
+```
+
+---
+
 ### Задание 4
 
 1. Объявите в файле outputs.tf **один** output, содержащий: instance_name, external_ip, fqdn для каждой из ВМ в удобном вам формате.
