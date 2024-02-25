@@ -67,7 +67,7 @@ variables.tf
 
 ![init](https://github.com/SlavaZakariev/netology/blob/38792aaab144fbe271dfbea83ecd66a963bfae32/terraform/17.2_basics/resources/ter_1.2.jpg)
 
-4. Исправленный блок кода файа **main.tf** в 16-й и 18-й строке
+4. Исправленный блок кода файа **main.tf** в 15-й и 17-й строке
 
 - Строка `platform_id = "standart-v4"`. Согласно документациии, можно воспользоваться параметрами ЦП: v1, v2 и v3, а также другие графические или высокопроизводительные коды ЦП. В слове **standart** допущена ошибка.
    [https://cloud.yandex.ru/ru/docs/compute/concepts/vm-platforms](https://cloud.yandex.ru/ru/docs/compute/concepts/vm-platforms)
