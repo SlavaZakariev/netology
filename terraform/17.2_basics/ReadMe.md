@@ -351,7 +351,7 @@ output "VMs_data" {
 
 ### Решение 6
 
-1. В файле **variables.tf** добавлена map-переменная
+1. В файле **variables.tf** добавлена map-переменная для описания ресурсов для ВМ
 
 ```terraform
 variable "vms_resources" {
@@ -370,8 +370,18 @@ variable "vms_resources" {
   }
 }
 ```
-2. Добавлена единая переменная для **metadata**
 
+2. В файле **variables.tf** добавлена map-переменная для описания SSH для ВМ
+
+```terraform
+variable "metadata" {
+  type        = map(string)
+  default     = {
+    serial-port-enavle = 1
+    ssh-keys           = ssh-ed25519 AAAAC___
+ }
+}
+```
 
 
 ---
