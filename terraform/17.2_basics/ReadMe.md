@@ -188,15 +188,15 @@ variable "vm_web_core_fraction" {
 
 ```terraform
 data "yandex_compute_image" "ubuntu" {
-  family = vm_web_version
+  family = var.vm_web_version
 }
 resource "yandex_compute_instance" "platform" {
-  name        = vm_web_name
-  platform_id = vm_web_cpu_id
+  name        = var.vm_web_name
+  platform_id = var.vm_web_cpu_id
   resources {
-    cores         = vm_web_cores
-    memory        = vm_web_memory
-    core_fraction = vm_web_core_fraction
+    cores         = var.vm_web_cores
+    memory        = var.vm_web_memory
+    core_fraction = var.vm_web_core_fraction
   }
 ```
 
