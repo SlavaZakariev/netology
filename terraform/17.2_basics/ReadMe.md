@@ -164,7 +164,7 @@ variable "vm_web_name" {
 
 variable "vm_web_cpu_id" {
   type        = string
-  default     = "standatd-v1"
+  default     = "standard-v1"
   description = "cpu id"
 
 variable "vm_web_cores" {
@@ -179,7 +179,7 @@ variable "vm_web_memory" {
 
 variable "vm_web_core_fraction" {
   type        = string
-  default     = ""
+  default     = "5"
   description = "cpu core fraction"
 
 ```
