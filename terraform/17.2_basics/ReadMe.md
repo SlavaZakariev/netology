@@ -377,8 +377,8 @@ variable "vms_resources" {
 variable "metadata" {
   type        = map(string)
   default     = {
-    serial-port-enavle = 1
-    ssh-keys           = ssh-ed25519 AAAAC___
+    serial-port-enable = "1"
+    ssh-keys           = "ssh-ed25519 AAAAC___"
  }
 }
 ```
