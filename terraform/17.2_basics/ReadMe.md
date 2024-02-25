@@ -266,6 +266,14 @@ variable "vm_db_core_fraction" {
 }
 ```
 
+2. Применяем **terraform apply**
+
+![db](https://github.com/SlavaZakariev/netology/blob/cb4e35e7935cf606c0e2caa68bac1e5c5a009a40/terraform/17.2_basics/resources/ter_3.1.jpg)
+
+3. Две ВМ в консоле Yandex Cloud
+
+![db-yc](https://github.com/SlavaZakariev/netology/blob/cb4e35e7935cf606c0e2caa68bac1e5c5a009a40/terraform/17.2_basics/resources/ter_3.1.jpg)
+
 ---
 
 ### Задание 4
