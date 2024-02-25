@@ -156,31 +156,37 @@ variable "vm_web_version" {
   type        = string
   default     = "ubuntu-2004-lts"
   description = "ubuntu version"
+}
 
 variable "vm_web_name" {
   type        = string
   default     = "netology-develop-platform-web"
   description = "instance name"
+}
 
 variable "vm_web_cpu_id" {
   type        = string
   default     = "standard-v1"
   description = "cpu id"
+}
 
 variable "vm_web_cores" {
   type        = string
   default     = "2"
   description = "numbers of cpu cores"
+}
 
 variable "vm_web_memory" {
   type        = string
   default     = "1"
   description = "the amount of RAM"
+}
 
 variable "vm_web_core_fraction" {
   type        = string
   default     = "5"
   description = "cpu core fraction"
+}
 
 ```
 
