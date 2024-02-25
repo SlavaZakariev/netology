@@ -136,6 +136,72 @@ resource "yandex_compute_instance" "platform" {
 
 ---
 
+### Решение 2
+
+1. Файл main.tf состоит из:
+   - Сеть VPC и подсеть с ссылкой на переменные
+   - Семейство снимка ОС создаваемой ВМ
+   - Предоставляемые ресурсы для ВМ (ЦП, ОЗУ, % использования ЦП)
+   - Загрузка снимка ОС на диск
+   - Параметр прерываемости ВМ
+   - Маршрутизация с помощью NAT-инстанса
+   - Переменная данных SSH (для аутентификация)
+  
+2. Добавлены переменные в файл **variables.tf**
+
+```terraform
+###vm_web
+
+variable "vm_web_version" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "ubuntu version"
+
+variable "vm_web_name" {
+  type        = string
+  default     = "netology-develop-platform-web"
+  description = "instance name"
+
+variable "vm_web_cpu_id" {
+  type        = string
+  default     = "standatd-v1"
+  description = "cpu id"
+
+variable "vm_web_cores" {
+  type        = string
+  default     = "2"
+  description = "numbers of cpu cores"
+
+variable "vm_web_memory" {
+  type        = string
+  default     = "1"
+  description = "the amount of RAM"
+
+variable "vm_web_core_fraction" {
+  type        = string
+  default     = ""
+  description = "cpu core fraction"
+
+```
+
+3. Внесены изменения в файл **main.tf**
+
+```terraform
+data "yandex_compute_image" "ubuntu" {
+  family = vm_web_version
+}
+resource "yandex_compute_instance" "platform" {
+  name        = vm_web_name
+  platform_id = vm_web_cpu_id
+  resources {
+    cores         = vm_web_cores
+    memory        = vm_web_memory
+    core_fraction = vm_web_core_fraction
+  }
+```
+
+---
+
 ### Задание 3
 
 1. Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
