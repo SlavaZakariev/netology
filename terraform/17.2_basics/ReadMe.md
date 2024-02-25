@@ -206,6 +206,10 @@ resource "yandex_compute_instance" "platform" {
   }
 ```
 
+4. Результат выполнения команды **terraform plan**
+
+![plan](https://github.com/SlavaZakariev/netology/blob/dcdd0dbd51c7b6b6f58cff58aff05304b041f1b8/terraform/17.2_basics/resources/ter_1.5.jpg)
+
 ---
 
 ### Задание 3
