@@ -285,6 +285,28 @@ variable "vm_db_core_fraction" {
 
 ---
 
+### Решение 4
+
+Создан файл **outputs.tf** в папке проекта:
+
+```terraform
+output "VMs_data" {
+  value = {
+    vm_name1 = yandex_compute_instance.platform.name
+    fqdn_name1 = yandex_compute_instance.platform.fqdn
+    external_ip1 = yandex_compute_instance.platform.network_interface.0.nat_ip_address
+    vm_name2 = yandex_compute_instance.platform2.name
+    fqdn_name2 = yandex_compute_instance.platform2.fqdn
+    external_ip2 = yandex_compute_instance.platform2.network_interface.0.nat_ip_address
+ }
+}
+```
+2. Результат вывода файла:
+
+![output](https://github.com/SlavaZakariev/netology/blob/d2f38333ef5bf0b444d868fa3f21250824c3488b/terraform/17.2_basics/resources/ter_4.1.jpg)
+
+---
+
 ### Задание 5
 
 1. В файле locals.tf опишите в **одном** local-блоке имя каждой ВМ, используйте интерполяцию ${..} с несколькими переменными по примеру из лекции.
