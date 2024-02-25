@@ -382,7 +382,61 @@ variable "metadata" {
  }
 }
 ```
+3. Изменения в файле **main.tf**:
 
+```terraform
+data "yandex_compute_image" "ubuntu" {
+  family = var.vm_web_version
+}
+resource "yandex_compute_instance" "platform" {
+  name        = var.vm_web_name
+  platform_id = var.vm_web_cpu_id
+  resources {
+    cores         = var.vms_resources.vm_web_resources.cores
+    memory        = var.vms_resources.vm_web_resources.memory
+    core_fraction = var.vms_resources.vm_web_resources.core_fraction
+  }
+  metadata = var.metadata
+  boot_disk {
+    initialize_params {
+      image_id = data.yandex_compute_image.ubuntu.image_id
+    }
+  }
+  scheduling_policy {
+    preemptible = true
+  }
+  network_interface {
+    subnet_id = yandex_vpc_subnet.develop.id
+    nat       = true
+  }
+}
+
+data "yandex_compute_image" "ubuntu-db" {
+  family = var.vm_db_version
+}
+resource "yandex_compute_instance" "platform2" {
+  name        = var.vm_db_name
+  platform_id = var.vm_db_cpu_id
+  resources {
+    cores         = var.vms_resources.vm_db_resources.cores
+    memory        = var.vms_resources.vm_db_resources.memory
+    core_fraction = var.vms_resources.vm_db_resources.core_fraction
+  }
+  metadata = var.metadata
+  boot_disk {
+    initialize_params {
+      image_id = data.yandex_compute_image.ubuntu.image_id
+    }
+  }
+  scheduling_policy {
+    preemptible = true
+  }
+
+```
+
+5. Результат команды **terraform apply**
+  
+![apply](https://github.com/SlavaZakariev/netology/blob/a71575729670ff9e90ac40ae4d7d6ed3595d6c0c/terraform/17.2_basics/resources/ter_6.1.jpg)
 
 ---
 
