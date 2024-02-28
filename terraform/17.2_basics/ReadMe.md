@@ -67,9 +67,9 @@ variables.tf
 
 ![init](https://github.com/SlavaZakariev/netology/blob/38792aaab144fbe271dfbea83ecd66a963bfae32/terraform/17.2_basics/resources/ter_1.2.jpg)
 
-4. Исправленный блок кода файа **main.tf** в 15-й и 17-й строке
+4. Исправленный блок кода файла **main.tf** в 15-й и 17-й строке
 
-- Строка `platform_id = "standart-v4"`. Согласно документациии, можно воспользоваться параметрами ЦП: v1, v2 и v3, а также другие графические или высокопроизводительные коды ЦП. В слове **standart** допущена ошибка.
+- Строка `platform_id = "standart-v4"`. Согласно документации, можно воспользоваться параметрами ЦП: v1, v2 и v3, а также другие графические или высокопроизводительные коды ЦП. В слове **standart** допущена ошибка.
    [https://cloud.yandex.ru/ru/docs/compute/concepts/vm-platforms](https://cloud.yandex.ru/ru/docs/compute/concepts/vm-platforms)
 - Строка `cores = 1`. Исправлено количество ядер с 1 до 2, согласно документации 2 ядра является минимальным количеством ядер для виртуальной машины.
    [https://cloud.yandex.ru/ru/docs/compute/concepts/performance-levels](https://cloud.yandex.ru/ru/docs/compute/concepts/performance-levels)
@@ -116,9 +116,9 @@ resource "yandex_compute_instance" "platform" {
 }
 ```
 5. Параметр `preemptible = true` применяется при необходимости сделать ВМ прерываемой. Применятся если с момента запуска машины прошло 24 часа, либо возникает нехватка ресурсов для запуска ВМ. Прерываемые ВМ не обеспечивают отказоустойчивость. \
-Параметр `core_fraction = 5` указывает базовую производительность ядра в процентах. Применятеся для экономии финансовых затрат на ресурсы в облаке.
+Параметр `core_fraction = 5` указывает базовую производительность ядра в процентах. Применяется для экономии финансовых затрат на ресурсы в облаке.
 
-6. Созданная ВМ в консоле Yandex Cloud
+6. Созданная ВМ в консоли Yandex Cloud
 
 ![ycvm](https://github.com/SlavaZakariev/netology/blob/1fa9547abdbb0d6047330ec0258f3a0bd620ba12/terraform/17.2_basics/resources/ter_1.3.jpg)
 
@@ -140,12 +140,12 @@ resource "yandex_compute_instance" "platform" {
 
 1. Файл **main.tf** состоит из:
    - Сеть VPC и подсеть с ссылкой на переменные
-   - Семейство снимка ОС создаваемой ВМ
+   - Семейство снимка ОС, создаваемой ВМ
    - Предоставляемые ресурсы для ВМ (ЦП, ОЗУ, % использования ЦП)
    - Загрузка снимка ОС на диск
    - Параметр прерываемости ВМ
    - Маршрутизация с помощью NAT-инстанса
-   - Переменная данных SSH (для аутентификация)
+   - Переменная данных SSH (для аутентификации)
   
 2. Добавлены переменные в файл **variables.tf**
 
@@ -266,7 +266,7 @@ variable "vm_db_core_fraction" {
 
 ![db](https://github.com/SlavaZakariev/netology/blob/3d6beff28e835ae7b44a271cf9e54aa77cf2f94d/terraform/17.2_basics/resources/ter_3.2.jpg)
 
-3. Две ВМ в консоле Yandex Cloud
+3. Две ВМ в консоли Yandex Cloud
 
 ![db-yc](https://github.com/SlavaZakariev/netology/blob/cb4e35e7935cf606c0e2caa68bac1e5c5a009a40/terraform/17.2_basics/resources/ter_3.1.jpg)
 
