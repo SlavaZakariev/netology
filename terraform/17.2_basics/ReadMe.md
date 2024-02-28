@@ -199,11 +199,7 @@ data "yandex_compute_image" "ubuntu" {
 resource "yandex_compute_instance" "platform" {
   name        = var.vm_web_name
   platform_id = var.vm_web_cpu_id
-  resources {
-    cores         = var.vm_web_cores
-    memory        = var.vm_web_memory
-    core_fraction = var.vm_web_core_fraction
-  }
+
 ```
 
 4. Результат выполнения команды **terraform plan**
@@ -356,11 +352,6 @@ web
 resource "yandex_compute_instance" "platform" {
   name        = local.vm_web
   platform_id = var.vm_web_cpu_id
-  resources {
-    cores         = var.vms_resources.vm_web_resources.cores
-    memory        = var.vms_resources.vm_web_resources.memory
-    core_fraction = var.vms_resources.vm_web_resources.core_fraction
-  }
 ```
 
 db
@@ -369,11 +360,6 @@ db
 resource "yandex_compute_instance" "platform2" {
   name        = local.vm_db
   platform_id = var.vm_db_cpu_id
-  resources {
-    cores         = var.vms_resources.vm_db_resources.cores
-    memory        = var.vms_resources.vm_db_resources.memory
-    core_fraction = var.vms_resources.vm_db_resources.core_fraction
-  }
 ```
 
 ---
