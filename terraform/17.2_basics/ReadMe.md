@@ -350,6 +350,8 @@ variable "db" {
 ```
 3. Изменены ссылки c **variables.tf** на **locals.tf** на переменные в **Root-модуле**
 
+web
+
 ```terraform
 resource "yandex_compute_instance" "platform" {
   name        = local.vm_web
@@ -360,6 +362,9 @@ resource "yandex_compute_instance" "platform" {
     core_fraction = var.vms_resources.vm_web_resources.core_fraction
   }
 ```
+
+db
+
 ```terraform
 resource "yandex_compute_instance" "platform2" {
   name        = local.vm_db
