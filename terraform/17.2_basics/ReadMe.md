@@ -315,6 +315,64 @@ output "VMs_data" {
 
 ---
 
+### Решение 5
+
+1. Создан файл **locals.tf** в папке проекта
+
+```terraform
+locals {
+  vm_web = "${var.instance}-${var.web}"
+  vm_db = "${var.instance}-${var.db}"
+}
+
+```
+
+2. Закоментирован блок переменных с именами для ВМ, созданы следующие переменные в файле **variables.tf**
+
+```terraform
+variable "instance" {
+  type        = string
+  default     = "netology-develop-platform"
+  description = "instance name"
+}
+
+variable "web" {
+  type        = string
+  default     = "web"
+  description = "vm name"
+}
+
+variable "db" {
+  type        = string
+  default     = "db"
+  description = "vm name"
+}
+```
+3. Изменены ссылки c **variables.tf** на **locals.tf** на переменные в **Root-модуле**
+
+```terraform
+resource "yandex_compute_instance" "platform" {
+  name        = local.vm_web
+  platform_id = var.vm_web_cpu_id
+  resources {
+    cores         = var.vms_resources.vm_web_resources.cores
+    memory        = var.vms_resources.vm_web_resources.memory
+    core_fraction = var.vms_resources.vm_web_resources.core_fraction
+  }
+```
+```terraform
+resource "yandex_compute_instance" "platform2" {
+  name        = local.vm_db
+  platform_id = var.vm_db_cpu_id
+  resources {
+    cores         = var.vms_resources.vm_db_resources.cores
+    memory        = var.vms_resources.vm_db_resources.memory
+    core_fraction = var.vms_resources.vm_db_resources.core_fraction
+  }
+```
+
+---
+
 ### Задание 6
 
 1. Вместо использования трёх переменных  ".._cores",".._memory",".._core_fraction" в блоке  resources {...}, объедините их в единую map-переменную **vms_resources** и  внутри неё конфиги обеих ВМ в виде вложенного map.  
@@ -391,7 +449,7 @@ data "yandex_compute_image" "ubuntu" {
   family = var.vm_web_version
 }
 resource "yandex_compute_instance" "platform" {
-  name        = var.vm_web_name
+  name        = local.vm_web
   platform_id = var.vm_web_cpu_id
   resources {
     cores         = var.vms_resources.vm_web_resources.cores
@@ -407,7 +465,7 @@ data "yandex_compute_image" "ubuntu-db" {
   family = var.vm_db_version
 }
 resource "yandex_compute_instance" "platform2" {
-  name        = var.vm_db_name
+  name        = local.vm_db
   platform_id = var.vm_db_cpu_id
   resources {
     cores         = var.vms_resources.vm_db_resources.cores
