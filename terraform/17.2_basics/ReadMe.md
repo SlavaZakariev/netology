@@ -131,7 +131,7 @@ resource "yandex_compute_instance" "platform" {
 ### Задание 2
 
 1. Замените все хардкод-**значения** для ресурсов **yandex_compute_image** и **yandex_compute_instance** на **отдельные** переменные. К названиям переменных ВМ добавьте в начало префикс **vm_web_** .  Пример: **vm_web_name**.
-2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
+2. Объявите нужные переменные в файле **variables.tf**, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из **main.tf**. 
 3. Проверьте terraform plan. Изменений быть не должно. 
 
 ---
@@ -199,7 +199,11 @@ data "yandex_compute_image" "ubuntu" {
 resource "yandex_compute_instance" "platform" {
   name        = var.vm_web_name
   platform_id = var.vm_web_cpu_id
-
+  resources {
+    cores         = var.vm_web_cores
+    memory        = var.vm_web_memory
+    core_fraction = var.vm_web_core_fraction
+  }
 ```
 
 4. Результат выполнения команды **terraform plan**
