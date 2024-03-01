@@ -771,6 +771,26 @@ output "VMs_data" {
 ```
 </details>
 
+<details>
+<summary>Файл исключений для Git .gitignore</summary>
+
+```terraform
+# Local .terraform directories and files
+**/.terraform/*
+.terraform*
+
+!.terraformrc
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# own secret vars store.
+personal.auto.tfvars
+variables.tf
+```
+</details>
+
 ---
 
 ## Дополнительное задание (со звёздочкой*)
