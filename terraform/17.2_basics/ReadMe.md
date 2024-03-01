@@ -744,10 +744,10 @@ variable "metadata" {
 </details>
 
 <details>
-<summary>Файл c переменными для интерполяцию locals.tf</summary>
+<summary>Файл c переменными для интерполяции locals.tf</summary>
 
 ```terraform
-ocals {
+locals {
   vm_web = "${var.instance}-${var.web}"
   vm_db = "${var.instance}-${var.db}"
 }
