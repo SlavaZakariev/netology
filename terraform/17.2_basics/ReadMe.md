@@ -522,6 +522,7 @@ provider "yandex" {
 <summary>Root-модуль main.tf</summary>
 
 ```terraform
+### VPC
 resource "yandex_vpc_network" "web" {
   name = var.vpc_nameweb
 }
@@ -542,6 +543,7 @@ resource "yandex_vpc_subnet" "db_subnet" {
   v4_cidr_blocks = var.cidr_b
 }
 
+### VMs
 data "yandex_compute_image" "ubuntu-web" {
   family = var.vm_web_version
 }
