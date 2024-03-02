@@ -822,7 +822,7 @@ Terraform will perform the following actions:
       + maintenance_policy        = (known after apply)
       + metadata                  = {
           + "serial-port-enable" = "1"
-          + "ssh-keys"           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA1XMBJrjqTUqlJHlQuZXTwAbSTZZY7Pqq9urjvx4HDh"
+          + "ssh-keys"           = "ssh-ed25519 AAAAC3***"
         }
       + name                      = "netology-develop-platform-db"
       + network_acceleration_type = "standard"
@@ -885,7 +885,7 @@ Terraform will perform the following actions:
       + maintenance_policy        = (known after apply)
       + metadata                  = {
           + "serial-port-enable" = "1"
-          + "ssh-keys"           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA1XMBJrjqTUqlJHlQuZXTwAbSTZZY7Pqq9urjvx4HDh"
+          + "ssh-keys"           = "ssh-ed25519 AAAAC3***"
         }
       + name                      = "netology-develop-platform-web"
       + network_acceleration_type = "standard"
