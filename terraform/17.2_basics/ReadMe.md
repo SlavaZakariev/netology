@@ -547,7 +547,7 @@ resource "yandex_vpc_subnet" "db_subnet" {
 data "yandex_compute_image" "ubuntu-web" {
   family = var.vm_web_version
 }
-resource "yandex_compute_instance" "platform1" {
+resource "yandex_compute_instance" "web" {
   name        = local.vm_web
   platform_id = var.vm_web_cpu_id
   resources {
@@ -573,7 +573,7 @@ resource "yandex_compute_instance" "platform1" {
 data "yandex_compute_image" "ubuntu-db" {
   family = var.vm_db_version
 }
-resource "yandex_compute_instance" "platform2" {
+resource "yandex_compute_instance" "db" {
   name        = local.vm_db
   platform_id = var.vm_db_cpu_id
   resources {
@@ -762,12 +762,12 @@ locals {
 ```terraform
 output "VMs_data" {
   value = {
-    vm_name1 = yandex_compute_instance.platform1.name
-    fqdn_name1 = yandex_compute_instance.platform1.fqdn
-    external_ip1 = yandex_compute_instance.platform1.network_interface.0.nat_ip_address
-    vm_name2 = yandex_compute_instance.platform2.name
-    fqdn_name2 = yandex_compute_instance.platform2.fqdn
-    external_ip2 = yandex_compute_instance.platform2.network_interface.0.nat_ip_address
+    vm_name1 = yandex_compute_instance.web.name
+    fqdn_name1 = yandex_compute_instance.web.fqdn
+    external_ip1 = yandex_compute_instance.web.network_interface.0.nat_ip_address
+    vm_name2 = yandex_compute_instance.db.name
+    fqdn_name2 = yandex_compute_instance.db.fqdn
+    external_ip2 = yandex_compute_instance.db.network_interface.0.nat_ip_address
  }
 }
 ```
