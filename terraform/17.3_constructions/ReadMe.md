@@ -30,6 +30,18 @@
 
 ---
 
+Решение 1
+
+1. Инициализация проекта
+
+![init](https://github.com/SlavaZakariev/netology/blob/52bcb5550cb5a9f1b08db2035a8807932a5854b8/terraform/17.3_constructions/resources/ter2_1.1.jpg)
+
+2. Группа безопасности example_dynamic
+
+![security](https://github.com/SlavaZakariev/netology/blob/52bcb5550cb5a9f1b08db2035a8807932a5854b8/terraform/17.3_constructions/resources/ter2_1.2.jpg)
+
+---
+
 ### Задание 2
 
 1. Создайте файл count-vm.tf. Опишите в нём создание двух **одинаковых** ВМ  web-1 и web-2 (не web-0 и web-1) с минимальными параметрами, используя мета-аргумент **count loop**. Назначьте ВМ созданную в первом задании группу безопасности.(как это сделать узнайте в документации провайдера yandex/compute_instance )
