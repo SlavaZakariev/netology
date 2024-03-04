@@ -1,4 +1,5 @@
 ### cloud vars
+
 variable "token" {
   type    = string
   default = "y0________"
