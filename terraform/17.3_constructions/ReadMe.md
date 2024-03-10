@@ -158,7 +158,7 @@ locals {
 
 ![apply](https://github.com/SlavaZakariev/netology/blob/70920aeeda1c61465600130f6f5087643f3e8d1c/terraform/17.3_constructions/resources/ter2_2.1.jpg)
 
-5. Результат в консоли Яндекс Облака
+5. Результат в консоли **Yandex Cloud**
 
 ![yc](https://github.com/SlavaZakariev/netology/blob/70920aeeda1c61465600130f6f5087643f3e8d1c/terraform/17.3_constructions/resources/ter2_2.2.jpg)
 
@@ -166,8 +166,71 @@ locals {
 
 ### Задание 3
 
-1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле **disk_vm.tf** .
-2. Создайте в том же файле **одиночную**(использовать count или for_each запрещено из-за задания №4) ВМ c именем "storage"  . Используйте блок **dynamic secondary_disk{..}** и мета-аргумент for_each для подключения созданных вами дополнительных дисков.
+1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле **disk_vm.tf**.
+2. Создайте в том же файле **одиночную**(использовать count или for_each запрещено из-за задания №4) ВМ c именем "storage". Используйте блок **dynamic secondary_disk{..}** и мета-аргумент for_each для подключения созданных вами дополнительных дисков.
+
+---
+
+### Решение 3
+
+1. Создал файл **disk_vm.tf**
+
+```terraform
+data "yandex_compute_image" "storage" {
+  family = "ubuntu-2004-lts"
+}
+
+resource "yandex_compute_disk" "disks" {
+  count = 3
+  name  = "disk-${count.index+1}"
+  type  = "network-hdd"
+  size  = 1
+  block_size = 4096
+}
+
+resource "yandex_compute_instance" "storage" {  
+  name        = "storage"
+  zone        = "ru-central1-a"
+  platform_id = "standard-v1"
+   
+  resources {
+    cores         = 2
+    memory        = 2
+    core_fraction = 5 
+  }
+
+  boot_disk {
+    initialize_params {
+      image_id = data.yandex_compute_image.storage.image_id
+      type = "network-hdd"
+      size = 5
+    }   
+  }
+
+  dynamic "secondary_disk" {
+    for_each = yandex_compute_disk.disks.*.id
+    content {
+      disk_id = secondary_disk.value
+    }
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.develop.id
+    nat       = true
+  }
+
+  scheduling_policy {preemptible = true}
+  
+  metadata = local.metadata
+}
+```
+2. Результат выполнения команды **terraform apply**
+
+![apply2](https://github.com/SlavaZakariev/netology/blob/571726a98010e6280d512ffef9f7dbd6b954fb10/terraform/17.3_constructions/resources/ter2_3.1.jpg)
+
+3. Созданный ресурс в консоли **Yandex Cloud**
+
+![apply2](https://github.com/SlavaZakariev/netology/blob/571726a98010e6280d512ffef9f7dbd6b954fb10/terraform/17.3_constructions/resources/ter2_3.2.jpg)
 
 ---
 
