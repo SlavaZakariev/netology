@@ -58,6 +58,114 @@ variable "each_vm" {
 
 ---
 
+### Решение 2
+
+1. Создал файл **count-vm.tf**
+
+```terraform
+data "yandex_compute_image" "ubuntu1" {
+  family = "ubuntu-2004-lts"
+}
+
+resource "yandex_compute_instance" "count" {
+    count = 2
+    name = "web-${count.index+1}"
+    platform_id = "standard-v1"
+    resources {
+      cores         = 2
+      memory        = 1
+      core_fraction = 5
+    }
+    
+    boot_disk {
+      initialize_params {
+        image_id = data.yandex_compute_image.ubuntu1.image_id
+    }
+  }
+
+  network_interface {
+    security_group_ids = [yandex_vpc_security_group.example.id]    
+    subnet_id = yandex_vpc_subnet.develop.id
+    nat       = true
+  }
+
+  scheduling_policy {preemptible = true}
+  
+  metadata = local.metadata
+}
+```
+
+2. Создал файл **for_each-vm.tf**, описал переменные внутри данного файла.
+
+```terraform
+data "yandex_compute_image" "ubuntu2" {
+  family = "ubuntu-2004-lts"
+}
+
+resource "yandex_compute_instance" "for_each" {
+  depends_on  = [yandex_compute_instance.count]
+  for_each    = var.vm_resources
+  name        = each.value.vm_name
+  platform_id = "standard-v1"
+  zone        = "ru-central1-a"
+  
+  resources {
+    cores      = each.value.cores
+    memory     = each.value.memory
+  }
+  
+  boot_disk {
+    initialize_params {
+      image_id = data.yandex_compute_image.ubuntu2.image_id
+   }
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.develop.id
+    nat       = true
+  }
+
+  scheduling_policy {
+    preemptible = true
+  }
+
+  metadata = local.metadata
+}
+
+variable "vm_resources" {
+  type = map(object({
+    vm_name = string
+    cores     = number
+    memory    = number
+    disk      = number
+  }))
+  default = {
+    main    = { vm_name = "main", cores = 2, memory = 2, disk = 5 }
+    replica = { vm_name = "replica", cores = 4, memory = 4, disk = 10 }
+  }
+}
+```
+
+3. Создал файл **locals.tf** с данными ключа.
+
+```terraform
+locals {
+  metadata = {  
+    serial-port-enable = 1
+    ssh-keys = "metadata:${file("~/.ssh/id_ed25519.pub")}"
+ }
+}
+```
+4. Результат выполнения команды **terraform apply**
+
+![apply](https://github.com/SlavaZakariev/netology/blob/70920aeeda1c61465600130f6f5087643f3e8d1c/terraform/17.3_constructions/resources/ter2_2.1.jpg)
+
+5. Результат в консоли Яндекс Облака
+
+![yc](https://github.com/SlavaZakariev/netology/blob/70920aeeda1c61465600130f6f5087643f3e8d1c/terraform/17.3_constructions/resources/ter2_2.2.jpg)
+
+---
+
 ### Задание 3
 
 1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле **disk_vm.tf** .
