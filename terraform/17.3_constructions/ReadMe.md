@@ -125,9 +125,7 @@ resource "yandex_compute_instance" "for_each" {
     nat       = true
   }
 
-  scheduling_policy {
-    preemptible = true
-  }
+  scheduling_policy {preemptible = true}
 
   metadata = local.metadata
 }
