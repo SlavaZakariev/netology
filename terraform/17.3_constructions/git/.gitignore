@@ -11,3 +11,6 @@
 # own secret vars store.
 personal.auto.tfvars
 variables.tf
+
+#ansible
+*.cfg
