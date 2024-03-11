@@ -314,6 +314,8 @@ ${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]==null 
 
 ![host](https://github.com/SlavaZakariev/netology/blob/dcdd5191290131bbfe83b4d393155e3181956fae/terraform/17.3_constructions/resources/ter2_4.2.jpg)
 
+### Ссылка на [Git](https://github.com/SlavaZakariev/netology/tree/main/terraform/17.3_constructions/git)
+
 ---
 
 ## Дополнительные задания (со звездочкой*)
