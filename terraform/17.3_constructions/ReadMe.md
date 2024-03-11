@@ -36,7 +36,7 @@
 
 ![init](https://github.com/SlavaZakariev/netology/blob/52bcb5550cb5a9f1b08db2035a8807932a5854b8/terraform/17.3_constructions/resources/ter2_1.1.jpg)
 
-2. Группа безопасности example_dynamic
+2. Группа безопасности **example_dynamic**
 
 ![security](https://github.com/SlavaZakariev/netology/blob/52bcb5550cb5a9f1b08db2035a8807932a5854b8/terraform/17.3_constructions/resources/ter2_1.2.jpg)
 
@@ -60,7 +60,7 @@ variable "each_vm" {
 
 ### Решение 2
 
-1. Создал файл **count-vm.tf**
+1. Создан файл **count-vm.tf**
 
 ```terraform
 data "yandex_compute_image" "ubuntu1" {
@@ -95,7 +95,7 @@ resource "yandex_compute_instance" "count" {
 }
 ```
 
-2. Создал файл **for_each-vm.tf**, описал переменные внутри данного файла.
+2. Создан файл **for_each-vm.tf**, описал переменные внутри данного файла.
 
 ```terraform
 data "yandex_compute_image" "ubuntu2" {
@@ -144,7 +144,7 @@ variable "vm_resources" {
 }
 ```
 
-3. Создал файл **locals.tf** с данными ключа.
+3. Создан файл **locals.tf** с данными ключа.
 
 ```terraform
 locals {
@@ -173,7 +173,7 @@ locals {
 
 ### Решение 3
 
-1. Создал файл **disk_vm.tf**
+1. Создан файл **disk_vm.tf**
 
 ```terraform
 data "yandex_compute_image" "storage" {
@@ -259,6 +259,50 @@ storage ansible_host=<внешний ip-адрес> fqdn=<полное доме�
 
 Для общего зачёта создайте в вашем GitHub-репозитории новую ветку terraform-03. Закоммитьте в эту ветку свой финальный код проекта, пришлите ссылку на коммит.   
 **Удалите все созданные ресурсы**.
+
+---
+
+### Решение 4
+
+1. Создан файл **ansible.tf**
+
+```terraform
+resource  "local_file" "inventory" {
+  filename = "${abspath(path.module)}/hosts.cfg"
+  content  = templatefile("${path.module}/hosts.tftpl", {
+    webservers = yandex_compute_instance.count
+    databases  = yandex_compute_instance.for_each
+    storage   = [yandex_compute_instance.storage]
+    })  
+ }
+```
+
+2. Создан **hosts.tftpl** в папке проета
+
+```bash
+[webservers]
+%{~ for i in webservers ~}
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]==null ? i["network_interface"][0]["ip_address"] : i["network_interface"][0]["nat_ip_address"]}
+%{~ endfor ~}
+
+[databases]
+%{~ for i in databases ~}
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]==null ? i["network_interface"][0]["ip_address"] : i["network_interface"][0]["nat_ip_address"]}
+%{~ endfor ~}
+
+[storage]
+%{~ for i in storage ~}
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]==null ? i["network_interface"][0]["ip_address"] : i["network_interface"][0]["nat_ip_address"]}
+%{~ endfor ~}
+```
+
+3. Результат выполнения команды **terraform apply**
+
+![ansible](https://github.com/SlavaZakariev/netology/blob/b1792f62d33da56e59eb6dceb7bf1c7a5900389f/terraform/17.3_constructions/resources/ter2_4.1.jpg)
+
+4. В результате в папке проекта появился файл **host.cfg**
+
+
 
 ---
 
