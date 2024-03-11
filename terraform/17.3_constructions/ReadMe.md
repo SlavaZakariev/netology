@@ -302,7 +302,11 @@ ${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]==null 
 
 4. В результате в папке проекта появился файл **host.cfg**
 
+![host](https://github.com/SlavaZakariev/netology/blob/dcdd5191290131bbfe83b4d393155e3181956fae/terraform/17.3_constructions/resources/ter2_4.3.jpg)
 
+5. Пересобрались виртуальные машины в **Yandex Cloud**
+
+![host](https://github.com/SlavaZakariev/netology/blob/dcdd5191290131bbfe83b4d393155e3181956fae/terraform/17.3_constructions/resources/ter2_4.2.jpg)
 
 ---
 
