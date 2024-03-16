@@ -64,29 +64,30 @@ variable "each_vm" {
 
 ```terraform
 data "yandex_compute_image" "ubuntu1" {
-  family = "ubuntu-2004-lts"
+  family = var.vm_ubuntu_ver
 }
 
 resource "yandex_compute_instance" "count" {
-    count = 2
-    name = "web-${count.index+1}"
-    platform_id = "standard-v1"
-    resources {
-      cores         = 2
-      memory        = 1
-      core_fraction = 5
-    }
+  count = 2
+  name = "web-${count.index+1}"
+  platform_id = var.vm_cpu_id
+  zone        = var.default_zone
+  resources {
+    cores         = var.vms_resources.vm_count_resources.cores
+    memory        = var.vms_resources.vm_count_resources.memory
+    core_fraction = var.vms_resources.vm_count_resources.core_fraction
+  }
     
-    boot_disk {
-      initialize_params {
-        image_id = data.yandex_compute_image.ubuntu1.image_id
-    }
+  boot_disk {
+    initialize_params {
+      image_id = data.yandex_compute_image.ubuntu1.image_id
+   }
   }
 
   network_interface {
     security_group_ids = [yandex_vpc_security_group.example.id]    
-    subnet_id = yandex_vpc_subnet.develop.id
-    nat       = true
+    subnet_id          = yandex_vpc_subnet.develop.id
+    nat                = true
   }
 
   scheduling_policy {preemptible = true}
@@ -99,19 +100,18 @@ resource "yandex_compute_instance" "count" {
 
 ```terraform
 data "yandex_compute_image" "ubuntu2" {
-  family = "ubuntu-2004-lts"
+  family = var.vm_ubuntu_ver
 }
 
 resource "yandex_compute_instance" "for_each" {
   depends_on  = [yandex_compute_instance.count]
   for_each    = var.vm_resources
   name        = each.value.vm_name
-  platform_id = "standard-v1"
-  zone        = "ru-central1-a"
-  
+  platform_id = var.vm_cpu_id
+  zone        = var.default_zone
   resources {
-    cores      = each.value.cores
-    memory     = each.value.memory
+    cores     = each.value.cores
+    memory    = each.value.memory
   }
   
   boot_disk {
@@ -133,9 +133,9 @@ resource "yandex_compute_instance" "for_each" {
 variable "vm_resources" {
   type = map(object({
     vm_name = string
-    cores     = number
-    memory    = number
-    disk      = number
+    cores   = number
+    memory  = number
+    disk    = number
   }))
   default = {
     main    = { vm_name = "main", cores = 2, memory = 2, disk = 5 }
@@ -177,7 +177,7 @@ locals {
 
 ```terraform
 data "yandex_compute_image" "storage" {
-  family = "ubuntu-2004-lts"
+  family = var.vm_ubuntu_ver
 }
 
 resource "yandex_compute_disk" "disks" {
@@ -190,20 +190,20 @@ resource "yandex_compute_disk" "disks" {
 
 resource "yandex_compute_instance" "storage" {  
   name        = "storage"
-  zone        = "ru-central1-a"
-  platform_id = "standard-v1"
+  zone        = var.default_zone
+  platform_id = var.vm_cpu_id
    
   resources {
-    cores         = 2
-    memory        = 2
-    core_fraction = 5 
+    cores         = var.vms_resources.vm_disks_resources.cores
+    memory        = var.vms_resources.vm_disks_resources.memory
+    core_fraction = var.vms_resources.vm_disks_resources.core_fraction
   }
 
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.storage.image_id
-      type = "network-hdd"
-      size = 5
+      type     = "network-hdd"
+      size     = 5
     }   
   }
 
