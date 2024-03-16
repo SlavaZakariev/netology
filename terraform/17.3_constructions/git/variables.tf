@@ -36,3 +36,33 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network & subnet name"
 }
+
+### vm_resources
+
+variable "vms_resources" {
+  type        = map(map(number))
+  default     = {
+    vm_count_resources = {
+      cores          = 2
+      memory         = 1
+      core_fraction  = 5
+    }
+    vm_disks_resources = {
+      cores         = 2
+      memory        = 2
+      core_fraction = 5
+    }
+  }
+}
+
+variable "vm_ubuntu_ver" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "ubuntu version"
+}
+
+variable "vm_cpu_id" {
+  type        = string
+  default     = "standard-v1"
+  description = "cpu id"
+  }
