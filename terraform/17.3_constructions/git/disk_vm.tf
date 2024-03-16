@@ -1,5 +1,5 @@
 data "yandex_compute_image" "storage" {
-  family = "ubuntu-2004-lts"
+  family = var.vm_ubuntu_ver
 }
 
 resource "yandex_compute_disk" "disks" {
@@ -12,20 +12,20 @@ resource "yandex_compute_disk" "disks" {
 
 resource "yandex_compute_instance" "storage" {  
   name        = "storage"
-  zone        = "ru-central1-a"
-  platform_id = "standard-v1"
+  zone        = var.default_zone
+  platform_id = var.vm_cpu_id
    
   resources {
-    cores         = 2
-    memory        = 2
-    core_fraction = 5 
+    cores         = var.vms_resources.vm_disks_resources.cores
+    memory        = var.vms_resources.vm_disks_resources.memory
+    core_fraction = var.vms_resources.vm_disks_resources.core_fraction
   }
 
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.storage.image_id
-      type = "network-hdd"
-      size = 5
+      type     = "network-hdd"
+      size     = 5
     }   
   }
 
