@@ -1,17 +1,16 @@
 data "yandex_compute_image" "ubuntu2" {
-  family = "ubuntu-2004-lts"
+  family = var.vm_ubuntu_ver
 }
 
 resource "yandex_compute_instance" "for_each" {
   depends_on  = [yandex_compute_instance.count]
   for_each    = var.vm_resources
   name        = each.value.vm_name
-  platform_id = "standard-v1"
-  zone        = "ru-central1-a"
-  
+  platform_id = var.vm_cpu_id
+  zone        = var.default_zone
   resources {
-    cores      = each.value.cores
-    memory     = each.value.memory
+    cores     = each.value.cores
+    memory    = each.value.memory
   }
   
   boot_disk {
@@ -33,9 +32,9 @@ resource "yandex_compute_instance" "for_each" {
 variable "vm_resources" {
   type = map(object({
     vm_name = string
-    cores     = number
-    memory    = number
-    disk      = number
+    cores   = number
+    memory  = number
+    disk    = number
   }))
   default = {
     main    = { vm_name = "main", cores = 2, memory = 2, disk = 5 }
