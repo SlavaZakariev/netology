@@ -50,7 +50,7 @@
 
 6. Запуск шифрованного Playbook
 
-![ans06]()
+![ans06](https://github.com/SlavaZakariev/netology/blob/2b6dc80fa672c2d1ebd2b98cf2df8a8170fc8b7f/ansible/18.1_introduction/resources/ans1_1.6.jpg)
 
 7. Вывод список плагинов
 
