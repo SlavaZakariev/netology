@@ -24,6 +24,42 @@
 12. Заполните `README.md` ответами на вопросы. Сделайте `git push` в ветку `master`. В ответе отправьте ссылку на ваш открытый репозиторий с изменённым `playbook` и заполненным `README.md`.
 13. Предоставьте скриншоты результатов запуска команд.
 
+---
+
+Решение 1
+
+1. Запускаем Playbook на локальный сервер
+
+![ans01](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.1.jpg)
+
+2. Повторяем Playbook на локальный сервер, предварительно сменив сообщение на "all default fact"
+
+![ans02](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.2.jpg)
+
+3. Разворачиваем контейнеры ubuntu и centos7 и запускаем Playbook
+
+![ans03](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.3.jpg)
+
+4. Повторяем Playbook для контейнеров, предварительно сменив сообщения с "deb" на "deb default fact" и "el" на "el default fact"
+
+![ans04](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.4.jpg)
+
+5. Шифрую файлы с сообщениями
+
+![ans05](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.5.jpg)
+
+6. Запуск шифрованного Playbook
+
+![ans06](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.6.jpg)
+
+7. Вывод список плагинов
+
+![ans07](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.7.jpg)
+
+8. Внесение локального сервера в файл инвентори
+
+![ans08](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.8.jpg)
+
 ## Необязательная часть
 
 1. При помощи `ansible-vault` расшифруйте все зашифрованные файлы с переменными.
