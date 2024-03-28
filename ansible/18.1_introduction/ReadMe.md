@@ -60,6 +60,10 @@
 
 ![ans08](https://github.com/SlavaZakariev/netology/blob/ea120408ccbcfc1773e0096283a64f5207e97c46/ansible/18.1_introduction/resources/ans1_1.8.jpg)
 
+9. Запуск Playbook после внесения изменений в файл инвентори
+
+![ans09](https://github.com/SlavaZakariev/netology/blob/d42a14f860c657c60b47fa7aaf896fb726c389b7/ansible/18.1_introduction/resources/ans1_1.9.jpg)
+
 Ссылка на [playbook](https://github.com/SlavaZakariev/netology/tree/main/ansible/18.1_introduction/playbook)
 
 ## Необязательная часть
