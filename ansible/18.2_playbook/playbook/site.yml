@@ -1,21 +1,18 @@
 ---
 - name: Install Clickhouse
-  hosts: clickhouse
-  handlers:
-    - name: Start clickhouse service
-      become: true
-      ansible.builtin.service:
-        name: clickhouse-server
-        state: restarted
+  hosts: clickhouse-01
   tasks:
     - block:
-        - name: Get clickhouse distrib
+        - name: Get Сlickhouse distrib client
           ansible.builtin.get_url:
-            url: "https://packages.clickhouse.com/rpm/stable/{{ item }}-{{ clickhouse_version }}.noarch.rpm"
-            dest: "./{{ item }}-{{ clickhouse_version }}.rpm"
-          with_items: "{{ clickhouse_packages }}"
+            url: "https://packages.clickhouse.com/rpm/stable/clickhouse-client-{{ clickhouse_version }}.noarch.rpm"
+            dest: "./clickhouse-client-{{ clickhouse_version }}.rpm"
+        - name: Get clickhouse distrib server
+          ansible.builtin.get_url:
+            url: "https://packages.clickhouse.com/rpm/stable/clickhouse-server-{{ clickhouse_version }}.noarch.rpm"
+            dest: "./clickhouse-server-{{ clickhouse_version }}.rpm"
       rescue:
-        - name: Get clickhouse distrib
+        - name: Get clickhouse distrib commom-static
           ansible.builtin.get_url:
             url: "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-{{ clickhouse_version }}.x86_64.rpm"
             dest: "./clickhouse-common-static-{{ clickhouse_version }}.rpm"
@@ -23,14 +20,48 @@
       become: true
       ansible.builtin.yum:
         name:
-          - clickhouse-common-static-{{ clickhouse_version }}.rpm
-          - clickhouse-client-{{ clickhouse_version }}.rpm
-          - clickhouse-server-{{ clickhouse_version }}.rpm
+          - ./clickhouse-common-static-{{ clickhouse_version }}.rpm
+          - ./clickhouse-client-{{ clickhouse_version }}.rpm
+          - ./clickhouse-server-{{ clickhouse_version }}.rpm
       notify: Start clickhouse service
     - name: Flush handlers
       meta: flush_handlers
+  handlers:
+    - name: Start clickhouse service
+      become: true
+      ansible.builtin.service:
+        name: clickhouse-server
+        state: restarted
     - name: Create database
       ansible.builtin.command: "clickhouse-client -q 'create database logs;'"
       register: create_db
       failed_when: create_db.rc != 0 and create_db.rc !=82
       changed_when: create_db.rc == 0
+  tags: clickhouse
+
+- name: Install Vector
+  hosts: vector-01
+  pre_tasks:
+    - name: Get Vector distrib
+      ansible.builtin.get_url:
+        url: "https://packages.timber.io/vector/0.33.0/vector-{{ vector_version }}-{{ vector_architecture }}-unknown-linux-gnu.tar.gz"
+        dest: "./vector-{{ vector_version }}-{{ vector_architecture }}-unknown-linux-gnu.tar.gz"
+    - name: Create Vector directory
+      become: true
+      ansible.builtin.file:
+        path: /etc/vector
+        state: directory
+  handlers:
+    - name: Unarchive Vector package 
+      ansible.builtin.command: "tar -xf ./vector-{{ vector_version }}-{{ vector_architecture }}-unknown-linux-gnu.tar.gz -C /ect/vector"
+  tasks:
+    - name: Template file
+      become: true
+      ansible.builtin.template:
+        src: vector.toml.j2
+        dest: /etc/vector/vector.toml
+        mode: '0644'
+    - name: Run Vector
+      become: true
+      ansible.builtin.shell: /etc/vector/vector-x86_64-unknown-linux-gnu/bin/vector --config /etc/vector/vector.toml &
+  tags: vector
