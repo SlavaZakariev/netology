@@ -22,7 +22,7 @@
 
 ---
 
-Решение 1
+### Решение 1
 
 1. Развёрнуты 2 ВМ на HyperV
 
@@ -54,7 +54,8 @@ vector:
 
 4. Написан Playbook для Vector
 
-Примечание: Постоянно выходила ошибка при использовании модуля распаковки, пришлось добавить **hadler** с командой распаковки. Возможно какая-то несовместимость версии ansible 2.10.8 с модулем распаковки архивов **gz.tar**
+**Примечание:** Постоянно выходила ошибка при использовании модуля распаковки, пришлось добавить **hadler** с командой распаковки. \
+Возможно какая-то несовместимость версии ansible **2.10.8** с модулем распаковки архивов **gz.tar**
 
 ```yaml
 - name: Install Vector
@@ -85,7 +86,15 @@ vector:
   tags: vector
 ```
 
-5. 
+5. Запускаем **Playbook**
+
+![playbook1](https://github.com/SlavaZakariev/netology/blob/224a40906b106ebe8a4c8b9645fa0c8ea23d074a/ansible/18.2_playbook/resources/ans2_1.2.jpg)
+
+6. Запускаем **Playbook** c флагом **--check**
+
+![playbook1](https://github.com/SlavaZakariev/netology/blob/224a40906b106ebe8a4c8b9645fa0c8ea23d074a/ansible/18.2_playbook/resources/ans2_1.3.jpg)
+
+7. 
 
 
 
