@@ -21,3 +21,71 @@
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на коммит, в ответ предоставьте ссылку.
 
 ---
+
+Решение 1
+
+1. Развёрнуты 2 ВМ на HyperV
+
+![VMs](https://github.com/SlavaZakariev/netology/blob/2e4a33a6a6bc0c78b341a89a471c493c49f46bba/ansible/18.2_playbook/resources/ans2_1.5.jpg)
+
+2. Добавляем SSH ключи и проверяем связь через Ansible
+
+![ping](https://github.com/SlavaZakariev/netology/blob/2e4a33a6a6bc0c78b341a89a471c493c49f46bba/ansible/18.2_playbook/resources/ans2_1.1.jpg)
+
+3. Добавлены ВМ в файл invertory
+
+```yaml
+clickhouse:
+  hosts:
+    clickhouse-01:
+      ansible_connection: ssh
+      ansible_ssh_user: root
+      ansible_host: 172.23.189.19
+      ansible_private_key_file: ~/.ssh/id_ed25519
+
+vector:
+  hosts:
+    vector-01:
+      ansible_connection: ssh
+      ansible_ssh_user: root
+      ansible_host: 172.23.191.3
+      ansible_private_key_file: ~/.ssh/id_ed25519
+```
+
+4. Написан Playbook для Vector
+
+Примечание: Постоянно выходила ошибка при использовании модуля распаковки, пришлось добавить **hadler** с командой распаковки. Возможно какая-то несовместимость версии ansible 2.10.8 с модулем распаковки архивов **gz.tar**
+
+```yaml
+- name: Install Vector
+  hosts: vector-01
+  pre_tasks:
+    - name: Get Vector distrib
+      ansible.builtin.get_url:
+        url: "https://packages.timber.io/vector/0.33.0/vector-{{ vector_version }}-{{ vector_architecture }}-unknown-linux-gnu.tar.gz"
+        dest: "./vector-{{ vector_version }}-{{ vector_architecture }}-unknown-linux-gnu.tar.gz"
+    - name: Create Vector directory
+      become: true
+      ansible.builtin.file:
+        path: /etc/vector
+        state: directory
+  handlers:
+    - name: Unarchive Vector package 
+      ansible.builtin.command: "tar -xf ./vector-{{ vector_version }}-{{ vector_architecture }}-unknown-linux-gnu.tar.gz -C /ect/vector"
+  tasks:
+    - name: Template file
+      become: true
+      ansible.builtin.template:
+        src: vector.toml.j2
+        dest: /etc/vector/vector.toml
+        mode: '0644'
+    - name: Run Vector
+      become: true
+      ansible.builtin.shell: /etc/vector/vector-x86_64-unknown-linux-gnu/bin/vector --config /etc/vector/vector.toml &
+  tags: vector
+```
+
+5. 
+
+
+
