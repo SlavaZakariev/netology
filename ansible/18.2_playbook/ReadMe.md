@@ -92,9 +92,13 @@ vector:
 
 6. Запускаем **Playbook** c флагом **--check**
 
-![playbook1](https://github.com/SlavaZakariev/netology/blob/224a40906b106ebe8a4c8b9645fa0c8ea23d074a/ansible/18.2_playbook/resources/ans2_1.3.jpg)
+![playbook2](https://github.com/SlavaZakariev/netology/blob/224a40906b106ebe8a4c8b9645fa0c8ea23d074a/ansible/18.2_playbook/resources/ans2_1.3.jpg)
 
-7. 
+7. Дважды запускаем **Playbook** с флагом --diff
+
+![playbook3](https://github.com/SlavaZakariev/netology/blob/224a40906b106ebe8a4c8b9645fa0c8ea23d074a/ansible/18.2_playbook/resources/ans2_1.4.jpg)
+
+8. Ссылка на Гит
 
 
 
