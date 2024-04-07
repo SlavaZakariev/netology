@@ -98,7 +98,4 @@ vector:
 
 ![playbook3](https://github.com/SlavaZakariev/netology/blob/224a40906b106ebe8a4c8b9645fa0c8ea23d074a/ansible/18.2_playbook/resources/ans2_1.4.jpg)
 
-8. Ссылка на Гит
-
-
-
+8. Ссылка на [Playbook](https://github.com/SlavaZakariev/netology/tree/main/ansible/18.2_playbook/playbook)
