@@ -24,11 +24,11 @@
 
 ### Решение 1
 
-1. Развёрнуты 2 ВМ на HyperV
+1. Развёрнуты 2 ВМ на **Hyper-V**
 
 ![VMs](https://github.com/SlavaZakariev/netology/blob/2e4a33a6a6bc0c78b341a89a471c493c49f46bba/ansible/18.2_playbook/resources/ans2_1.5.jpg)
 
-2. Добавляем SSH ключи и проверяем связь через Ansible
+2. Добавляем **SSH** ключи и проверяем связь через **Ansible**
 
 ![ping](https://github.com/SlavaZakariev/netology/blob/2e4a33a6a6bc0c78b341a89a471c493c49f46bba/ansible/18.2_playbook/resources/ans2_1.1.jpg)
 
@@ -52,9 +52,9 @@ vector:
       ansible_private_key_file: ~/.ssh/id_ed25519
 ```
 
-4. Написан Playbook для Vector
+4. Написан **Playbook** для **Vector**, добавлен вторым плеем к **Clickhouse**
 
-**Примечание:** Постоянно выходила ошибка при использовании модуля распаковки, пришлось добавить **hadler** с командой распаковки. \
+**Примечание:** Постоянно выходила ошибка при использовании модуля распаковки, пришлось добавить **handler** с командой распаковки. \
 Возможно какая-то несовместимость версии ansible **2.10.8** с модулем распаковки архивов **gz.tar**
 
 ```yaml
@@ -94,7 +94,7 @@ vector:
 
 ![playbook2](https://github.com/SlavaZakariev/netology/blob/224a40906b106ebe8a4c8b9645fa0c8ea23d074a/ansible/18.2_playbook/resources/ans2_1.3.jpg)
 
-7. Дважды запускаем **Playbook** с флагом --diff
+7. Дважды запускаем **Playbook** с флагом **--diff**
 
 ![playbook3](https://github.com/SlavaZakariev/netology/blob/224a40906b106ebe8a4c8b9645fa0c8ea23d074a/ansible/18.2_playbook/resources/ans2_1.4.jpg)
 
