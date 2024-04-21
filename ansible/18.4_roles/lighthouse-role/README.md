@@ -12,10 +12,10 @@
 ### Переменные
 
 default/main.yml
-lighthouse_user: netology
-lighthouse_password: netology
+- lighthouse_user: netology
+- lighthouse_password: netology
 
 vars/main.yml
-lighthouse_vcs: https://github.com/VKCOM/lighthouse.git
-lighthouse_dir: /var/lib/lighthouse
-lighthouse_access_log_name: lighthouse_access
+- lighthouse_vcs: https://github.com/VKCOM/lighthouse.git
+- lighthouse_dir: /var/lib/lighthouse
+- lighthouse_access_log_name: lighthouse_access
