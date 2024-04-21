@@ -1,0 +1,4 @@
+---
+# defaults file for lighthouse-role
+clickhouse_user: user
+clickhouse_password: password
