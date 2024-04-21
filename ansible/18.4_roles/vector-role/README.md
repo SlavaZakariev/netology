@@ -11,9 +11,9 @@
 
 ## Переменные
 
-default/main.yml
-clickhouse_user: netology
-clickhouse_password: netology
+**default/main.yml**
+- clickhouse_user: netology
+- clickhouse_password: netology
 
-vars/main.yml
+**vars/main.yml** \
 endpoint: http://{{ hostvars['clickhouse-01'].ansible_host }}:8123
