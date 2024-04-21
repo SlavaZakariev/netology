@@ -18,11 +18,11 @@
 
 ### Переменные 
 
-default/main.yml
+**default/main.yml**
 - clickhouse_user: user
 - clickhouse_password: password
 
-vars/main.yml \
+**vars/main.yml** \
 clickhouse_version: "22.10.4.23" \
 clickhouse_packages:
   - clickhouse-client
