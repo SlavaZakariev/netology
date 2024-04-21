@@ -143,7 +143,7 @@ resource "yandex_compute_instance" "lighthouse" {
 
 5. Выполнение playbook `ansible-playbook -i inventory/prod.yml site.yml`
 
-```
+```bash
 ansible-playbook -i inventory/prod.yml site.yml
 
 PLAY [Install Clickhouse] **************************************************************************************************
@@ -280,3 +280,9 @@ clickhouse              : ok=25   changed=9    unreachable=0    failed=0    skip
 lighthouse              : ok=9    changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 vector                  : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
+
+6. Ссылки на роли
+
+[Clickhouse](https://github.com/SlavaZakariev/netology/tree/main/ansible/18.4_roles/clickhouse-role) \
+[Lighthouse](https://github.com/SlavaZakariev/netology/tree/main/ansible/18.4_roles/lighthouse-role) \
+[Vector](https://github.com/SlavaZakariev/netology/tree/main/ansible/18.4_roles/vector-role)
