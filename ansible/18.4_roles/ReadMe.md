@@ -135,5 +135,8 @@ resource "yandex_compute_instance" "lighthouse" {
 3. Результат выполнения
 
 ![output](https://github.com/SlavaZakariev/netology/blob/19da0d0d5bd4a3ddf812abf8ddd66bb1d944bcb7/ansible/18.4_roles/resources/ans4_1.2.jpg)
+![yc](https://github.com/SlavaZakariev/netology/blob/19da0d0d5bd4a3ddf812abf8ddd66bb1d944bcb7/ansible/18.4_roles/resources/ans4_1.3.jpg)
 
-4. 
+4. Добавление ролей
+
+![roles](https://github.com/SlavaZakariev/netology/blob/19da0d0d5bd4a3ddf812abf8ddd66bb1d944bcb7/ansible/18.4_roles/resources/ans4_1.4.jpg)
