@@ -41,7 +41,7 @@
 
 ![init](https://github.com/SlavaZakariev/netology/blob/19da0d0d5bd4a3ddf812abf8ddd66bb1d944bcb7/ansible/18.4_roles/resources/ans4_1.1.jpg)
 
-2. Подготовлен код terraform
+2. Подготовлен код [terraform](https://github.com/SlavaZakariev/netology/tree/main/ansible/18.4_roles/terraform)
 
 ```tf
 ### ===clickhouse===
