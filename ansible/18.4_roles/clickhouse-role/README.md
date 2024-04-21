@@ -22,11 +22,12 @@ default/main.yml
 - clickhouse_user: user
 - clickhouse_password: password
 
-vars/main.yml
-clickhouse_version: "22.10.4.23"
+vars/main.yml \
+clickhouse_version: "22.10.4.23" \
 clickhouse_packages:
   - clickhouse-client
   - clickhouse-server
   - clickhouse-common-static
-clickhouse_config_path: /etc/clickhouse-server/config.xml
+
+clickhouse_config_path: /etc/clickhouse-server/config.xml \
 clickhouse_users_path: /etc/clickhouse-server/users.xml
