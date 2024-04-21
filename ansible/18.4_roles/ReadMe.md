@@ -146,136 +146,136 @@ resource "yandex_compute_instance" "lighthouse" {
 ```
 ansible-playbook -i inventory/prod.yml site.yml
 
-PLAY [Install Clickhouse] ****************************************************************************************************
-TASK [Gathering Facts] *******************************************************************************************************
+PLAY [Install Clickhouse] **************************************************************************************************
+TASK [Gathering Facts] *****************************************************************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Include OS Family Specific Variables] *********************************************************************
+TASK [clickhouse : Include OS Family Specific Variables] *******************************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Requirements check | Checking sse4_2 support] *************************************************************
+TASK [clickhouse : Requirements check | Checking sse4_2 support] ***********************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Requirements check | Not supported distribution && release] ***********************************************
+TASK [clickhouse : Requirements check | Not supported distribution && release] *********************************************
 skipping: [clickhouse]
 
-TASK [clickhouse : Set clickhouse_service_enable] ****************************************************************************
+TASK [clickhouse : Set clickhouse_service_enable] **************************************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Set clickhouse_service_ensure] ****************************************************************************
+TASK [clickhouse : Set clickhouse_service_ensure] **************************************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Install | Ensure clickhouse repo GPG key imported] ********************************************************
+TASK [clickhouse : Install | Ensure clickhouse repo GPG key imported] ******************************************************
 changed: [clickhouse]
 
-TASK [clickhouse : Install | Ensure clickhouse repo installed] ***************************************************************
+TASK [clickhouse : Install | Ensure clickhouse repo installed] *************************************************************
 changed: [clickhouse]
 
-TASK [clickhouse : Install | Ensure clickhouse package installed (latest)] ***************************************************
+TASK [clickhouse : Install | Ensure clickhouse package installed (latest)] *************************************************
 skipping: [clickhouse]
 
-TASK [clickhouse : Install | Ensure clickhouse package installed (version 22.3.3.44)] ****************************************
+TASK [clickhouse : Install | Ensure clickhouse package installed (version 22.3.3.44)] **************************************
 changed: [clickhouse]
 
-TASK [clickhouse : Check clickhouse config, data and logs] *******************************************************************
+TASK [clickhouse : Check clickhouse config, data and logs] *****************************************************************
 ok: [clickhouse] => (item=/var/log/clickhouse-server)
 changed: [clickhouse] => (item=/etc/clickhouse-server)
 changed: [clickhouse] => (item=/var/lib/clickhouse/tmp/)
 changed: [clickhouse] => (item=/var/lib/clickhouse/)
 
-TASK [clickhouse : Config | Create config.d folder] **************************************************************************
+TASK [clickhouse : Config | Create config.d folder] ************************************************************************
 changed: [clickhouse]
 
-TASK [clickhouse : Config | Create users.d folder] ***************************************************************************
+TASK [clickhouse : Config | Create users.d folder] *************************************************************************
 changed: [clickhouse]
 
-TASK [clickhouse : Config | Generate system config] **************************************************************************
+TASK [clickhouse : Config | Generate system config] ************************************************************************
 changed: [clickhouse]
 
-TASK [clickhouse : Config | Generate users config] ***************************************************************************
+TASK [clickhouse : Config | Generate users config] *************************************************************************
 changed: [clickhouse]
 
-TASK [clickhouse : Config | Generate remote_servers config] ******************************************************************
+TASK [clickhouse : Config | Generate remote_servers config] ****************************************************************
 skipping: [clickhouse]
 
-TASK [clickhouse : Config | Generate macros config] **************************************************************************
+TASK [clickhouse : Config | Generate macros config] ************************************************************************
 skipping: [clickhouse]
 
-TASK [clickhouse : Config | Generate zookeeper servers config] ***************************************************************
+TASK [clickhouse : Config | Generate zookeeper servers config] *************************************************************
 skipping: [clickhouse]
 
-TASK [clickhouse : Config | Fix interserver_http_port and intersever_https_port collision] ***********************************
+TASK [clickhouse : Config | Fix interserver_http_port and intersever_https_port collision] *********************************
 skipping: [clickhouse]
 
-TASK [clickhouse : Notify Handlers Now] **************************************************************************************
+TASK [clickhouse : Notify Handlers Now] ************************************************************************************
 
-RUNNING HANDLER [clickhouse : Restart Clickhouse Service] ********************************************************************
+RUNNING HANDLER [clickhouse : Restart Clickhouse Service] ******************************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Ensure clickhouse-server.service is enabled: True and state: restarted] ***********************************
+TASK [clickhouse : Ensure clickhouse-server.service is enabled: True and state: restarted] *********************************
 changed: [clickhouse]
 
-TASK [clickhouse : Wait for Clickhouse Server to Become Ready] ***************************************************************
+TASK [clickhouse : Wait for Clickhouse Server to Become Ready] *************************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Set ClickHose Connection String] **************************************************************************
+TASK [clickhouse : Set ClickHose Connection String] ************************************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Gather list of existing databases] ************************************************************************
+TASK [clickhouse : Gather list of existing databases] **********************************************************************
 ok: [clickhouse]
 
-TASK [clickhouse : Config | Delete database config] **************************************************************************
+TASK [clickhouse : Config | Delete database config] ************************************************************************
 
-TASK [clickhouse : Config | Create database config] **************************************************************************
+TASK [clickhouse : Config | Create database config] ************************************************************************
 
-TASK [clickhouse : Config | Generate dictionary config] **********************************************************************
+TASK [clickhouse : Config | Generate dictionary config] ********************************************************************
 skipping: [clickhouse]
 
-TASK [clickhouse : include_tasks] ********************************************************************************************
+TASK [clickhouse : include_tasks] ******************************************************************************************
 skipping: [clickhouse]
 
-PLAY [Install Lighthouse] ****************************************************************************************************
+PLAY [Install Lighthouse] **************************************************************************************************
 
-TASK [Gathering Facts] *******************************************************************************************************
+TASK [Gathering Facts] *****************************************************************************************************
 ok: [lighthouse]
 
-TASK [lighthouse : NGINX | Install epel-release] *****************************************************************************
+TASK [lighthouse : NGINX | Install epel-release] ***************************************************************************
 changed: [lighthouse]
 
-TASK [lighthouse : NGINX | Install NGINX] ************************************************************************************
+TASK [lighthouse : NGINX | Install NGINX] **********************************************************************************
 changed: [lighthouse]
 
-TASK [lighthouse : NGINX | Create Config] ************************************************************************************
+TASK [lighthouse : NGINX | Create Config] **********************************************************************************
 changed: [lighthouse]
 
-TASK [lighthouse : Lighthouse | Create lighthouse vector_config] *************************************************************
+TASK [lighthouse : Lighthouse | Create lighthouse vector_config] ***********************************************************
 changed: [lighthouse]
 
-RUNNING HANDLER [lighthouse : start-nginx] ***********************************************************************************
+RUNNING HANDLER [lighthouse : start-nginx] *********************************************************************************
 changed: [lighthouse]
 
-RUNNING HANDLER [lighthouse : reload-nginx] **********************************************************************************
+RUNNING HANDLER [lighthouse : reload-nginx] ********************************************************************************
 changed: [lighthouse]
 
-PLAY [Install Vector] ********************************************************************************************************
+PLAY [Install Vector] ******************************************************************************************************
 
-TASK [Gathering Facts] *******************************************************************************************************
+TASK [Gathering Facts] *****************************************************************************************************
 ok: [vector]
 
-TASK [vector : Install Vector] ***********************************************************************************************
+TASK [vector : Install Vector] *********************************************************************************************
 changed: [vector]
 
 TASK [vector : Configure Vector] 
-******************************************************************************************************************************
+****************************************************************************************************************************
 changed: [vector]
 
-TASK [vector : Vector | Create systemd unit] *********************************************************************************
+TASK [vector : Vector | Create systemd unit] *******************************************************************************
 changed: [vector]
 
-TASK [vector : Vector | Start Service] ***************************************************************************************
+TASK [vector : Vector | Start Service] *************************************************************************************
 changed: [vector]
 
-PLAY RECAP *******************************************************************************************************************
+PLAY RECAP *****************************************************************************************************************
 clickhouse              : ok=25   changed=9    unreachable=0    failed=0    skipped=10   rescued=0    ignored=0
 lighthouse              : ok=9    changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 vector                  : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
