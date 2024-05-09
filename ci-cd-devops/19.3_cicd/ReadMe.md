@@ -57,3 +57,80 @@
 ---
 
 ### Решение №1
+
+1. Инициализировали terraform через VPN
+![init](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.1.jpg)
+
+2. Подготовлена конфигурация для [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.3_cicd/infrastructure/terraform)
+
+```tf
+### ===SonarQube===
+data "yandex_compute_image" "centos-sonarqube" {
+  family = var.vm_os_centos
+}
+resource "yandex_compute_instance" "sonarqube" {
+  name        = var.vm_01
+  hostname    = var.vm_01
+  platform_id = var.vm_cpu_id_v1
+  resources {
+    cores         = var.vms_resources.sonarqube.cores
+    memory        = var.vms_resources.sonarqube.memory
+    core_fraction = var.vms_resources.sonarqube.fraction
+  }
+  metadata = local.metadata
+  scheduling_policy {preemptible = true}
+  boot_disk {
+  initialize_params {
+    image_id = data.yandex_compute_image.centos-sonarqube.image_id
+    }
+  }
+  network_interface {
+    subnet_id = yandex_vpc_subnet.subnet_ci-cd.id
+    nat       = true
+    ip_address = "10.10.10.11"
+  }
+}
+
+### ===Nexus===
+data "yandex_compute_image" "centos-nexus" {
+  family = var.vm_os_centos
+}
+resource "yandex_compute_instance" "nexus" {
+  name        = var.vm_02
+  hostname    = var.vm_02
+  platform_id = var.vm_cpu_id_v1
+  resources {
+    cores         = var.vms_resources.nexus.cores
+    memory        = var.vms_resources.nexus.memory
+    core_fraction = var.vms_resources.nexus.fraction
+  }
+  metadata = local.metadata
+  scheduling_policy {preemptible = true}
+  boot_disk {
+    initialize_params {
+      image_id = data.yandex_compute_image.centos-nexus.image_id
+    }
+  }
+    network_interface {
+    subnet_id = yandex_vpc_subnet.subnet_ci-cd.id
+    nat       = true
+    ip_address = "10.10.10.12"
+  }
+}
+```
+3. Развёрнуты ВМ на Yandex Cloud
+![VMs](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.2.jpg)
+![VMs-YC](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.3.jpg)
+
+4. Проверена связь с ВМ
+
+**ПРИМЕЧАНИЕ:** Изначально был добавлен ключ ed25519, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на id_rsa
+![ssh](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
+
+
+
+
+
+
+
+
