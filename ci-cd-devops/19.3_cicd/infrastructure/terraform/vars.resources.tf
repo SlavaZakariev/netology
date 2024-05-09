@@ -17,7 +17,7 @@ variable "vms_resources" {
 
 variable "vm_os_centos" {
   type        = string
-  default     = "centos-7"
+  default     = "centos-stream-8"
   description = "os version"
 }
 
