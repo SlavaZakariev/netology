@@ -127,8 +127,52 @@ resource "yandex_compute_instance" "nexus" {
 **ПРИМЕЧАНИЕ:** Изначально был добавлен ключ ed25519, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на id_rsa
 ![ssh](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
 
+5. Запуск Playbook выдаёт ошибку: Не может найти пакет для установки после добавления репозитория. Что необходимо добавить в Playbook?
 
+```bash
+sysadmin@ubuntu1:~/cicd01$ ansible-playbook site.yml -i inventory/hosts.yml
 
+PLAY [Get OpenJDK installed] *************************************************************************************************
+
+TASK [Gathering Facts] *******************************************************************************************************
+ok: [sonarqube]
+
+TASK [install unzip] *********************************************************************************************************
+ok: [sonarqube]
+
+TASK [Upload .tar.gz file conaining binaries from remote storage] ************************************************************
+ok: [sonarqube]
+
+TASK [Ensure installation dir exists] ****************************************************************************************
+ok: [sonarqube]
+
+TASK [Extract java in the installation directory] ****************************************************************************
+skipping: [sonarqube]
+
+TASK [Export environment variables] ******************************************************************************************
+ok: [sonarqube]
+
+PLAY [Get PostgreSQL installed] **********************************************************************************************
+
+TASK [Gathering Facts] *******************************************************************************************************
+ok: [sonarqube]
+
+TASK [Change repo file] ******************************************************************************************************
+ok: [sonarqube]
+
+TASK [Install PostgreSQL repos] **********************************************************************************************
+ok: [sonarqube]
+
+TASK [Repo update] ***********************************************************************************************************
+changed: [sonarqube]
+
+TASK [Install PostgreSQL] ****************************************************************************************************
+fatal: [sonarqube]: FAILED! => {"changed": false, "msg": "No package matching 'postgresql11-server' found available, installed or updated", "rc": 126, "results": ["No package matching 'postgresql11-server' found available, installed or updated"]}
+
+PLAY RECAP *******************************************************************************************************************
+sonarqube                  : ok=9    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0
+
+```
 
 
 
