@@ -127,7 +127,8 @@ resource "yandex_compute_instance" "nexus" {
 **ПРИМЕЧАНИЕ:** Изначально был добавлен ключ ed25519, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на id_rsa
 ![ssh](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
 
-5. Запуск Playbook выдаёт ошибку: Не может найти пакет для установки после добавления репозитория. Что необходимо добавить в Playbook?
+5. Запуск Playbook выдаёт ошибку: Не может найти пакет для установки после добавления репозитория PostgeSQL. \
+ Что необходимо добавить в Playbook?
 
 ```bash
 sysadmin@ubuntu1:~/cicd01$ ansible-playbook site.yml -i inventory/hosts.yml
