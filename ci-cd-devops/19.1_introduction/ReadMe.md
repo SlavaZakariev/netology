@@ -60,3 +60,6 @@
 Создал Scrum доску
 
 ![sc](https://github.com/SlavaZakariev/netology/blob/3392f6653660bb2106769bd2cf4418c147e6ca0c/ci-cd-devops/19.1_introduction/resources/jira_1.4.jpg)
+
+[bug.xml](https://github.com/SlavaZakariev/netology/blob/69ac86d37a68a41fdaf20fb37ac9a91ea0c3c1ad/ci-cd-devops/19.1_introduction/resources/bug.xml)
+[other.xml]()
