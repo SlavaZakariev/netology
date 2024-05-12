@@ -6,7 +6,7 @@
 2. Создайте виртуальную машину и установите на нее gitlab runner, подключите к вашему серверу gitlab  [по инструкции](https://docs.gitlab.com/runner/install/linux-repository.html) .
 3. (* Необязательно) Если знакомы с k8s попробуйте выполнить задание, запустив gitlab server и gitlab runner в k8s [по инструкции](https://cloud.yandex.ru/docs/tutorials/infrastructure-management/gitlab-containers). 
 4. Создайте свой новый проект.
-5. Создайте новый репозиторий в GitLab, наполните его [файлами](./repository).
+5. Создайте новый репозиторий в GitLab, наполните его [файлами](https://github.com/netology-code/mnt-homeworks/tree/MNT-video/09-ci-06-gitlab/repository).
 6. Проект должен быть публичным, остальные настройки по желанию.
 
 ### DevOps
