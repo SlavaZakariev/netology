@@ -41,4 +41,22 @@
 
 ### Решение №1
 
+Провёл регистрацию 
 
+![reg](https://github.com/SlavaZakariev/netology/blob/3392f6653660bb2106769bd2cf4418c147e6ca0c/ci-cd-devops/19.1_introduction/resources/jira_1.0.jpg)
+
+Создал workflow 1
+
+![wk1](https://github.com/SlavaZakariev/netology/blob/3392f6653660bb2106769bd2cf4418c147e6ca0c/ci-cd-devops/19.1_introduction/resources/jira_1.1.jpg)
+
+Создал workflow 2
+
+![wk2](https://github.com/SlavaZakariev/netology/blob/3392f6653660bb2106769bd2cf4418c147e6ca0c/ci-cd-devops/19.1_introduction/resources/jira_1.2.jpg)
+
+Создал Kanban доску
+
+![kan](https://github.com/SlavaZakariev/netology/blob/3392f6653660bb2106769bd2cf4418c147e6ca0c/ci-cd-devops/19.1_introduction/resources/jira_1.3.jpg)
+
+Создал Scrum доску
+
+![sc](https://github.com/SlavaZakariev/netology/blob/3392f6653660bb2106769bd2cf4418c147e6ca0c/ci-cd-devops/19.1_introduction/resources/jira_1.4.jpg)
