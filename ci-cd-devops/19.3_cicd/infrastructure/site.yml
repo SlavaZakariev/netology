@@ -59,13 +59,22 @@
         state: present
         validate_certs: false
 
-    - name: Install PostgreSQL
+    - name: Update cache after added repo
       yum:
-        name: "postgresql{{ postgresql_version }}-server"
+        update_cache: yes
+
+    - name: Install epel-release
+      yum:
+        name: epel-release
         state: present
 
+#    - name: Install PostgreSQL
+#      yum:
+#        name: "postgresql{{ postgresql_version }}-server"
+#        state: present
+
     - name: Init template1 DB
-      command: /usr/pgsql-11/bin/postgresql-11-setup initdb
+      command: /usr/pgsql-12/bin/postgresql-12-setup initdb
       failed_when: false
 
     - name: Start pgsql service
@@ -94,7 +103,7 @@
     - name: Copy pg_hba.conf
       copy:
         src: pg_hba.conf
-        dest: /var/lib/pgsql/11/data/pg_hba.conf
+        dest: /var/lib/pgsql/12/data/pg_hba.conf
         mode: 0600
         owner: postgres
         group: postgres
@@ -133,8 +142,6 @@
         state: present
         regexp: '^vm.max_map_count'
         line: 'vm.max_map_count=262144'
-    - name: Reboot VM
-      reboot:
 
 - name: Get Sonarqube installed
   hosts: sonarqube
@@ -143,14 +150,14 @@
   tasks:
     - name: Get distrib ZIP
       get_url:
-        url: "{{ sonar_download_url }}"
-        dest: "/tmp/{{ sonar_version_directory }}.zip"
+        url: "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.1.0.47736.zip"
+        dest: "/tmp/sonarqube-9.1.0.47736.zip"
         validate_certs: false
 
     - name: Unzip Sonar
       become: true
       unarchive:
-        src: "/tmp/{{ sonar_version_directory }}.zip"
+        src: "/tmp/sonarqube-9.1.0.47736.zip"
         dest: /usr/local/
         copy: false
         owner: "{{ sonarqube_db_user }}"
@@ -160,13 +167,14 @@
     - name: Move Sonar into place.
       become: true
       copy:
-        src: /usr/local/{{ sonar_version_directory }}/
+        src: /usr/local/sonarqube-9.1.0.47736/
         dest: /usr/local/sonar/
         owner: "{{ sonarqube_db_user }}"
         group: "{{ sonarqube_db_user }}"
         remote_src: true
 
     - name: Configure SonarQube JDBC settings for PostgreSQL.
+      become: true
       lineinfile:
         dest: /usr/local/sonar/conf/sonar.properties
         regexp: "{{ item.regexp }}"
@@ -177,11 +185,12 @@
         - regexp: "^sonar.jdbc.password"
           line: "sonar.jdbc.password={{ sonarqube_db_password }}"
         - regexp: "^sonar.jdbc.url"
-          line: "sonar.jdbc.url=jdbc:postgresql://localhost:{{ sonar_db_port }}/{{ sonarqube_db_name }}?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance"
+          line: "sonar.jdbc.url=jdbc:postgresql://localhost:5432/{{ sonarqube_db_name }}?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance"
         - regexp: "^sonar.web.context"
-          line: "sonar.web.context={{ sonar_web_context }}"
+          line: "sonar.web.context= "
     
     - name: Generate wrapper.conf
+      become: true
       template:
         src: wrapper.conf.j2
         dest: /usr/local/sonar/conf/wrapper.conf
