@@ -68,10 +68,10 @@
         name: epel-release
         state: present
 
-#    - name: Install PostgreSQL
-#      yum:
-#        name: "postgresql{{ postgresql_version }}-server"
-#        state: present
+    - name: Install PostgreSQL
+      yum:
+        name: "postgresql{{ postgresql_version }}-server"
+        state: present
 
     - name: Init template1 DB
       command: /usr/pgsql-12/bin/postgresql-12-setup initdb
