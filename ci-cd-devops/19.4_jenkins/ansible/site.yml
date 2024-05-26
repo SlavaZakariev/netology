@@ -62,7 +62,7 @@
         name: jenkins
         state: restarted
         enabled: true
-      when: jenkins_installed is changed.
+      when: jenkins_installed is changed
 
 - name: Prepare jenkins agent
   hosts: jenkins_agents
@@ -73,7 +73,7 @@
       authorized_key:
         user: "{{ jenkins_user_name }}"
         state: present
-        key: "{{ hostvars['jenkins-master-01']['ssh_key_info']['ssh_public_key'] }}"
+        key: "{{ hostvars['jenkins-master']['ssh_key_info']['ssh_public_key'] }}"
     - name: Create agent_dir
       become_user: root
       file:
@@ -141,7 +141,7 @@
         enabled: true
     - name: Install agent.jar
       get_url:
-        url: "http://{{ hostvars['jenkins-master-01']['ansible_host'] }}:8080/jnlpJars/agent.jar"
+        url: "http://{{ hostvars['jenkins-master']['ansible_host'] }}:8080/jnlpJars/agent.jar"
         dest: "{{ jenkins_agent_dir }}"
       register: install_agent
       until: install_agent is succeeded
