@@ -62,7 +62,8 @@
         name: jenkins
         state: restarted
         enabled: true
-      when: jenkins_installed is changed
+      when: jenkins_installed is changed.
+
 - name: Prepare jenkins agent
   hosts: jenkins_agents
   become: true
