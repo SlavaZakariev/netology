@@ -23,6 +23,10 @@
 
 ### Решение №1
 
-1. Инициализировали проект для **terraform**
+1. Инициализировал проект для **terraform**
+   
 2. Создали с помощью [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/terraform) две ВМ **jenkins-master** и **jenkins-agent**.
-3. 
+  
+3. Проверил связь с виртуальными машинами
+
+4. Установил [playbook]()
