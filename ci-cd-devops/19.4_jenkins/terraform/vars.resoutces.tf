@@ -3,7 +3,7 @@ variable "vms_resources" {
   type            = map(map(number))
   default         = {
     jenkins-master = {
-      cores       = 2
+      cores       = 4
       memory      = 4
       fraction    = 20
     }
