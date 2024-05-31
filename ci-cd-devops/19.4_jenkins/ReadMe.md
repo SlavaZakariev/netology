@@ -24,5 +24,5 @@
 ### Решение №1
 
 1. Инициализировали проект для **terraform**
-2. Создали с помощью [terraform]() две ВМ **jenkins-master** и **jenkins-agent**.
+2. Создали с помощью [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/terraform) две ВМ **jenkins-master** и **jenkins-agent**.
 3. 
