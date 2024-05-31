@@ -29,4 +29,9 @@
   
 3. Проверил связь с виртуальными машинами
 
-4. Установил [playbook]()
+4. Установил [playbook](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/ansible)
+
+```yaml
+```
+5. Разблокировка пользователя и аутентификация в jenkins
+
