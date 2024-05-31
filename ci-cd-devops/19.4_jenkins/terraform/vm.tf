@@ -1,4 +1,4 @@
-### ===SonarQube===
+### ===jenkins-master===
 data "yandex_compute_image" "centos-jenkins-master" {
   family = var.vm_os_centos
 }
@@ -25,7 +25,7 @@ resource "yandex_compute_instance" "jenkins-master" {
   }
 }
 
-### ===Nexus===
+### ===jenkins-agent===
 data "yandex_compute_image" "centos-jenkins-agent" {
   family = var.vm_os_centos
 }
