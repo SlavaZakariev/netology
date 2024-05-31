@@ -24,13 +24,20 @@
 ### Решение №1
 
 1. Инициализировал проект для **terraform**
-   
+
+![init](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.1.jpg)
+ 
 2. Создали с помощью [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/terraform) две ВМ **jenkins-master** и **jenkins-agent**. \
    Примечание: Сменил античный Centos 7 на Centos 8, иначе новая версия **jenkins** не устанавливает свои плагины по умолчанию из-за несовместимости. Прошу исправить playbook в домашнем задании или же привязать жёстко совместимую версию **jenkins**
-  
-4. Проверил связь с виртуальными машинами.
 
-5. Установил [playbook](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/ansible).
+![apply](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.2.jpg)
+![yc](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.3.jpg)
+
+3. Проверил связь с виртуальными машинами.
+
+![ping](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.4.jpg)
+
+4. Установил [playbook](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/ansible).
    **Примечание:** Удалено задание **Reinstall Selinux** из playbook, так как для **Centos 8** она не нужна (выдаёт ошибку).
 
 ```yaml
@@ -128,3 +135,4 @@ jenkins-master             : ok=11   changed=9    unreachable=0    failed=0    s
 ```
 5. Разблокировка пользователя и аутентификация в jenkins
 
+![jen1](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.5.jpg)
