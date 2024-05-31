@@ -35,9 +35,9 @@
 
 3. Проверил связь с виртуальными машинами.
 
-![ping](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.4.jpg)
+![ping](https://github.com/SlavaZakariev/netology/blob/8ca8a246fca66e8e08d182571d7692fccd041684/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.4.jpg)
 
-4. Установил [playbook](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/ansible).
+4. Установил [playbook](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/ansible) \
    **Примечание:** Удалено задание **Reinstall Selinux** из playbook, так как для **Centos 8** она не нужна (выдаёт ошибку).
 
 ```yaml
