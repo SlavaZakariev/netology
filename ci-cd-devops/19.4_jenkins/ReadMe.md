@@ -23,3 +23,6 @@
 
 ### Решение №1
 
+1. Инициализировали проект для terraform
+2. Создали с помощью terraform две ВМ jenkins-master и jenkins-agent.
+3. 
