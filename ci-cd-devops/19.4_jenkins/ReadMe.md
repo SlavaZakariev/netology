@@ -139,4 +139,4 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 ```
 5. Разблокировка пользователя и аутентификация в **jenkins**
 
-![jen1](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.5.jpg)
+![jen1](https://github.com/SlavaZakariev/netology/blob/ac253a5398a0f408496821ce28e5e6b0b2e01c38/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.5.jpg)
