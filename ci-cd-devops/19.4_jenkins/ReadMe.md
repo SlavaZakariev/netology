@@ -45,7 +45,7 @@ sysadmin@ubuntu1:~/cicd04/ansible$ ansible-playbook site.yml -i inventory/hosts.
 
 PLAY [Preapre all hosts] ********************************************************************************************
 TASK [Gathering Facts] **********************************************************************************************
-^[[Aok: [jenkins-agent]
+ok: [jenkins-agent]
 ok: [jenkins-master]
 
 TASK [Create group] *************************************************************************************************
