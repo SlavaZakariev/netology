@@ -30,12 +30,12 @@
 2. Создали с помощью [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/terraform) две ВМ **jenkins-master** и **jenkins-agent**. \
    Примечание: Сменил античный Centos 7 на Centos 8, иначе новая версия **jenkins** не устанавливает свои плагины по умолчанию из-за несовместимости. Прошу исправить playbook в домашнем задании или же привязать жёстко совместимую версию **jenkins**
 
-![apply](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.2.jpg)
-![yc](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.3.jpg)
+![apply](https://github.com/SlavaZakariev/netology/blob/448524d7d1f12a7baab1d9075f89ddcef6b51356/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.2.jpg)
+![yc](https://github.com/SlavaZakariev/netology/blob/448524d7d1f12a7baab1d9075f89ddcef6b51356/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.3.jpg)
 
 3. Проверил связь с виртуальными машинами.
 
-![ping](https://github.com/SlavaZakariev/netology/blob/8ca8a246fca66e8e08d182571d7692fccd041684/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.4.jpg)
+![ping](https://github.com/SlavaZakariev/netology/blob/448524d7d1f12a7baab1d9075f89ddcef6b51356/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.4.jpg)
 
 4. Установил [playbook](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/ansible) \
    **Примечание:** Удалено задание **Reinstall Selinux** из playbook, так как для **Centos 8** она не нужна (выдаёт ошибку).
