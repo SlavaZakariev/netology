@@ -43,95 +43,99 @@
 ```yaml
 sysadmin@ubuntu1:~/cicd04/ansible$ ansible-playbook site.yml -i inventory/hosts.yml
 
-PLAY [Preapre all hosts] ***********************************************************************************************
-
-TASK [Gathering Facts] *************************************************************************************************
-ok: [jenkins-agent]
+PLAY [Preapre all hosts] ********************************************************************************************
+TASK [Gathering Facts] **********************************************************************************************
+^[[Aok: [jenkins-agent]
 ok: [jenkins-master]
 
-TASK [Create group] ****************************************************************************************************
-changed: [jenkins-master]
-changed: [jenkins-agent]
+TASK [Create group] *************************************************************************************************
+ok: [jenkins-master]
+ok: [jenkins-agent]
 
-TASK [Create user] *****************************************************************************************************
-changed: [jenkins-master]
-changed: [jenkins-agent]
+TASK [Create user] **************************************************************************************************
+ok: [jenkins-master]
+ok: [jenkins-agent]
 
-TASK [Install JDK] *****************************************************************************************************
-changed: [jenkins-master]
-changed: [jenkins-agent]
+TASK [Install JDK] **************************************************************************************************
+ok: [jenkins-master]
+ok: [jenkins-agent]
 
-PLAY [Get Jenkins master installed] ************************************************************************************
-
-TASK [Gathering Facts] *************************************************************************************************
+PLAY [Get Jenkins master installed] *********************************************************************************
+TASK [Gathering Facts] **********************************************************************************************
 ok: [jenkins-master]
 
-TASK [Get repo Jenkins] ************************************************************************************************
+TASK [Get repo Jenkins] *********************************************************************************************
+ok: [jenkins-master]
+
+TASK [Add Jenkins key] **********************************************************************************************
+ok: [jenkins-master]
+
+TASK [Update apt cache] *********************************************************************************************
 changed: [jenkins-master]
 
-TASK [Add Jenkins key] *************************************************************************************************
-changed: [jenkins-master]
+TASK [Install Jenkins and requirements] *****************************************************************************
+ok: [jenkins-master]
 
-TASK [Install epel-release] ********************************************************************************************
-changed: [jenkins-master]
+TASK [Ensure jenkins agents are present in known_hosts file] ********************************************************
+# 178.154.207.17:22 SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.7
+# 178.154.207.17:22 SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.7
+# 178.154.207.17:22 SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.7
+# 178.154.207.17:22 SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.7
+# 178.154.207.17:22 SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.7
+ok: [jenkins-master] => (item=jenkins-agent)
 
-TASK [Install Jenkins and requirements] ********************************************************************************
-changed: [jenkins-master]
+TASK [Start Jenkins] ************************************************************************************************
+skipping: [jenkins-master]
 
-TASK [Ensure jenkins agents are present in known_hosts file] ***********************************************************
-# 158.160.62.97:22 SSH-2.0-OpenSSH_8.0
-# 158.160.62.97:22 SSH-2.0-OpenSSH_8.0
-# 158.160.62.97:22 SSH-2.0-OpenSSH_8.0
-# 158.160.62.97:22 SSH-2.0-OpenSSH_8.0
-# 158.160.62.97:22 SSH-2.0-OpenSSH_8.0
-changed: [jenkins-master] => (item=jenkins-agent)
-[WARNING]: Module remote_tmp /home/jenkins/.ansible/tmp did not exist and was created with a mode of 0700, this may cause
-issues when running as another user. To avoid this, create the remote_tmp dir with the correct permissions manually
-
-TASK [Start Jenkins] ***************************************************************************************************
-changed: [jenkins-master]
-
-PLAY [Prepare jenkins agent] *******************************************************************************************
-
-TASK [Gathering Facts] *************************************************************************************************
+PLAY [Prepare jenkins agent] ****************************************************************************************
+TASK [Gathering Facts] **********************************************************************************************
 ok: [jenkins-agent]
 
-TASK [Add master publickey into authorized_key] ************************************************************************
-changed: [jenkins-agent]
-
-TASK [Create agent_dir] ************************************************************************************************
-changed: [jenkins-agent]
-
-TASK [Add docker repo] *************************************************************************************************
-changed: [jenkins-agent]
-
-TASK [Install some required] *******************************************************************************************
-changed: [jenkins-agent]
-
-TASK [Update pip] ******************************************************************************************************
-changed: [jenkins-agent]
-
-TASK [Install Ansible] *************************************************************************************************
-changed: [jenkins-agent]
-
-TASK [Add local to PATH] ***********************************************************************************************
-changed: [jenkins-agent]
-
-TASK [Create docker group] *********************************************************************************************
+TASK [Add master publickey into authorized_key] *********************************************************************
 ok: [jenkins-agent]
 
-TASK [Add jenkinsuser to dockergroup] **********************************************************************************
+TASK [Create agent_dir] *********************************************************************************************
+ok: [jenkins-agent]
+
+TASK [Add Docker GPG key] *******************************************************************************************
+ok: [jenkins-agent]
+
+TASK [Add Docker repository] ****************************************************************************************
+ok: [jenkins-agent]
+
+TASK [Update apt cache] *********************************************************************************************
 changed: [jenkins-agent]
 
-TASK [Restart docker] **************************************************************************************************
+TASK [Install some packeges] ****************************************************************************************
 changed: [jenkins-agent]
 
-TASK [Install agent.jar] ***********************************************************************************************
+TASK [Install Docker] ***********************************************************************************************
+ok: [jenkins-agent]
+
+TASK [Update pip] ***************************************************************************************************
 changed: [jenkins-agent]
 
-PLAY RECAP *************************************************************************************************************
-jenkins-agent              : ok=16   changed=13   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-jenkins-master             : ok=11   changed=9    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+TASK [Install Ansible] **********************************************************************************************
+changed: [jenkins-agent]
+
+TASK [Add local to PATH] ********************************************************************************************
+changed: [jenkins-agent]
+
+TASK [Create docker group] ******************************************************************************************
+ok: [jenkins-agent]
+
+TASK [Add jenkinsuser to dockergroup] *******************************************************************************
+changed: [jenkins-agent]
+
+TASK [Restart docker] ***********************************************************************************************
+changed: [jenkins-agent]
+
+TASK [Install agent.jar] ********************************************************************************************
+changed: [jenkins-agent]
+
+PLAY RECAP **********************************************************************************************************
+jenkins-agent              : ok=19   changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
 ```
 5. Разблокировка пользователя и аутентификация в jenkins
 
