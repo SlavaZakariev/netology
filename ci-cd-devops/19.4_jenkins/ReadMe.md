@@ -38,7 +38,7 @@
 ![ping](https://github.com/SlavaZakariev/netology/blob/448524d7d1f12a7baab1d9075f89ddcef6b51356/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.4.jpg)
 
 4. Установил [playbook](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.4_jenkins/ansible) \
-   **Примечание:** Удалено задание **Reinstall Selinux** из playbook, так как для **Centos 8** она не нужна (выдаёт ошибку).
+   **Примечание:** Переписал **playbook** под **Ubuntu 2204**.
 
 ```yaml
 sysadmin@ubuntu1:~/cicd04/ansible$ ansible-playbook site.yml -i inventory/hosts.yml
@@ -137,6 +137,6 @@ PLAY RECAP *********************************************************************
 jenkins-agent              : ok=19   changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
 ```
-5. Разблокировка пользователя и аутентификация в jenkins
+5. Разблокировка пользователя и аутентификация в **jenkins**
 
 ![jen1](https://github.com/SlavaZakariev/netology/blob/5ba01bb8650366acde0e385111cfd4a465862730/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.5.jpg)
