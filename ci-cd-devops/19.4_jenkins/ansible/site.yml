@@ -110,6 +110,7 @@
           - git
           - python3-pip
           - ca-certificates 
+          - apt-transport-https
           - software-properties-common
         state: present
     - name: Install Docker
