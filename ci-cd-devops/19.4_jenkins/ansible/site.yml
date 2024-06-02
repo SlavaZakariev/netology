@@ -52,7 +52,6 @@
       become: true
       become_method: sudo
       become_user: root
-      #become_user: "{{ jenkins_user_name }}"
       known_hosts:
         name: "{{ hostvars[item].ansible_host }}"
         state: present
@@ -74,7 +73,6 @@
   become: true
   become_method: sudo
   become_user: root
-  #become_user: "{{ jenkins_user_name }}"
   tasks:
     - name: Add master publickey into authorized_key
       authorized_key:
