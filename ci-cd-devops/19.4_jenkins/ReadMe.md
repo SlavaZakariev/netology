@@ -140,3 +140,7 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 5. Разблокировка пользователя и аутентификация в **jenkins**
 
 ![jen1](https://github.com/SlavaZakariev/netology/blob/ac253a5398a0f408496821ce28e5e6b0b2e01c38/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.5.jpg)
+
+6. Подключен **agent** по **ssh** (добавлены 2 метки, linux, ansible)
+
+![agent](https://github.com/SlavaZakariev/netology/blob/7c6c9cbf5812fd534e690d0f2f50187c0417c8f6/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.6.jpg)
