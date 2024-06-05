@@ -151,4 +151,35 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 
 8. Declarative Pipeline Job
 
+```groovy
+pipeline {
+    agent any
+
+    stages {
+        stage('GIT checkout') {
+            steps {
+                echo 'Get from GIT repository'
+                git credentialsId: 'git_ssh', 
+                url: 'https://github.com/SlavaZakariev/vector-role-molecule.git',
+                branch: 'main'
+            }
+        }
+        stage('preparation') {
+            steps {
+                echo 'Start preparation'
+                sh 'pip3 install -r tox-requirements.txt'
+                sh 'pip install "molecule[lint]"'
+                sh 'pip install "molecule[docker,lint]"'
+            }
+        }
+        stage('Start molecule test') {
+            steps {
+                echo 'Run molecule test'
+                sh 'molecule test'
+            }
+        }
+    }
+}
+```
+
 ![declarative](https://github.com/SlavaZakariev/netology/blob/6798fc8066dae526bcccfa02b3e3a9c530246674/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.8.jpg)
