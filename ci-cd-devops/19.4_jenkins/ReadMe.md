@@ -155,6 +155,37 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 
 9. Создан [Jenkinsfile](https://github.com/SlavaZakariev/vector-role-molecule/blob/main/Jenkinsfile)
 
+```groovy
+pipeline {
+    agent any
+
+    stages {
+        stage('GIT checkout') {
+            steps {
+                echo 'Get from GIT repository'
+                git credentialsId: 'git_ssh',
+                url: 'https://github.com/SlavaZakariev/vector-role-molecule.git',
+                branch: 'main'
+            }
+        }
+        stage('preparation') {
+            steps {
+                echo 'Start preparation'
+                sh 'pip3 install -r requirements.txt'
+                sh 'pip install "molecule[lint]"'
+                sh 'pip install "molecule[docker,lint]"'
+            }
+        }
+        stage('Start molecule test') {
+            steps {
+                echo 'Run molecule test'
+                sh 'molecule test'
+            }
+        }
+    }
+}
+```
+
 10. Multibrach Pipeline
 
 ![multi](https://github.com/SlavaZakariev/netology/blob/bda50a0b5f2e860fea59cb6be915d5a96170fdc5/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.9.jpg)
