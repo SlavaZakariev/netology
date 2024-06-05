@@ -144,3 +144,7 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 6. Подключен **agent** по **ssh** (добавлены 2 метки, linux, ansible)
 
 ![agent](https://github.com/SlavaZakariev/netology/blob/7c6c9cbf5812fd534e690d0f2f50187c0417c8f6/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.6.jpg)
+
+7. Freestyle Job из [GitHub](https://github.com/SlavaZakariev/vector-role-molecule)
+
+![free](https://github.com/SlavaZakariev/netology/blob/3a8915705e11d3ab642e2a6f0334cfda849774e5/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.7.jpg)
