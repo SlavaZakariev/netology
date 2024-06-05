@@ -154,3 +154,7 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 ![declarative](https://github.com/SlavaZakariev/netology/blob/6798fc8066dae526bcccfa02b3e3a9c530246674/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.8.jpg)
 
 9. Создан [Jenkinsfile](https://github.com/SlavaZakariev/vector-role-molecule/blob/main/Jenkinsfile)
+
+10. Multibrach Pipeline
+
+![multi](https://github.com/SlavaZakariev/netology/blob/bda50a0b5f2e860fea59cb6be915d5a96170fdc5/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.9.jpg)
