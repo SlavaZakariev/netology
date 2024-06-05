@@ -158,3 +158,5 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 10. Multibrach Pipeline
 
 ![multi](https://github.com/SlavaZakariev/netology/blob/bda50a0b5f2e860fea59cb6be915d5a96170fdc5/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.9.jpg)
+
+11. Scripted Pipeline
