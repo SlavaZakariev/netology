@@ -148,3 +148,7 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 7. Freestyle Job из [GitHub](https://github.com/SlavaZakariev/vector-role-molecule)
 
 ![free](https://github.com/SlavaZakariev/netology/blob/3a8915705e11d3ab642e2a6f0334cfda849774e5/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.7.jpg)
+
+8. Declarative Pipeline Job
+
+![declarative](https://github.com/SlavaZakariev/netology/blob/6798fc8066dae526bcccfa02b3e3a9c530246674/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.8.jpg)
