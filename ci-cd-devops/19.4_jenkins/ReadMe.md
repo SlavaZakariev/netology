@@ -153,4 +153,4 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 
 ![declarative](https://github.com/SlavaZakariev/netology/blob/6798fc8066dae526bcccfa02b3e3a9c530246674/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.8.jpg)
 
-9. [Jenkinsfile](https://github.com/SlavaZakariev/vector-role-molecule/blob/main/Jenkinsfile)
+9. Создан [Jenkinsfile](https://github.com/SlavaZakariev/vector-role-molecule/blob/main/Jenkinsfile)
