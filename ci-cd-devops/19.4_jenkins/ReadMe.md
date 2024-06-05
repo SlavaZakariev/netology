@@ -166,8 +166,6 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 12. Обновлённый скрипт [ScriptedJenkinsfile](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.4_jenkins/pipeline/ScriptedJenkinsfile)
 
 ```groovy
-
-14 lines (13 loc) · 404 Bytes
 node("linux"){
     stage("Git checkout"){
         git url: 'https://github.com/aragastmatb/example-playbook.git'
