@@ -160,3 +160,5 @@ jenkins-master             : ok=10   changed=1    unreachable=0    failed=0    s
 ![multi](https://github.com/SlavaZakariev/netology/blob/bda50a0b5f2e860fea59cb6be915d5a96170fdc5/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.9.jpg)
 
 11. Scripted Pipeline
+
+![scripted](https://github.com/SlavaZakariev/netology/blob/f258e2a891a2d7025e1e04a8b5e835cbc56309c0/ci-cd-devops/19.4_jenkins/resources/ci-cd4_1.10.jpg)
