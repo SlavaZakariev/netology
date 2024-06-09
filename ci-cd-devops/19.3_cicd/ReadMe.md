@@ -124,8 +124,7 @@ resource "yandex_compute_instance" "nexus" {
 
 4. Проверена связь с ВМ
 
-**ПРИМЕЧАНИЕ:** Изначально был добавлен ключ ed25519, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на id_rsa
-![ssh](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
+**ПРИМЕЧАНИЕ:** Изначально был добавлен ключ **ed25519**, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на **id_rsa**
 
 5. Запустил **Playbook**.
 **ПРИМЕЧАНИЕ:** Внесены изменения в **Playbook** из-за ошибок \
