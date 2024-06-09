@@ -59,6 +59,7 @@
 ### Решение №1
 
 1. Инициализировали **terraform** через **VPN**
+
 ![init](https://github.com/SlavaZakariev/netology/blob/928ed33afb8b92884ce628eb8562e41557317e3e/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.1.jpg)
 
 2. Подготовлена конфигурация для [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.3_cicd/terraform)
@@ -119,10 +120,13 @@ resource "yandex_compute_instance" "nexus" {
 }
 ```
 3. Развёрнуты ВМ на **Yandex Cloud**
+
 ![yc1](https://github.com/SlavaZakariev/netology/blob/928ed33afb8b92884ce628eb8562e41557317e3e/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.2.jpg)
 ![yc2](https://github.com/SlavaZakariev/netology/blob/928ed33afb8b92884ce628eb8562e41557317e3e/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.3.jpg)
 
 4. Проверена связь с ВМ
+
+![ping](https://github.com/SlavaZakariev/netology/blob/928ed33afb8b92884ce628eb8562e41557317e3e/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
 
 **ПРИМЕЧАНИЕ:** Изначально был добавлен ключ **ed25519**, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на **id_rsa**
 
