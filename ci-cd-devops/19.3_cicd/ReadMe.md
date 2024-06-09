@@ -58,10 +58,10 @@
 
 ### Решение №1
 
-1. Инициализировали terraform через VPN
+1. Инициализировали **terraform** через **VPN**
 ![init](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.1.jpg)
 
-2. Подготовлена конфигурация для [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.3_cicd/infrastructure/terraform)
+2. Подготовлена конфигурация для [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.3_cicd/terraform)
 
 ```tf
 ### ===SonarQube===
@@ -118,7 +118,7 @@ resource "yandex_compute_instance" "nexus" {
   }
 }
 ```
-3. Развёрнуты ВМ на Yandex Cloud
+3. Развёрнуты ВМ на **Yandex Cloud**
 ![VMs](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.2.jpg)
 ![VMs-YC](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.3.jpg)
 
@@ -127,51 +127,201 @@ resource "yandex_compute_instance" "nexus" {
 **ПРИМЕЧАНИЕ:** Изначально был добавлен ключ ed25519, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на id_rsa
 ![ssh](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
 
-5. Запуск Playbook выдаёт ошибку: Не может найти пакет для установки после добавления репозитория PostgeSQL. \
- Что необходимо добавить в Playbook?
+5. Запустил **Playbook**. \
+**ПРИМЕЧАНИЕ:** Внесены изменения в **Playbook** из-за ошибок
+1) Добавлено задание по установке **epel-release** перед заданием установки **PostgreSQL**
+2) PosgreSQL 11 более недоступен из официального репозитория, заменил на 12 версию
+3) Изменил путь в задании Init template1 DB из-за смены версии PostgreSQL
+4) Изменил путь для добавлении конфигурационного файла в задании Copy pg_hba.conf из-за смены версии PostgreSQL
+5) Для заданий Configure SonarQube JDBC settings for PostgreSQL и Generate wrapper.conf добавлена строка become: true для повышения прав исполнения
 
 ```bash
-sysadmin@ubuntu1:~/cicd01$ ansible-playbook site.yml -i inventory/hosts.yml
+sysadmin@ubuntu1:~/cicd03/ansible$ ansible-playbook site.yml -i inventory/hosts.yml
 
-PLAY [Get OpenJDK installed] *************************************************************************************************
-
-TASK [Gathering Facts] *******************************************************************************************************
+PLAY [Get OpenJDK installed] ************************************************************************************
+TASK [Gathering Facts] ******************************************************************************************
 ok: [sonarqube]
 
-TASK [install unzip] *********************************************************************************************************
+TASK [install unzip] ********************************************************************************************
 ok: [sonarqube]
 
-TASK [Upload .tar.gz file conaining binaries from remote storage] ************************************************************
+TASK [Upload .tar.gz file conaining binaries from remote storage] ***********************************************
 ok: [sonarqube]
 
-TASK [Ensure installation dir exists] ****************************************************************************************
+TASK [Ensure installation dir exists] ***************************************************************************
 ok: [sonarqube]
 
-TASK [Extract java in the installation directory] ****************************************************************************
+TASK [Extract java in the installation directory] ***************************************************************
 skipping: [sonarqube]
 
-TASK [Export environment variables] ******************************************************************************************
+TASK [Export environment variables] *****************************************************************************
 ok: [sonarqube]
 
-PLAY [Get PostgreSQL installed] **********************************************************************************************
-
-TASK [Gathering Facts] *******************************************************************************************************
+PLAY [Get PostgreSQL installed] *********************************************************************************
+TASK [Gathering Facts] ******************************************************************************************
 ok: [sonarqube]
 
-TASK [Change repo file] ******************************************************************************************************
+TASK [Change repo file] *****************************************************************************************
 ok: [sonarqube]
 
-TASK [Install PostgreSQL repos] **********************************************************************************************
+TASK [Install PostgreSQL repos] *********************************************************************************
 ok: [sonarqube]
 
-TASK [Repo update] ***********************************************************************************************************
+TASK [Update cache after added repo] ****************************************************************************
+ok: [sonarqube]
+
+TASK [Install epel-release] *************************************************************************************
+ok: [sonarqube]
+
+TASK [Install PostgreSQL] ***************************************************************************************
+ok: [sonarqube]
+
+TASK [Init template1 DB] ****************************************************************************************
 changed: [sonarqube]
 
-TASK [Install PostgreSQL] ****************************************************************************************************
-fatal: [sonarqube]: FAILED! => {"changed": false, "msg": "No package matching 'postgresql11-server' found available, installed or updated", "rc": 126, "results": ["No package matching 'postgresql11-server' found available, installed or updated"]}
+TASK [Start pgsql service] **************************************************************************************
+ok: [sonarqube]
 
-PLAY RECAP *******************************************************************************************************************
-sonarqube                  : ok=9    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0
+TASK [Create user in system] ************************************************************************************
+ok: [sonarqube]
+
+TASK [Create user for Sonar in PostgreSQL] **********************************************************************
+changed: [sonarqube]
+
+TASK [Change password for Sonar user in PostgreSQL] *************************************************************
+changed: [sonarqube]
+
+TASK [Create Sonar DB] ******************************************************************************************
+changed: [sonarqube]
+
+TASK [Copy pg_hba.conf] *****************************************************************************************
+ok: [sonarqube]
+
+PLAY [Prepare Sonar host] ***************************************************************************************
+TASK [Gathering Facts] ******************************************************************************************
+ok: [sonarqube]
+
+TASK [Create group in system] ***********************************************************************************
+ok: [sonarqube]
+
+TASK [Create user in system] ************************************************************************************
+ok: [sonarqube]
+
+TASK [Set up ssh key to access for managed node] ****************************************************************
+ok: [sonarqube]
+
+TASK [Allow group to have passwordless sudo] ********************************************************************
+ok: [sonarqube]
+
+TASK [Increase Virtual Memory] **********************************************************************************
+ok: [sonarqube]
+
+TASK [Reboot VM] ************************************************************************************************
+changed: [sonarqube]
+
+PLAY [Get Sonarqube installed] **********************************************************************************
+TASK [Gathering Facts] ******************************************************************************************
+ok: [sonarqube]
+
+TASK [Get distrib ZIP] ******************************************************************************************
+ok: [sonarqube]
+
+TASK [Unzip Sonar] **********************************************************************************************
+skipping: [sonarqube]
+
+TASK [Move Sonar into place.] ***********************************************************************************
+changed: [sonarqube]
+
+TASK [Configure SonarQube JDBC settings for PostgreSQL.] ********************************************************
+changed: [sonarqube] => (item={'regexp': '^sonar.jdbc.username', 'line': 'sonar.jdbc.username=sonar'})
+changed: [sonarqube] => (item={'regexp': '^sonar.jdbc.password', 'line': 'sonar.jdbc.password=sonar'})
+changed: [sonarqube] => (item={'regexp': '^sonar.jdbc.url', 'line': 'sonar.jdbc.url=jdbc:postgresql://localhost:
+5432/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance'})
+changed: [sonarqube] => (item={'regexp': '^sonar.web.context', 'line': 'sonar.web.context='})
+
+TASK [Generate wrapper.conf] ************************************************************************************
+changed: [sonarqube]
+
+TASK [Symlink sonar bin.] ***************************************************************************************
+ok: [sonarqube]
+
+TASK [Copy SonarQube systemd unit file into place (for systemd systems).] ***************************************
+ok: [sonarqube]
+
+TASK [Ensure Sonar is running and set to start on boot.] ********************************************************
+changed: [sonarqube]
+
+TASK [Allow Sonar time to build on first start.] ****************************************************************
+skipping: [sonarqube]
+
+TASK [Make sure Sonar is responding on the configured port.] ****************************************************
+ok: [sonarqube]
+
+PLAY [Get Nexus installed] **************************************************************************************
+TASK [Gathering Facts] ******************************************************************************************
+ok: [nexus]
+
+TASK [Create Nexus group] ***************************************************************************************
+ok: [nexus]
+
+TASK [Create Nexus user] ****************************************************************************************
+ok: [nexus]
+
+TASK [Install JDK] **********************************************************************************************
+ok: [nexus]
+
+TASK [Create Nexus directories] *********************************************************************************
+ok: [nexus] => (item=/home/nexus/log)
+ok: [nexus] => (item=/home/nexus/sonatype-work/nexus3)
+ok: [nexus] => (item=/home/nexus/sonatype-work/nexus3/etc)
+ok: [nexus] => (item=/home/nexus/pkg)
+ok: [nexus] => (item=/home/nexus/tmp)
+
+TASK [Download Nexus] *******************************************************************************************
+changed: [nexus]
+
+TASK [Unpack Nexus] *********************************************************************************************
+changed: [nexus]
+
+TASK [Link to Nexus Directory] **********************************************************************************
+changed: [nexus]
+
+TASK [Add NEXUS_HOME for Nexus user] ****************************************************************************
+changed: [nexus]
+
+TASK [Add run_as_user to Nexus.rc] ******************************************************************************
+changed: [nexus]
+
+TASK [Raise nofile limit for Nexus user] ************************************************************************
+changed: [nexus]
+
+TASK [Create Nexus service for SystemD] *************************************************************************
+changed: [nexus]
+
+TASK [Ensure Nexus service is enabled for SystemD] **************************************************************
+changed: [nexus]
+
+TASK [Create Nexus vmoptions] ***********************************************************************************
+changed: [nexus]
+
+TASK [Create Nexus properties] **********************************************************************************
+changed: [nexus]
+
+TASK [Lower Nexus disk space threshold] *************************************************************************
+skipping: [nexus]
+
+TASK [Start Nexus service if enabled] ***************************************************************************
+changed: [nexus]
+
+TASK [Ensure Nexus service is restarted] ************************************************************************
+skipping: [nexus]
+
+TASK [Wait for Nexus port if started] ***************************************************************************
+ok: [nexus]
+
+PLAY RECAP ******************************************************************************************************
+nexus                      : ok=17   changed=11   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+sonarqube                  : ok=34   changed=9    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
 
 ```
 
