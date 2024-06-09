@@ -131,7 +131,8 @@ resource "yandex_compute_instance" "nexus" {
 ![ping](https://github.com/SlavaZakariev/netology/blob/928ed33afb8b92884ce628eb8562e41557317e3e/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
 
 5. Запустил **Playbook**.
-**ПРИМЕЧАНИЕ:** Внесены изменения в **Playbook** из-за ошибок \
+
+**ПРИМЕЧАНИЕ:** Внесены изменения в **Playbook** из-за ошибок
 1) Добавлено задание по установке **epel-release** перед заданием установки **PostgreSQL**
 2) **PosgreSQL 11** более недоступен из официального репозитория, заменил на **12** версию
 3) Изменил путь в задании **Init template1 DB** из-за смены версии **PostgreSQL**
