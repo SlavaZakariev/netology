@@ -329,7 +329,12 @@ sonarqube                  : ok=34   changed=9    unreachable=0    failed=0    s
 
 ```
 
+6. Проверка доступности и смена пароля на SonarQube
 
+![sonarpass](https://github.com/SlavaZakariev/netology/blob/6adbebdf67394ebea42a0b6d9c02cc319f0b3d53/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.5.jpg)
 
+7. Проверка доступности и смена пароля на Nexus
+
+![nexuspass](https://github.com/SlavaZakariev/netology/blob/6adbebdf67394ebea42a0b6d9c02cc319f0b3d53/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.6.jpg)
 
 
