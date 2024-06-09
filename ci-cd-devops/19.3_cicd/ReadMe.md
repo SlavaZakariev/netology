@@ -137,7 +137,7 @@ resource "yandex_compute_instance" "nexus" {
 2) **PosgreSQL 11** более недоступен из официального репозитория, заменил на **12** версию
 3) Изменил путь в задании **Init template1 DB** из-за смены версии **PostgreSQL**
 4) Изменил путь при добавлении конфигурационного файла в задании **Copy pg_hba.conf** из-за смены версии **PostgreSQL**
-5) Для заданий Configure SonarQube JDBC settings for PostgreSQL и Generate wrapper.conf добавлена строка **become: true**
+5) Для заданий **Configure SonarQube JDBC settings for PostgreSQL** и **Generate wrapper.conf** добавлена строка **become: true**
 
 ```bash
 sysadmin@ubuntu1:~/cicd03/ansible$ ansible-playbook site.yml -i inventory/hosts.yml
