@@ -59,7 +59,7 @@
 ### Решение №1
 
 1. Инициализировали terraform через VPN
-![init](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.1.jpg)
+![init](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.1.jpg)
 
 2. Подготовлена конфигурация для [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.3_cicd/infrastructure/terraform)
 
@@ -119,13 +119,13 @@ resource "yandex_compute_instance" "nexus" {
 }
 ```
 3. Развёрнуты ВМ на Yandex Cloud
-![VMs](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.2.jpg)
-![VMs-YC](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.3.jpg)
+![VMs](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.2.jpg)
+![VMs-YC](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.3.jpg)
 
 4. Проверена связь с ВМ
 
 **ПРИМЕЧАНИЕ:** Изначально был добавлен ключ ed25519, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на id_rsa
-![ssh](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
+![ssh](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
 
 5. Запуск Playbook выдаёт ошибку: Не может найти пакет для установки после добавления репозитория PostgeSQL. \
  Что необходимо добавить в Playbook?
