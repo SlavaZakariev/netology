@@ -59,7 +59,7 @@
 ### Решение №1
 
 1. Инициализировали **terraform** через **VPN**
-![init](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.1.jpg)
+
 
 2. Подготовлена конфигурация для [terraform](https://github.com/SlavaZakariev/netology/tree/main/ci-cd-devops/19.3_cicd/terraform)
 
@@ -119,8 +119,7 @@ resource "yandex_compute_instance" "nexus" {
 }
 ```
 3. Развёрнуты ВМ на **Yandex Cloud**
-![VMs](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.2.jpg)
-![VMs-YC](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.3.jpg)
+
 
 4. Проверена связь с ВМ
 
