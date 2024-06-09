@@ -127,13 +127,13 @@ resource "yandex_compute_instance" "nexus" {
 **ПРИМЕЧАНИЕ:** Изначально был добавлен ключ ed25519, **ansible** выдавал ошибку прав чтение закрытого ключа, переделал на id_rsa
 ![ssh](https://github.com/SlavaZakariev/netology/blob/c737880dac83a588038851e709b9a6bb39c90ce9/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.4.jpg)
 
-5. Запустил **Playbook**. \
-**ПРИМЕЧАНИЕ:** Внесены изменения в **Playbook** из-за ошибок
+5. Запустил **Playbook**.
+**ПРИМЕЧАНИЕ:** Внесены изменения в **Playbook** из-за ошибок \
 1) Добавлено задание по установке **epel-release** перед заданием установки **PostgreSQL**
-2) PosgreSQL 11 более недоступен из официального репозитория, заменил на 12 версию
-3) Изменил путь в задании Init template1 DB из-за смены версии PostgreSQL
-4) Изменил путь для добавлении конфигурационного файла в задании Copy pg_hba.conf из-за смены версии PostgreSQL
-5) Для заданий Configure SonarQube JDBC settings for PostgreSQL и Generate wrapper.conf добавлена строка become: true для повышения прав исполнения
+2) **PosgreSQL 11** более недоступен из официального репозитория, заменил на **12** версию
+3) Изменил путь в задании **Init template1 DB** из-за смены версии **PostgreSQL**
+4) Изменил путь при добавлении конфигурационного файла в задании **Copy pg_hba.conf** из-за смены версии **PostgreSQL**
+5) Для заданий Configure SonarQube JDBC settings for PostgreSQL и Generate wrapper.conf добавлена строка **become: true**
 
 ```bash
 sysadmin@ubuntu1:~/cicd03/ansible$ ansible-playbook site.yml -i inventory/hosts.yml
