@@ -459,6 +459,26 @@ target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jac
 ```
 </details>
 
-11. Результат в интерфейсе SonaQube
+11. Результат в интерфейсе SonaQube. Обнаружены 2 бага и 1 запашок)))
 
 ![py1](https://github.com/SlavaZakariev/netology/blob/830e6c61fba999862b59106b2605701f3fd1fbca/ci-cd-devops/19.3_cicd/resources/ci-cd3_2.1.jpg)
+
+12. Подправлен скрипт
+
+```py
+def increment(index):
+    index_new = index + 1
+    return index_new
+def get_square(numb):
+    return numb*numb
+def print_numb(numb):
+    print("Number is {}".format(numb))
+
+index = 0
+while (index < 10):
+    index = increment(index)
+    print(get_square(index))
+```
+
+13. Запущена повторная проверка. Результат в интерфейсе.
+
