@@ -482,3 +482,5 @@ while (index < 10):
 
 13. Запущена повторная проверка. Результат в интерфейсе.
 
+![py2](https://github.com/SlavaZakariev/netology/blob/ff449cfb1131f5d3852b822640eecdb1d413e3a5/ci-cd-devops/19.3_cicd/resources/ci-cd3_2.2.jpg)
+
