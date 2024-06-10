@@ -337,9 +337,11 @@ sonarqube                  : ok=34   changed=9    unreachable=0    failed=0    s
 
 ![nexuspass](https://github.com/SlavaZakariev/netology/blob/6adbebdf67394ebea42a0b6d9c02cc319f0b3d53/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.6.jpg)
 
-8. Скачали архив, распаковали и добавили бинарный файл по пути **/opt/sonar-scanner**, добавили переменную в **$PATH**
+8. Создал проект с названием **Netology**
 
-9. Проверка версии socar-scanner
+9. Скачали архив, распаковали и добавили бинарный файл по пути **/opt/sonar-scanner**, добавили переменную в **$PATH**
+
+10. Проверка версии socar-scanner
 
 ```shell
 [centos@sonarqube ~]$ sonar-scanner --version
@@ -456,3 +458,7 @@ target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jac
 20:41:32.291 INFO  Total time: 14.462s
 ```
 </details>
+
+11. Результат в интерфейсе SonaQube
+
+![py1](https://github.com/SlavaZakariev/netology/blob/830e6c61fba999862b59106b2605701f3fd1fbca/ci-cd-devops/19.3_cicd/resources/ci-cd3_2.1.jpg)
