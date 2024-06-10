@@ -442,7 +442,7 @@ target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jac
 20:41:31.926 INFO  ------------- Run sensors on project
 20:41:31.949 INFO  Sensor Zero Coverage Sensor
 20:41:31.960 INFO  Sensor Zero Coverage Sensor (done) | time=11ms
-20:41:31.962 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+20:41:31.962 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to specify it.
 20:41:31.965 INFO  CPD Executor Calculating CPD for 1 file
 20:41:31.984 INFO  CPD Executor CPD calculation finished (done) | time=19ms
 20:41:32.134 INFO  Analysis report generated in 146ms, dir size=103.2 kB
