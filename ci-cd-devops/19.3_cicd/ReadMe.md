@@ -401,7 +401,7 @@ or disable the SCM Sensor in the project settings.
 20:41:30.516 INFO  Sensor Python Sensor [python]
 20:41:30.521 WARN  Your code is analyzed as compatible with python 2 and 3 by default.
 This will prevent the detection of issues specific to python 2 or python 3.
-You can get a more precise analysis by setting a python version in your configuration via the parameter "sonar.python.version"
+You can get a more analysis by setting a python version in your configuration via the parameter "sonar.python.version"
 20:41:30.529 INFO  Starting global symbols computation
 20:41:30.540 INFO  Load project repositories
 20:41:30.544 INFO  1 source file to be analyzed
