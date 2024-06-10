@@ -349,3 +349,110 @@ sonarqube                  : ok=34   changed=9    unreachable=0    failed=0    s
 19:44:54.231 INFO  Java 17.0.11 Eclipse Adoptium (64-bit)
 19:44:54.235 INFO  Linux 3.10.0-1160.118.1.el7.x86_64 amd64
 ```
+10. Запуск кода с ключом
+
+<details>
+<summary>Результат в терминале</summary>
+
+```shell
+[centos@sonarqube ~]$ sonar-scanner \
+>   -Dsonar.projectKey=Netology \
+>   -Dsonar.sources=. \
+>   -Dsonar.host.url=http://130.193.37.99:9000 \
+>   -Dsonar.login=6a913462dd51e6511f4bd7910d89e09c48e542ae
+>   -Dsonar.coverage.exclusions=fail.py
+20:41:17.835 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+20:41:17.840 INFO  Project root configuration file: NONE
+20:41:17.869 INFO  SonarScanner CLI 6.0.0.4432
+20:41:17.874 INFO  Java 17.0.11 Eclipse Adoptium (64-bit)
+20:41:17.875 INFO  Linux 3.10.0-1160.118.1.el7.x86_64 amd64
+20:41:17.937 INFO  User cache: /home/centos/.sonar/cache
+20:41:19.570 INFO  Communicating with SonarQube Server 9.1.0.47736
+20:41:19.924 INFO  Load global settings
+20:41:20.044 INFO  Load global settings (done) | time=122ms
+20:41:20.049 INFO  Server id: 9CFC3560-AY_9gzuRvZpl2HUI33CH
+20:41:20.053 INFO  User cache: /home/centos/.sonar/cache
+20:41:20.056 INFO  Load/download plugins
+20:41:20.057 INFO  Load plugins index
+20:41:20.134 INFO  Load plugins index (done) | time=77ms
+20:41:21.821 INFO  Load/download plugins (done) | time=1765ms
+20:41:22.460 INFO  Process project properties
+20:41:22.470 INFO  Process project properties (done) | time=10ms
+20:41:22.471 INFO  Execute project builders
+20:41:22.473 INFO  Execute project builders (done) | time=2ms
+20:41:22.479 INFO  Project key: Netology
+20:41:22.479 INFO  Base dir: /home/centos
+20:41:22.479 INFO  Working dir: /home/centos/.scannerwork
+20:41:22.731 INFO  Load project settings for component key: 'Netology'
+20:41:22.831 INFO  Load project settings for component key: 'Netology' (done) | time=100ms
+20:41:22.953 INFO  Load quality profiles
+20:41:23.776 INFO  Load quality profiles (done) | time=823ms
+20:41:23.809 INFO  Load active rules
+20:41:28.872 INFO  Load active rules (done) | time=5063ms
+20:41:28.901 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project,
+or disable the SCM Sensor in the project settings.
+20:41:28.948 INFO  Indexing files...
+20:41:28.949 INFO  Project configuration:
+20:41:28.986 INFO  2 files indexed
+20:41:28.987 INFO  Quality profile for py: Sonar way
+20:41:28.987 INFO  ------------- Run sensors on module Netology
+20:41:29.144 INFO  Load metrics repository
+20:41:29.212 INFO  Load metrics repository (done) | time=68ms
+20:41:30.516 INFO  Sensor Python Sensor [python]
+20:41:30.521 WARN  Your code is analyzed as compatible with python 2 and 3 by default.
+This will prevent the detection of issues specific to python 2 or python 3.
+You can get a more precise analysis by setting a python version in your configuration via the parameter "sonar.python.version"
+20:41:30.529 INFO  Starting global symbols computation
+20:41:30.540 INFO  Load project repositories
+20:41:30.544 INFO  1 source file to be analyzed
+20:41:30.998 INFO  Load project repositories (done) | time=458ms
+20:41:31.414 INFO  1/1 source file has been analyzed
+20:41:31.414 INFO  Starting rules execution
+20:41:31.425 INFO  1 source file to be analyzed
+20:41:31.866 INFO  1/1 source file has been analyzed
+20:41:31.867 INFO  Sensor Python Sensor [python] (done) | time=1351ms
+20:41:31.867 INFO  Sensor Cobertura Sensor for Python coverage [python]
+20:41:31.883 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=16ms
+20:41:31.883 INFO  Sensor PythonXUnitSensor [python]
+20:41:31.885 INFO  Sensor PythonXUnitSensor [python] (done) | time=2ms
+20:41:31.885 INFO  Sensor CSS Rules [cssfamily]
+20:41:31.889 INFO  No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+20:41:31.889 INFO  Sensor CSS Rules [cssfamily] (done) | time=4ms
+20:41:31.889 INFO  Sensor JaCoCo XML Report Importer [jacoco]
+20:41:31.891 INFO  'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations:
+target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+20:41:31.892 INFO  No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+20:41:31.892 INFO  Sensor JaCoCo XML Report Importer [jacoco] (done) | time=3ms
+20:41:31.892 INFO  Sensor C# Project Type Information [csharp]
+20:41:31.893 INFO  Sensor C# Project Type Information [csharp] (done) | time=1ms
+20:41:31.893 INFO  Sensor C# Analysis Log [csharp]
+20:41:31.905 INFO  Sensor C# Analysis Log [csharp] (done) | time=12ms
+20:41:31.905 INFO  Sensor C# Properties [csharp]
+20:41:31.906 INFO  Sensor C# Properties [csharp] (done) | time=1ms
+20:41:31.906 INFO  Sensor JavaXmlSensor [java]
+20:41:31.907 INFO  Sensor JavaXmlSensor [java] (done) | time=1ms
+20:41:31.907 INFO  Sensor HTML [web]
+20:41:31.909 INFO  Sensor HTML [web] (done) | time=2ms
+20:41:31.909 INFO  Sensor VB.NET Project Type Information [vbnet]
+20:41:31.910 INFO  Sensor VB.NET Project Type Information [vbnet] (done) | time=1ms
+20:41:31.910 INFO  Sensor VB.NET Analysis Log [vbnet]
+20:41:31.923 INFO  Sensor VB.NET Analysis Log [vbnet] (done) | time=13ms
+20:41:31.923 INFO  Sensor VB.NET Properties [vbnet]
+20:41:31.923 INFO  Sensor VB.NET Properties [vbnet] (done) | time=0ms
+20:41:31.926 INFO  ------------- Run sensors on project
+20:41:31.949 INFO  Sensor Zero Coverage Sensor
+20:41:31.960 INFO  Sensor Zero Coverage Sensor (done) | time=11ms
+20:41:31.962 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+20:41:31.965 INFO  CPD Executor Calculating CPD for 1 file
+20:41:31.984 INFO  CPD Executor CPD calculation finished (done) | time=19ms
+20:41:32.134 INFO  Analysis report generated in 146ms, dir size=103.2 kB
+20:41:32.149 INFO  Analysis report compressed in 15ms, zip size=14.4 kB
+20:41:32.278 INFO  Analysis report uploaded in 126ms
+20:41:32.281 INFO  ANALYSIS SUCCESSFUL, you can browse http://130.193.37.99:9000/dashboard?id=Netology
+20:41:32.281 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+20:41:32.281 INFO  More about the report processing at http://130.193.37.99:9000/api/ce/task?id=AZAD4nkirWgtUsydeimQ
+20:41:32.289 INFO  Analysis total time: 10.294 s
+20:41:32.290 INFO  EXECUTION SUCCESS
+20:41:32.291 INFO  Total time: 14.462s
+```
+</details>
