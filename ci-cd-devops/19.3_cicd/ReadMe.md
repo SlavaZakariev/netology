@@ -449,7 +449,7 @@ target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jac
 20:41:32.149 INFO  Analysis report compressed in 15ms, zip size=14.4 kB
 20:41:32.278 INFO  Analysis report uploaded in 126ms
 20:41:32.281 INFO  ANALYSIS SUCCESSFUL, you can browse http://130.193.37.99:9000/dashboard?id=Netology
-20:41:32.281 INFO  Note that you will be able to access the updated dashboard once the server has processed the analysis report
+20:41:32.281 INFO  Note that you will be able to access the updated dashboard once the server has processed the report
 20:41:32.281 INFO  More about the report processing at http://130.193.37.99:9000/api/ce/task?id=AZAD4nkirWgtUsydeimQ
 20:41:32.289 INFO  Analysis total time: 10.294 s
 20:41:32.290 INFO  EXECUTION SUCCESS
