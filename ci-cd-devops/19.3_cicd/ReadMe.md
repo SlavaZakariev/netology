@@ -337,4 +337,15 @@ sonarqube                  : ok=34   changed=9    unreachable=0    failed=0    s
 
 ![nexuspass](https://github.com/SlavaZakariev/netology/blob/6adbebdf67394ebea42a0b6d9c02cc319f0b3d53/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.6.jpg)
 
+8. Скачать архив, распаковали, и добавили бинарный файл по пути **/opt/sonar-scanner**, добавили переменную в $PATH
 
+9. Проверка версии socar-scanner
+
+```shell
+[centos@sonarqube ~]$ sonar-scanner --version
+19:44:54.198 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+19:44:54.204 INFO  Project root configuration file: NONE
+19:44:54.227 INFO  SonarScanner CLI 6.0.0.4432
+19:44:54.231 INFO  Java 17.0.11 Eclipse Adoptium (64-bit)
+19:44:54.235 INFO  Linux 3.10.0-1160.118.1.el7.x86_64 amd64
+```
