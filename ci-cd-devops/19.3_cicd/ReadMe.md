@@ -484,7 +484,7 @@ while (index < 10):
 
 ![py2](https://github.com/SlavaZakariev/netology/blob/ff449cfb1131f5d3852b822640eecdb1d413e3a5/ci-cd-devops/19.3_cicd/resources/ci-cd3_2.2.jpg)
 
-14. В Nexus в репозиторий **maven-public** добавил два артифакта, c пометками согласно условаию
+14. В Nexus в репозиторий **maven-public** добавил два артефакта, c пометками согласно условию
 
 ![nexus](https://github.com/SlavaZakariev/netology/blob/b2384a1dd740cabd440736527ed3cacbda7846f1/ci-cd-devops/19.3_cicd/resources/ci-cd3_3.1.jpg)
 
