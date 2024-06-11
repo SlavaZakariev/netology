@@ -543,3 +543,4 @@ OS name: "linux", version: "3.10.0-1160.118.1.el7.x86_64", arch: "amd64", family
 [INFO] Finished at: 2024-06-12T01:25:11+03:00
 [INFO] ------------------------------------------------------------------------
 ```
+Ссылка на скорректированный [pom.xml](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/mvn/pom.xml)
