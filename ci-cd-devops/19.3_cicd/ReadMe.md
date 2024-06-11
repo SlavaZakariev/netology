@@ -490,3 +490,15 @@ while (index < 10):
 
 Ссылка на [maven-metadata.xml](https://github.com/SlavaZakariev/netology/blob/main/ci-cd-devops/19.3_cicd/xml/maven-metadata.xml)
 
+15. Скачиваем архив, распаковываем, перемещаем в **/opt/maven/bin/**, далее добавляем в переменную **$PATH**, проверяем версию
+
+```shell
+[centos@nexus ~]$ sudo mv apache-maven-3.9.7 /opt/maven
+[centos@nexus ~]$ export PATH=/opt/maven/bin/:$PATH
+[centos@nexus ~]$ mvn --version
+Apache Maven 3.9.7 (8b094c9513efc1b9ce2d952b3b9c8eaedaf8cbf0)
+Maven home: /opt/maven
+Java version: 1.8.0_412, vendor: Red Hat, Inc., runtime: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.10.0-1160.118.1.el7.x86_64", arch: "amd64", family: "unix"
+```
