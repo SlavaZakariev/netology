@@ -337,11 +337,11 @@ sonarqube                  : ok=34   changed=9    unreachable=0    failed=0    s
 
 ![nexuspass](https://github.com/SlavaZakariev/netology/blob/6adbebdf67394ebea42a0b6d9c02cc319f0b3d53/ci-cd-devops/19.3_cicd/resources/ci-cd3_1.6.jpg)
 
-8. Создал проект с названием **Netology**
+8. Создаём проект с названием **Netology** в **SonarQube**
 
 9. Скачали архив, распаковали и добавили бинарный файл по пути **/opt/sonar-scanner**, добавили переменную в **$PATH**
 
-10. Проверка версии socar-scanner
+10. Проверка версии **socar-scanner**
 
 ```shell
 [centos@sonarqube ~]$ sonar-scanner --version
