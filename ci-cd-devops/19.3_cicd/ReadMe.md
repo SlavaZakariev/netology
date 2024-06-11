@@ -531,3 +531,15 @@ OS name: "linux", version: "3.10.0-1160.118.1.el7.x86_64", arch: "amd64", family
   </dependencies>
 </project>
 ```
+17. Запускаем в директории с **pom.xml** команду `mvn package`
+
+```shell
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /home/centos/mvn/target/simple-app-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.653 s
+[INFO] Finished at: 2024-06-12T01:25:11+03:00
+[INFO] ------------------------------------------------------------------------
+```
