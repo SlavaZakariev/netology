@@ -154,11 +154,11 @@ Cистемf сбора и визуализации логов как класт
 
 ---
 
-7. Запущен TICK-стэк
+7. Запущен **TICK-стэк**
 
 ![mon1](https://github.com/SlavaZakariev/netology/blob/2c647cce259567a9d3e67bd2a98168f230e500fd/monitoring-devops/20.1_systems/resources/monit_1.1.jpg)
 
-8. График CPU c обновлением каждые 15 секунд.
+8. График **CPU** c обновлением каждые 15 секунд.
 
 ![mon2](https://github.com/SlavaZakariev/netology/blob/2c647cce259567a9d3e67bd2a98168f230e500fd/monitoring-devops/20.1_systems/resources/monit_1.2.jpg)
 
