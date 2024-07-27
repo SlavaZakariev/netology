@@ -56,4 +56,12 @@
 ### Решение 1
 
 1. Выполнен [манифест](https://github.com/SlavaZakariev/netology/blob/main/monitoring-devops/20.2_grafana/yaml/docker-compose.yml) в **docker compose**
+![docker](https://github.com/SlavaZakariev/netology/blob/d4f1b2e9190862673ad3ad33ed007cc0acd56978/monitoring-devops/20.2_grafana/resources/monit2_1.1.jpg)
+
+2. Заходим на веб-страницу **Grafana**
+![grafana](https://github.com/SlavaZakariev/netology/blob/d4f1b2e9190862673ad3ad33ed007cc0acd56978/monitoring-devops/20.2_grafana/resources/monit2_1.2.jpg)
+
+3. Добавлен источник сбора данных Prometheus
+![prometheus](https://github.com/SlavaZakariev/netology/blob/d4f1b2e9190862673ad3ad33ed007cc0acd56978/monitoring-devops/20.2_grafana/resources/monit2_1.3.jpg)
+
 
