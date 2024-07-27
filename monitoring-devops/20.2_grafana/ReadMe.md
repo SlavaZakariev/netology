@@ -64,4 +64,31 @@
 3. Добавлен источник сбора данных Prometheus
 ![prometheus](https://github.com/SlavaZakariev/netology/blob/d4f1b2e9190862673ad3ad33ed007cc0acd56978/monitoring-devops/20.2_grafana/resources/monit2_1.3.jpg)
 
+### Решение 2
+
+Создал Dashboard и четыре Panels.
+
+1. Утилизация CPU для nodeexporter (в процентах, 100-idle)
+```bash
+100-(avg by (instance) (rate(node_cpu_seconds_total{job="nodeexporter",mode="idle"}[1m]))*100)
+```
+2. CPU Load Average 1/5/15
+```bash
+node_load1
+node_load5
+node_load15
+```
+3. Количество свободной оперативной памяти (Общее + Используемое)
+```bash
+avg(node_memory_MemFree_bytes{instance="nodeexporter:9100",job="nodeexporter"})
+```
+4. Количество места на файловой системе
+```bash
+node_filesystem_avail_bytes
+```
+
+Для этой метрики хотел применить строку ниже под наш exporter, но данные не выдавались в график:
+`node_filesystem_free_bytes{fstype="et4",instance="nodeexporter:9100",job="nodeexporter"}`
+
+![finish](https://github.com/SlavaZakariev/netology/blob/5ef2c1118662fb6e22f6deef6eb33cf2a40c7c3e/monitoring-devops/20.2_grafana/resources/monit2_1.4.jpg)
 
