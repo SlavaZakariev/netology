@@ -2,7 +2,7 @@
 
 ### Задание повышенной сложности
 
-**При решении задания 1** не используйте директорию [help](./help) для сборки проекта. Самостоятельно разверните grafana, где в роли источника данных будет выступать prometheus, а сборщиком данных будет node-exporter:
+**При решении задания 1** не используйте директорию [help]([./help](https://github.com/netology-code/mnt-homeworks/tree/MNT-video/10-monitoring-03-grafana/help)) для сборки проекта. Самостоятельно разверните grafana, где в роли источника данных будет выступать prometheus, а сборщиком данных будет node-exporter:
 
 - grafana;
 - prometheus-server;
