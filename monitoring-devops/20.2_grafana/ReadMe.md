@@ -2,7 +2,7 @@
 
 ### Задание повышенной сложности
 
-**При решении задания 1** не используйте директорию [help]([./help](https://github.com/netology-code/mnt-homeworks/tree/MNT-video/10-monitoring-03-grafana/help)) для сборки проекта. Самостоятельно разверните grafana, где в роли источника данных будет выступать prometheus, а сборщиком данных будет node-exporter:
+**При решении задания 1** не используйте директорию [help](https://github.com/netology-code/mnt-homeworks/tree/MNT-video/10-monitoring-03-grafana/help) для сборки проекта. Самостоятельно разверните grafana, где в роли источника данных будет выступать prometheus, а сборщиком данных будет node-exporter:
 
 - grafana;
 - prometheus-server;
@@ -21,7 +21,7 @@
 
 ### Задание 1
 
-1. Используя директорию [help](./help) внутри этого домашнего задания, запустите связку prometheus-grafana.
+1. Используя директорию [help](https://github.com/netology-code/mnt-homeworks/tree/MNT-video/10-monitoring-03-grafana/help) внутри этого домашнего задания, запустите связку prometheus-grafana.
 1. Зайдите в веб-интерфейс grafana, используя авторизационные данные, указанные в манифесте docker-compose.
 1. Подключите поднятый вами prometheus, как источник данных.
 1. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.
