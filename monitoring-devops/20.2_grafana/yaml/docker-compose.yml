@@ -14,12 +14,17 @@ services:
       - '--storage.tsdb.retention.time=200h'
       - '--web.enable-lifecycle'
     restart: unless-stopped
+    environment:
+      TZ: Europe/Moscow
     depends_on:
       - nodeexporter
     expose:
       - 9090
+    ports:
+      - 9090:9090
     networks:
-      - monitor-net
+      monitor-net:
+        ipv4_address: 10.10.10.10
 
   nodeexporter:
     image: prom/node-exporter:v1.0.1
@@ -34,11 +39,15 @@ services:
       - '--path.sysfs=/host/sys'
       - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
     restart: unless-stopped
+    environment:
+      TZ: Europe/Moscow
     expose:
       - 9100
+    ports:
+      - 9100:9100
     networks:
-      - monitor-net
-
+      monitor-net:
+        ipv4_address: 10.10.10.15
 
   grafana:
     image: grafana/grafana:7.4.0
@@ -49,6 +58,7 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_USERS_ALLOW_SIGN_UP=false
+      - Europe/Moscow
     restart: unless-stopped
     depends_on:
       - prometheus
@@ -57,11 +67,15 @@ services:
     expose:
       - 3000
     networks:
-      - monitor-net
+      monitor-net:
+        ipv4_address: 10.10.10.20
 
 networks:
   monitor-net:
-    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 10.10.10.0/24
 
 volumes:
   prometheus_data: {}
