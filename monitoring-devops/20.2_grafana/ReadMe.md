@@ -92,3 +92,8 @@ node_filesystem_avail_bytes
 
 ![finish](https://github.com/SlavaZakariev/netology/blob/5ef2c1118662fb6e22f6deef6eb33cf2a40c7c3e/monitoring-devops/20.2_grafana/resources/monit2_1.4.jpg)
 
+### Решение 3
+
+Настроены **Alerts** для каждой ранее созданной **Panels**
+
+![alert](https://github.com/SlavaZakariev/netology/blob/95f7745678fd2bb7165ad40b79df11bbf99c0350/monitoring-devops/20.2_grafana/resources/monit2_1.5.jpg)
