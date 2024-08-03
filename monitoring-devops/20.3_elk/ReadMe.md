@@ -13,15 +13,7 @@
 - [как просматривать логи в kibana](https://www.elastic.co/guide/en/kibana/current/discover.html);
 - [решение ошибки increase vm.max_map_count elasticsearch](https://stackoverflow.com/questions/42889241/how-to-increase-vm-max-map-count).
 
-В процессе выполнения в зависимости от системы могут также возникнуть не указанные здесь проблемы.
-
-Используйте output stdout filebeat/kibana и api elasticsearch для изучения корня проблемы и её устранения.
-
-## Задание повышенной сложности
-
-Не используйте директорию [help](./help) при выполнении домашнего задания.
-
-## Задание 1
+### Задание 1
 
 Вам необходимо поднять в докере и связать между собой:
 
@@ -44,7 +36,7 @@ Filebeat следует сконфигурировать для отправки
 - docker-compose манифест (если вы не использовали директорию help);
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
 
-## Задание 2
+### Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
 
