@@ -46,3 +46,21 @@ Filebeat следует сконфигурировать для отправки
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
  
 ---
+
+### Решение 1
+
+Отредактирован манифест из папки [help](https://github.com/SlavaZakariev/netology/blob/main/monitoring-devops/20.3_elk/yaml/docker-compose.yml)
+
+![docker1](https://github.com/SlavaZakariev/netology/blob/3767b1ca7bce4892311252dc4347adc83f1ad857/monitoring-devops/20.3_elk/resources/monit3_1.1.jpg)
+
+Запуск команды `docker ps` спустя 5 минут, согласно условию задания
+
+![docker2](https://github.com/SlavaZakariev/netology/blob/3767b1ca7bce4892311252dc4347adc83f1ad857/monitoring-devops/20.3_elk/resources/monit3_1.2.jpg)
+
+Запуск начально страницы Kibana
+
+![kibana](https://github.com/SlavaZakariev/netology/blob/3767b1ca7bce4892311252dc4347adc83f1ad857/monitoring-devops/20.3_elk/resources/monit3_1.3.jpg)
+
+### Решение 2
+
+
