@@ -49,7 +49,7 @@ Filebeat следует сконфигурировать для отправки
 
 ### Решение 1
 
-Отредактирован манифест из папки [help](https://github.com/SlavaZakariev/netology/blob/main/monitoring-devops/20.3_elk/yaml/docker-compose.yml)
+Изменён манифест из папки [help](https://github.com/SlavaZakariev/netology/blob/main/monitoring-devops/20.3_elk/yaml/docker-compose.yml) добавлены пара переменных, изменены версии, сеть, статические IP и другие мелкие элементы.
 
 ![docker1](https://github.com/SlavaZakariev/netology/blob/3767b1ca7bce4892311252dc4347adc83f1ad857/monitoring-devops/20.3_elk/resources/monit3_1.1.jpg)
 
@@ -63,4 +63,10 @@ Filebeat следует сконфигурировать для отправки
 
 ### Решение 2
 
+Создан **data view**, указан **logstash-***
 
+![log1](https://github.com/SlavaZakariev/netology/blob/3767b1ca7bce4892311252dc4347adc83f1ad857/monitoring-devops/20.3_elk/resources/monit3_1.4.jpg)
+
+Отображение списка лога по временной шкале
+
+![log2](https://github.com/SlavaZakariev/netology/blob/3767b1ca7bce4892311252dc4347adc83f1ad857/monitoring-devops/20.3_elk/resources/monit3_1.5.jpg)
