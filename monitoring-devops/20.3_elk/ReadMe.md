@@ -57,7 +57,7 @@ Filebeat следует сконфигурировать для отправки
 
 ![docker2](https://github.com/SlavaZakariev/netology/blob/3767b1ca7bce4892311252dc4347adc83f1ad857/monitoring-devops/20.3_elk/resources/monit3_1.2.jpg)
 
-Запуск начальной страницы Kibana
+Запуск начальной страницы **Kibana**
 
 ![kibana](https://github.com/SlavaZakariev/netology/blob/3767b1ca7bce4892311252dc4347adc83f1ad857/monitoring-devops/20.3_elk/resources/monit3_1.3.jpg)
 
